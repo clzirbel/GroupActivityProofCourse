@@ -1,0 +1,59 @@
+\yourname
+
+\activitytitle{Functions}{One-to-one, onto and bijective functions}
+
+\overview{You are comfortable working with functions already. There are various ways of describing functions. Here you will learn the formal definition of a function.}
+
+\definition{Function}{Let $X$ and $Y$ be sets. A function $f$ from $X$ to $Y$ is a relation from $X$ to $Y$ that satisfies:
+\begin{enumerate}
+\item for each $x \in X$ there is a $y \in Y$ such that $(x,y)\in f$, and
+\item if $(x,y)\in f$ and $(x,z)\in f$, then $y=z$.
+\end{enumerate}
+The set $X$ is called the domain of $f$ and the set $Y$ is called the codomain of $f$.}
+
+\notation{We write $f:X\rightarrow Y$ to describe a function $f$ from $X$ to $Y$ and we write $f(x)=y$ instead of $(x,y)\in f$.}
+
+\definition{Injective Functions} {Let $X$ and $Y$ be sets and let $f:X \rightarrow Y$ be a function. The function $f$ is said to be injective or one-to-one if whenever $x_1,x_2 \in X$ are such that $x_1\neq x_2$ then $f(x_1) \neq f(x_2)$.}
+
+\definition{Surjective Functions} {Let $X$ and $Y$ be sets and let $f:X \rightarrow Y$ be a function. The function $f$ is said to be surjective or onto if for each $y\in Y$ there exists an $x\in X$ such that $f(x)=y$.}
+
+\definition{Bijective Functions}{Let $X$ and $Y$ be sets and let $f:X \rightarrow Y$ be a function. The function $f$ is said to be bijective if it is both injective and surjective.} 
+
+\example{Let $X=\{Monday, \diamondsuit, \sqrt{\pi}, purple\}$ and $Y=\{\alpha, \heartsuit, fun\}$ be sets and define the relation $f$ from $X$ to $Y$ by $f=\{(Monday, fun), (\diamondsuit, \alpha), (\sqrt{\pi}, fun), (purple, fun)\}$. Draw a diagram to illustrate the relation. Is the relation $f$ a function? Prove your answer by using the definition.} {2in}
+
+\problem{Let $X=\{Cleveland, Chicago, Los Angeles, Miami \}$ be a set of American cities and let $Y=\{Cavaliers, Heat, Lakers, Bulls, Clippers\}$ be a set of NBA teams. 
+
+a) Provide an example of a relation that is a function from $X$ to $Y$ and draw a diagram to illustrate your example.
+\vspace{2in}
+
+b) Provide an example of a relation from $X$ to $Y$ that is not a function and draw a diagram to illustrate your example.
+\vspace{2in}
+
+c) Provide  an example of an injective function from $X$ to $Y$. Draw a diagram to illustrate your example.
+\vspace{2in}
+
+d) Show that there are no surjective functions from $X$ to $Y$.}{2in}
+
+\note{The next problem states an equivalent definition for injectivity. This definition is very useful when proving that a function is injective.}
+\problem{Let $X$ and $Y$ be two sets and let $f:X \rightarrow Y$ be a function. Then $f$ is injective if and only if for all $x_1, x_2 \in X$ such that $f(x_1)=f(x_2)$ we have $x_1=x_2$.}{1in}
+
+\problem {Let $f:\N \rightarrow \N$ be a function defined by $f(n)=2n+1$. Show that the function $f$ is injective but not surjective.
+ 
+{\bf Hint:} Use the previous problem to prove injectivity. In order to prove that $f$ is not surjective you need to find an $m\in \N$ which cannot be written as $2n+1$.}{2in}
+
+\problem {Let $f:\N \rightarrow \Z$ be a function defined by 
+$$
+   f(n) = \left\{
+     \begin{array}{lr}
+       \frac{n}{2},       & \text{if } n \text{ is even} \\
+       \frac{-(n+1)}{2},  & \text{if } n \text{ is odd} 
+     \end{array}
+   \right.
+$$ 
+Show that $f$ is a bijective function. 
+
+{\bf Hint:} To show that $f$ is injective let $n_1, n_2 \in \N$ be such that $f(n_1)=f(n_2)$ and look at all the possible cases according to the parity of $n_1$ and $n_2$. 
+
+To prove the surjectivity let $m\in \Z$. Consider the two possible cases; one when $m\geq 0$ and the other one when $m<0$. Then in each case find an $n \in \N$ such that $f(n)=m$.}{3in}
+
+\vfill
