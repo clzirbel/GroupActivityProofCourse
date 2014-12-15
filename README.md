@@ -4,6 +4,7 @@ GroupActivityProofCourse
 This repository contains a sequence of activities for students to work on in groups to learn how to write mathematical proofs at the undergraduate level.
 
 These materials may be used for an undergraduate mathematics course whose goal is to help students learn the fundamental mathematical process of looking at examples, making a definition, checking more examples, making conjectures, looking for counterxamples and refining conjectures, and then writing proofs.
+Many of the activities are self--contained, and so could be used individually in a different course or different context.
 
 The Git repository contains all LaTeX source code necessary for producing the materials for the course.
 It can be downloaded using the Download ZIP button.
