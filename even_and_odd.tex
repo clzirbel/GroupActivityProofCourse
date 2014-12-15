@@ -1,0 +1,98 @@
+\yourname
+
+\activitytitle{Even and odd}{Our first example of definitions, examples, theorems, and proofs}
+
+\overview{Definitions are important to read and understand by looking at examples.  Many proofs are little more than working with the definitions and rewriting things.  With a bit of practice, these become very routine.  This activity has you work through two definitions, a few examples, and then some proofs.  Everything relies on the definitions, so keep coming back to them.  We will use a similar model many times during the semester.}
+
+\definition{Even\label{evendef}}{An integer $n$ is {\em even} if there exists an integer $k$ for which $n = 2k$.}
+
+\definition{Odd\label{odddef}}{An integer $n$ is {\em odd} if there exists an integer $k$ for which $n = 2k+1$.}
+
+\example{Check that 12 meets the definition to be even.  Find the value of $k$ and write $12 = 2k$.}{0.4in}
+
+\example{Does $-9$ meet the definition to be odd?  Find the value of $k$ and write $-9 = 2k+1$.}{0.4in}
+
+\example{Does 0 meet the definition to be even?  Find the value of $k$.}{0.4in}
+
+\example{Does 1.73 meet the definition to be odd?  Explain.}{0.4in}
+
+\note{Suppose that $m$ is an integer.  Then $2m+1$ is an integer and it is odd because it meets the definition to be odd.  Also, $2m+2$ is even because it is an integer and can be rewritten as $2(m+1)$, which is of the form $2k$ where $k=m+1$, which is an integer.}
+
+\show{Suppose that $m$ is an integer.  Show that $2m+6$ is even by rewriting it until it meets the definition to be even.}{0.5in}
+
+\show{Suppose that $m$ is an integer.  Show that $4m + 9$ is odd by rewriting it until it meets the definition to be odd.}{0.5in}
+
+\stop{Compare your answers to the questions above with the other people in your group before you move on.  Resolve any differences in your answers.}
+
+\show{Suppose that $m$ is even.  Then $m = 2k$ for some integer $k$.
+Show that $m+8$ is even by rewriting it as 2 times an integer.}{1in}
+
+\note{You know perfectly well that the sum of two even numbers is even.  The next item guides you through a proof of this fact, using the definitions of even and odd above.}
+
+\guidedproof{Suppose that $m$ and $n$ are even.  Fill in the blanks to show that $m+n$ is even.\label{sumofevens}
+\blist{0.1in}
+\item There exist integers $j$ and $k$ such that \blank{0.75in} and \blank{0.75in}.
+\item Thus, $m + n = $ \blank{0.75in}.
+\item This number is even because \blank{3.5in}.
+\item We saw that if $m$ and $n$ are even, then $m+n$ is even.  
+We made no further assumption about $m$ and $n$.
+Thus, the sum of any two even numbers is even. 
+\elist
+}
+
+\guidedproof{Suppose that $m$ is even and $n$ is odd.
+Fill in the blanks to show that $mn$ is even.  
+Use the previous exercise as a model.
+\blist{0.1in}
+\item There exist \blank{2in} such that $m = $\blank{0.75in} and $n = $\blank{0.75in}.
+\item Thus, $mn = $\blank{4in}.
+\item This number is even because \blank{2in}.
+\item We saw that \blank{4in}.  We made no \\\blank{3in}.
+Thus, \blank{2.5in}.
+\elist
+}
+
+\prove{Let $m$ and $n$ be odd.  Follow the examples above as a model to show that $mn$ is odd by rewriting $mn$ until it meets the definition to be odd.  Good form is critically important in proofs.
+\blist{0.1in}
+\item
+\item
+\item
+\item
+\elist
+}{0.1in}
+
+\prove{Let $m$ and $n$ be odd.  Follow the examples above as a model to show that $m + n$ is even by rewriting it.  Good form is critically important in proofs.
+\blist{0.1in}
+\item
+\item
+\item
+\item
+\elist
+}{0.1in}
+
+\groupwork{Steps 1 and 3 in your proofs connect to the definitions of even and odd.  Write a sentence telling what happens in step 1 and in step 3.
+Make sure that every member of your group has gotten to this step.
+Compare your sentence to those written by the other people in your group, then work together to write the best version of the sentence that your group can.}{2in}
+
+\prove{Let $m$ be odd.  Follow the models above to prove that $m^2$ is odd.  Use good form.}{1.5in}
+
+\prove{Let $m$ be even.  Follow the models above to prove that $m^2$ is even.  Use good form.}{1.5in}
+
+\question{What does it mean that an integer is a multiple of 4?  Give your own definition analogous to the definitions of even and odd.}{0.5in}
+
+\prove{Let $m$ be even.  Show that $m^2 +2m + 4$ is a multiple of 4.}{1in}
+
+\question{Let $m$ be even.  Can $m^2 +2m + 4$ be a multiple of 8?  Explain.}{1in}
+
+\noindent
+{\bf Challenges.}  Here are some statements that are harder to prove, because they require a bit more than simply restating the definitions.
+See if you can make a good argument for them.
+
+\prove{If $m$ is an integer, then either $m$ is even or $m$ is odd. \Hint:  0 is even.  If $n$ is even, then $n+1$ is odd.  If $n$ is odd, then $n+1$ is even.  This tells us something about all positive integers.  If $n$ is even, then $-n$ is even.}{1.5in}
+
+
+
+\prove{If $m$ is an integer and $m^2$ is odd, then $m$ is odd.
+\Hint:  There are two cases to check, the case in which $m$ is even and the case in which $m$ is odd.}{1.5in}
+
+\vfill          % pad the rest of the page with white space

@@ -1,0 +1,76 @@
+\yourname
+
+\activitytitle{Absolute value and related functions}{A careful development of the properties of the absolute value function.}
+
+\overview{The absolute value function is easy to understand for numbers like 9 and $-13$, but it's harder to show its properties because our intuition works so hard to see all variables as having positive values.
+In this activity, we will not use the standard notation for the absolute value function and will have to keep our intuition at bay.
+We will instead rely completely on the definition.
+{\bf When you use a property of inequalities, cite it by number.}}
+
+\definition{Absolute value}{The function $f : \R \to \R$ defined by
+\[
+    f(x) = \left\{ \begin{array}{cl} x, & \mbox{if $x \geq 0$} \\
+                          -x, & \mbox{if $x < 0$} \end{array} \right.
+\]
+is called the {\em absolute value} function.}
+
+\notation{In this activity, do not use the standard notation for absolute value, not even once.
+Every time you work with the absolute value function, use and cite the definition.}
+
+\show{\label{absofproduct}Show that $f(ab) = f(a) f(b)$ for all real numbers $a$ and $b$.
+Follow the model.\\
+
+Let $a$ and $b$ be real numbers.
+There are four cases.
+\blist{0.5in}
+\item Suppose that $a \geq 0$ and $b \geq 0$.  Then $ab \geq 0$ so $f(ab) = ab$ and $f(a) = a$ and $f(b) = b$, so $f(ab) = ab = f(a)f(b)$.
+\item Suppose that $a \geq 0$ and $b < 0$.
+\item Suppose that $a < 0$ and $b \geq 0$.
+\item Suppose that $a < 0$ and $b < 0$.
+\elist
+In each case, we see that \blank{2in}.
+We made no further assumptions about \blank{1in}, thus \blank{3in}.}{0in}
+
+\show{Following the model above, show that $f(f(a)) = f(a)$ for all real numbers $a$.}{1in}
+
+\show{Show that $f(-a) = f(a)$ for all real numbers $a$.}{1in}
+
+\show{Show that $f(a-b) = f(b-a)$ for all real numbers $a$ and $b$.}{1in}
+
+\show{Show that $f(a) \geq 0$ for all real numbers $a$.}{1in}
+
+\show{Follow the model in \ref{absofproduct} to show that $f(a+b) \leq f(a) + f(b)$ for all real numbers $a$ and $b$.
+When $a$ and $b$ have different signs, consider two cases, $a+b \geq 0$ and $a+b < 0$.
+You will probably want to show that if $b < 0$, then $b < -b$.
+Make a good, solid argument using transitivity of $<$.}{3in}
+
+\show{Show that for real numbers $a$ and $b$, $f(a) \leq b$ if and only if $-b \leq a \leq b$.
+Remember that an ``if and only if'' proof has two directions.
+In both directions, you will have to consider two cases, $a \geq 0$ and $a < 0$.
+Note that the statement $-b \leq a \leq b$ is equivalent to ($-b \leq a$ and $a \leq b$).}{3in}
+
+\show{Show that for all real numbers $a$ and $b$, $f(a) \geq b$ if and only if ($a \geq b$ or $a \leq -b$).}{2in}
+
+\show{Show that for all real numbers $a$ and $b$, $f(a) \leq f(a-b) + f(b)$. {\bf Hint:} Look at $f((a-b)+b)$.}{1in}
+
+\show{Show that for all real numbers $a$ and $b$, $f(a) - f(b) \leq f(a-b)$ and also $f(b)-f(a) \leq f(b-a)$.}{1in}
+
+\show{Show that for all real numbers $a$ and $b$, $f(a-b) \geq f(f(a)-f(b))$.}{1in}
+
+\definition{Minimum function}{The function $h : [0,\infty) \to \R$ defined by 
+\[
+    h(x) = \left\{ \begin{array}{cl} x, & \mbox{if $x \leq 1$} \\
+                                     1, & \mbox{if $x > 1$} \end{array} \right.
+\]
+can be called the minimum function.}
+
+\show{Show that for all real numbers $a$, $h(a) = 0$ if and only if $a = 0$.}{1.5in}
+
+\show{Show that if $a \leq b$, then $h(a) \leq h(b)$.}{1.5in}
+
+\show{Show that if $h(a) < h(b)$, then $a < b$.}{1.5in}
+
+\show{Show that for all real numbers $a$ and $b$, $h(a+b) \leq h(a) + h(b)$.
+{\bf Hint:}  Use a proof by cases.  But what are the cases?}{0in}
+
+\vfill          % pad the rest of the page with white space

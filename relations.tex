@@ -1,0 +1,99 @@
+\yourname
+
+\activitytitle{Relations}{Often treated as the little brother to functions, relations have unsuspected depth.}
+
+\overview{You are already familiar with a number of relations, including $<, \leq, =, \geq,$ and $>$ for real numbers, plus $\subset$, $\subseteq$, and $=$ for sets.  Many other relations can be defined.  The most useful ones are called equivalence relations; they are analogous to equality for numbers and for sets.  They partition the space into equivalence classes, which are very useful in a number of ways.}
+
+\definition{Relation}{A {\em relation} on a set $X$ is a subset $S$ of $X \times X$.}
+
+\notation{Suppose that $S$ is a relation on a set $X$.
+That is, suppose that $S$ is a subset of $X \times X$, which means that $S$ is a set of points of the form $(x,y)$, where $x \in X$ and $y \in X$.
+Rather than write $(x,y) \in S$, we usually write $x \sim y$.
+How to read this out loud?  There is no perfect solution.  I would suggest that you read it as ``$x$ tilde $y$'' because $\sim$ is the tilde that appears above the n in some Spanish words.}
+
+\problem{
+You are going to write out the subsets of $\{1, 2, 3, 4\}$ and then draw arrows between them to indicate the proper subset relation.  You might want to lay the sets out in a nice order to make the arrows easy to draw and to read.
+What is the set $X$ on which this relation is defined?
+}{2in}
+
+\definition{Reflexive}{A relation $\sim$ is {\em reflexive} if $x \sim x$ for all $x$ in $X$.}
+
+\definition{Symmetric}{A relation $\sim$ is {\em symmetric} if $x \sim y$ implies $y \sim x$.}
+
+\definition{Transitive}{A relation $\sim$ is {\em transitive} if $x \sim y$ and $y \sim z$ implies $x \sim z$.}
+
+\note{Sometimes people have a hard time remembering the words reflexivity, symmetry, and transitivity.  Notice that they are in alphabetical order, and that they involve 1, 2, or 3 objects at a time, respectively.}
+
+\definition{Equivalence relation}{A relation $\sim$ is called an {\em equivalence relation} if it is reflexive, symmetric, and transitive.  Note that equality is an equivalence relation on the set of real numbers.}
+
+\definition{Equivalence class}{Suppose that $\sim$ is an equivalence relation.  Fix $x$ in $X$.  The set of all elements $y$ for which $x \sim y$ is called the {\em equivalence class containing $x$}.}
+
+
+\problem{Let $X = \Z^+$ and say that $x \sim y$ if $y$ is divisible by $x$.
+People often write $x | y$ for this relation and say that $x$ divides $y$.
+\blist{0.8in}
+\item Check whether this relation is reflexive.  If so, prove that it is, starting with ``Let $x \in \Z^+$.''  If not, give a counterexample.
+\item Check whether this relation is symmetric.  If so, prove that it is, starting with ``Let $x, y \in \Z^+$ and suppose that $x \sim y$.''  If not, give a counterexample.
+\item Check whether this relation is transitive. If so, prove that it is, starting with  ``Let $x, y, z \in \Z^+$ and suppose that $x \sim y$ and $y \sim z$.''  If not, give a counterexample.
+\item Thinking of the relation as a set of ordered pairs, write out ten different ordered pairs satisfying the relation, and graph them on the $xy$ plane.
+\elist
+}{0.5in}
+
+\problem{Consider all cities in the US that have population over 30,000.
+For each of the following relations, determine whether they are reflexive, symmetric, and/or transitive.  Provide a counterexample for any property that fails to hold.  If all three hold, the relation is an equivalence relation.  In that case, identify the equivalence classes and tell how many such classes there are.
+\blist{1.2in}
+\item Say that $x \sim y$ if the names of cities $x$ and $y$ start with the same letter.
+\item Say that $x \sim y$ if $x$ and $y$ are in the same state.
+\item Say that $x \sim y$ if cities $x$ and $y$ are within 50 miles of each other.
+\elist
+}{1.2in}
+
+\problem{Let $X$ be the set of all English words.
+Say that $x \sim y$ if the letters in $x$ and $y$ appear on the same number keys on a cell phone, in the same order.
+For example, BAR $\sim$ CAP.
+\blist{0.5in}
+\item Check whether this relation is reflexive.
+\item Check whether this relation is symmetric.
+\item Check whether this relation is transitive.
+\item If all three properties hold, describe the equivalence classes, and tell what the equivalence class of BAR is.
+\elist}{0.5in}
+
+
+\problem{
+Let $X = \Z$.
+Say that $x \sim y$ if $x$ and $y$ has the same remainder as $y$ when they are divided by 3.
+Then, for example, $13 \sim 19$ and $9 \sim 27$.
+\blist{0.5in}
+\item Show that this relation is reflexive, symmetric, and transitive.
+Do this in general, starting with ``Let.''
+\vspace*{0.8in}
+\item Describe all elements of the equivalence class containing 0.
+\item Describe the other equivalence classes.  How many are there?
+\elist
+}{0.3in}
+
+\problem{Consider the set $X$ of all non--zero 3--dimensional vectors.
+For $\vec{a}$ and $\vec{b}$ in $X$, say that $\vec{a} \sim \vec{b}$ if there exists a constant $c$ for which $\vec{a} = c \vec{b}$.
+\blist{0.8in}
+\item Show that this relation is reflexive, starting with ``Let.''  Tell what $c$ is.
+\item Show that this relation is symmetric.  You will need two values of $c$.
+\item Show that this relation is transitive.  Here there will be three values of $c$.
+\item This is an equivalence relation.  Describe the equivalence classes.  The collection of all equivalence classes is called {\em projective space}.
+\item Could you use the angle between lines to define a distance between equivalence classes?  What would the maximum distance be?
+\elist}{0in}
+
+\problem{Consider the set of all English words.
+Say that $x \sim y$ if one can be obtained from the other by changing exactly one letter.
+For example, BAT $\sim$ CAT but BAT $\nsim$ CAR.
+Check whether this relation is reflexive, symmetric, and/or transitive.
+Provide counterexamples if necessary.}{1in}
+
+\problem{Consider the set of all functions on the real line.
+That is, consider the set of all $f : \R \to \R$.
+Say that $f \sim g$ if $f$ and $g$ are equal except at a finite number of points.
+For example, if $f(x) = x^2$ and $g(x) = \left\{ \begin{array}{cl} x^2, & x \ne 0 \\ 5, & x = 0 \end{array} \right.,$ then $f \sim g$.
+Show that this is an equivalence relation.
+How can you describe the equivalence classes?}{1.5in}
+
+\note{Problems 10.1 and 10.3 from Daepp and Gorkin\DGreference~are particularly good at this stage in the course.}
+\vfill          % pad the rest of the page with white space
