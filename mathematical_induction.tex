@@ -1,0 +1,109 @@
+\yourname
+
+\activitytitle{Mathematical Induction}{Proving that a claim is true for all $n$}
+
+\overview{One important task in mathematics is to find and distinguish regular patterns or sequences. The main method we use to prove certain propositions involving positive integers or about sequences is mathematical induction. Induction is also a very useful tool in computer science since a feature of many programs is repetition of a sequence of statements.}
+
+\theorem{\bf Mathematical induction\label{MItheorem}}\\
+{For an integer $n$, let $P(n)$ denote an assertion.
+\begin{itemize}
+\item[(i)] (The basis step) Prove $P(1)$ is true.
+\item[(ii)] (The inductive step) for any positive integer $k$, assume that $P(k)$ is true, then prove $P(k+1)$ is true.
+\end{itemize}
+From the above two steps, we have $P(n)$ is true for all positive integers $n$.}
+
+\example{Write out the sum of the first $n$ positive odd integers with $n=1,2,3,4,5$, respectively and make a conjecture about the formula for the sum for any given positive integer $n$.
+For example, when $n=3$, the sum is $1+3+5$.
+\label{examplesum}}{0.05in}
+\centerline{
+\begin{tabular}[c]{c|c|c|c|c|c}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $n$ & 1 & 2 & 3 & 4 & 5 \\
+  \hline
+  sum & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} \\
+\end{tabular}
+}
+
+\guidedproof{Prove the conjecture in \ref{examplesum} using mathematical induction.
+Let $P(n)$ be the assertion $1+3+5+\cdots+(2n-1) =$ \blank{0.5in}.
+\blist{0.1in}
+\item Show that $P(n)$ is true when $n=1$:
+\item Write out what $P(k+1)$ is:
+\item The inductive step: Let $k\in\mathbb{Z}^+$. Assume $P(k)$ is true, check $P(k+1)$:
+\vspace{1in}
+\elist
+By \blank{3 in} we conclude that $1+3+5+\cdots+(2n-1)=$ \blank{0.5in} for all positive integers $n$.
+}
+
+\show{Show that $3^n$ is odd for all $n\in \mathbb{N}$.
+\blist{0.1in}
+\item[0.] State $P(n)$:
+\item[1.] Basis step:
+\item[2.] Inductive step:
+\elist
+\vspace{0.3in}
+}{0.05in}
+
+\notation{The standard notation for the sum of $a_1,a_2,\ldots,a_n$ is $a_1+a_2+a_3+\cdots+a_n=\sum_{k=1}^{n}a_k$ and the notation for the product of $a_1,a_2,\ldots, a_n$ is $a_1\cdot a_2 \cdot a_3 \cdots \cdot a_n = \prod_{k=1}^n a_k$.}
+
+\example{Rewrite the conjecture in Example \ref{examplesum} by using the standard notation for the sum.}{0.4in}
+
+\show{Show that $\sum_{j=1}^n (4j-3) = n(2n-1)$ for all positive integers $n$.
+\blist{0.1in}
+\item[0.] State $P(n)$:
+\item[1.] Basis step:
+\item[2.] Inductive step:
+\elist
+}{0.8in}
+
+\show{Use mathematical induction to show that $\sum_{j=1}^n 5^j = \frac{5}{4} (5^n-1)$ for all positive integers $n$.
+\blist{0.1in}
+\item[0.] State $P(n)$:
+\item[1.] Basis step:
+\item[2.] Inductive step:
+\elist
+}{0.8in}
+
+\stop{Compare your proofs to the problems above with the other people in your group before you move on.}
+
+\note{In the basis step, it needs not always begin with $n=1$, for example, it can begin with $n=-3, n= 0, n = 100$.}
+
+\show{Use mathematical induction to show that $2n+1 < 2^n$ for all integers $n$ with $n \geq 4$.\\
+\blist{0.1in}
+\item[0.] State $P(n)$:
+\item[1.] Basis step:
+\item[2.] Inductive step:
+\elist
+}{0.8in}
+
+\show{Use mathematical induction to show that $5^n > 2^n + 3^n$ for all integers $n$ with $n \geq 2$.}{1.25in}
+
+\show{Use induction to prove Bernoulli's inequality: For $x\in \mathbb{R}$, if $1+x >0$, then $(1+x)^n \geq 1+nx$ for all $n = 0, 1, 2, \ldots$.}{1.25in}
+
+\show{Use induction to prove that $\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \cdots+\frac{1}{n\cdot (n+1)} = \frac{n}{n+1}$ for all positive integers $n$. \label{sumeq}}{1.25in}
+
+\note{In Problem \ref{sumeq}, we should be able to show the statement is true without using mathematical induction.  How?}
+
+\show{For each $n\in \mathbb{Z}^+$, let $P(n)$ denote the assertion ``$n^2+5n+1$ is an even integer.''
+\blist{0.05in}
+\item[(a)] Prove that $P(k+1)$ is true whenever $P(k)$ is true.
+\item[(b)] For which $k$ is $P(k)$ actually true? What is moral of this exercise?
+\elist
+}{1in}
+
+\show{Use induction to prove that 6 divides $n^3-n$ whenever $n$ is a natural number.}{1.25in}
+
+\show{Use induction to prove that $11^n-4^n$ is divisible by 7 when $n$ is a natural number.}{1.25in}
+
+\show{Prove that $1^2-2^2+3^2-4^2+5^2+\cdots-(2n)^2+(2n+1)^2 = (n+1)(2n+1)$ for all natural numbers $n$. \HintNN{ It would be helpful to find out $P(0)$ and $P(1)$ first.}}{1.25in}
+
+\note{We also can use mathematical induction to show some propositions about sets.}
+
+\show{Prove that if $A_1,A_2,\ldots,A_n$ and $B_1,B_2,\ldots,B_n$ are sets such that $A_j \subseteq B_j$ for $j=1,2,\ldots, n$, then $\bigcap_{j=1}^n A_j \subseteq \bigcap_{j=1}^n B_j$. \HintNN{ In the initial step, show that if $A_1 \subseteq B_1$ and $A_2 \subseteq B_2$, then $A_1 \cap A_2 \subseteq B_1 \cap B_2$.}\label{set1}}{1.5in}
+
+\show{Prove that if $A_1,A_2,\ldots,A_n$ and $B$ are sets, then $(A_1 \cup A_2 \cup \cdots \cup A_n)\cap B = (A_1 \cap B) \cup (A_2 \cap B) \cdots \cup (A_n \cap B)$ for any given positive integer $n$. \HintNN{ In the initial step, we have to show Distributive Property of Intersection over Union of sets: $(A_1 \cup A_2) \cap B = (A_1 \cap B) \cup (A_2 \cap B)$. You will use this property in the inductive step. \label{set2}}}{1.5in}
+
+\note{In \ref{set1} and \ref{set2}, instead of showing $P(1)$ is true, we show $P(2)$ is true in the initial step. But why? Explain!}
+
+\vfill          % pad the rest of the page with white space
+
