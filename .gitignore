@@ -1,0 +1,4 @@
+# Files with the following extensions are not uploaded to Git
+*.aux
+*.log
+*.dvi
