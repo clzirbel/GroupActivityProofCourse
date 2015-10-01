@@ -66,7 +66,7 @@
 
 % ----------------------------- Facilitate repeating things with no number (NN)
 
-\newcommand{\definitionNN}[2]{\noindent{\bf Definition. #1.} #2}
+\newcommand{\definitionNN}[2]{\noindent{\bf Definition #1.} #2}
 \newcommand{\notationNN}[1]{\begin{notationX}#1\end{notationX}}
 \newcommand{\exampleNN}[2]{\noindent{\bf Example.} #1 \\ \vspace*{#2}} \newcommand{\showNN}[2]{\noindent{\bf Show.} #1 \\ \vspace*{#2}}
 \newcommand{\recallNN}[2]{\noindent{\bf Recall.} #1 \\ \vspace*{#2}}
@@ -103,19 +103,33 @@
 
 % --------------------------------------------- what to process
 
-%\includeonly{final_quiz}
+%\includeonly{even_and_odd}
+%\includeonly{vector_sum_dot_product}
+%\includeonly{division_algorithm}
+%\includeonly{pigeonhole_principle}
+%\includeonly{DG_reading_assignment_chapter_3}
+%\includeonly{DG_reading_assignment_chapter_4}
+%\includeonly{even_and_odd_and_vector_quiz}
+%\includeonly{DG_reading_assignment_chapter_5}
+\includeonly{DG_reading_assignment_chapter_6}
+
+
+%\includeonly{practicing_creativity}
+%\includeonly{practicing_creativity_2}
+%\includeonly{square_roots_are_irrational}
 
 % --------------------------------------------------- begin document
 \begin{document}        % What came before is the 'preamble'
 
 \include{first_day_script}
 \include{even_and_odd}
-\include{syllabus}
+\include{background}
+\include{syllabus2015}
 \include{vector_sum_dot_product}
-\include{practicing_creativity}
-\include{practicing_creativity_2}
 \include{quantifier_assessment}
 \include{division_algorithm}
+\include{pigeonhole_principle}
+\include{even_and_odd_and_vector_quiz}
 \include{vector_sum_dot_product_quiz}
 \include{class_survey_1}
 \include{square_roots_are_irrational}
@@ -137,10 +151,10 @@
 \include{induction_quiz}
 \include{absolute_value}
 \include{functions}
-\include{Pigeonhole_Principle}
 \include{final_quiz_review}
 \include{final_quiz}
 \include{DG_reading_assignment_chapter_1}
+\include{DG_reading_assignment_chapter_1_alphabet}
 \include{DG_reading_assignment_chapter_2}
 \include{DG_reading_assignment_chapter_3}
 \include{DG_reading_assignment_chapter_4}
