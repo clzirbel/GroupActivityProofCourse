@@ -1,0 +1,127 @@
+\documentclass[a6paper]{article}
+\pagestyle{empty}
+\usepackage[margin=2mm]{geometry}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{amsmath}    % allows AMS math things like the cases environment
+\usepackage{amssymb}    % allows the use of AMS symbols like blackboard bold
+\usepackage{amsthm}     % allows AMS definitions for theorems, proofs, etc.
+\theoremstyle{definition}  % use roman font in theorems, definitions, etc.
+
+\newtheorem{theorem}{\bf Theorem}                  % Allow numbered theorems
+\newtheorem{proposition}[theorem]{\bf Proposition} % Number props with theorems
+\newtheorem{remark}[theorem]{\bf Remark}           % Number remarks with theorems
+\newtheorem{definitionX}[theorem]{{\bf Definition}}
+\newtheorem{notationX}[theorem]{\bf Notation}
+\newtheorem{exampleX}[theorem]{\bf Example}
+\newtheorem{problemX}[theorem]{\bf Problem}
+\newtheorem{showX}[theorem]{\bf Show}
+\newtheorem{recallX}[theorem]{\bf Recall}
+\newtheorem{noteX}[theorem]{\bf Note}
+\newtheorem{guidedproofX}[theorem]{\bf Guided proof}
+\newtheorem{proveX}[theorem]{\bf Prove}
+\newtheorem{groupworkX}[theorem]{\bf Group work}
+\newtheorem{questionX}[theorem]{\bf Question}
+\newtheorem{challengeX}[theorem]{\bf Challenge}
+
+%\newtheorem{theorem}[equation]{\bf Theorem} % this would number theorems
+                                             % with equations, as some people like
+%\numberwithin{equation}{section}  % equation 3 in section 2 is (2.3)
+
+% ------------------------------------------ new commands
+
+\newcommand{\coursenumber}{Math (insert course number here)}
+\newcommand{\coursename}{Mathematical Foundations and Techniques}
+
+\newcommand{\yourname}{\hfill {\bf Your name: \underline{\hspace{2.5in}}}
+%\vspace*{-0.1in}
+}
+
+\newcommand{\anonymous}{\hfill {\bf Anonymous!}}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\newcommand{\activitytitle}[2]{\noindent {\bf \LARGE #1}\\\noindent #2\vspace*{0.1in}}
+
+\newcommand{\overview}[1]{\noindent{\bf \Large Overview}\\\framebox{\parbox{7in}{#1}}}
+
+\newcommand{\definition}[2]{\begin{definitionX}{\bf #1.} #2\end{definitionX}}
+\newcommand{\notation}[1]{\begin{notationX}#1\end{notationX}}
+\newcommand{\example}[2]{\begin{exampleX}#1\end{exampleX}\vspace*{#2}}
+\newcommand{\problem}[2]{\begin{problemX}#1\end{problemX}\vspace*{#2}}
+\renewcommand{\show}[2]{\begin{showX}#1\end{showX}\vspace*{#2}}
+\newcommand{\recall}[2]{\begin{recallX}#1\end{recallX}\vspace*{#2}}
+\newcommand{\note}[1]{\begin{noteX}#1\end{noteX}}
+\renewcommand{\stop}[1]{\noindent{\bf \Large \underline{Stop.}} #1}
+\newcommand{\Hint}{{\bf Hint}}
+\newcommand{\guidedproof}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
+\newcommand{\prove}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
+\newcommand{\groupwork}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
+\newcommand{\question}[2]{\begin{questionX}#1\end{questionX}\vspace*{#2}}
+\newcommand{\challenge}[2]{\begin{challengeX}#1\end{challengeX}\vspace*{#2}}
+
+% ----------------------------- Facilitate repeating things with no number (NN)
+
+\newcommand{\definitionNN}[2]{\noindent{\bf Definition. #1.} #2}
+\newcommand{\notationNN}[1]{\begin{notationX}#1\end{notationX}}
+\newcommand{\exampleNN}[2]{\noindent{\bf Example.} #1 \\ \vspace*{#2}} \newcommand{\showNN}[2]{\noindent{\bf Show.} #1 \\ \vspace*{#2}}
+\newcommand{\recallNN}[2]{\noindent{\bf Recall.} #1 \\ \vspace*{#2}}
+\newcommand{\noteNN}[1]{\begin{noteX}#1\end{noteX}}
+\newcommand{\HintNN}{{\bf Hint}}
+\newcommand{\guidedproofNN}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
+\newcommand{\proveNN}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
+\newcommand{\groupworkNN}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
+\newcommand{\questionNN}[2]{\begin{questionX}#1\end{questionX}\vspace*{#2}}
+
+\newcommand{\blist}[1]{\begin{list}{{\bf \arabic{enumi}.}}{\usecounter{enumi}\setlength{\itemsep}{#1}}} 
+                                     % begin a numbered list.  The optional
+                                     % argument is the spacing between items
+\newcommand{\elist}{\end{list}}      % end the list
+
+\newcommand{\balist}[1]{\begin{list}{{\bf \alph{enumii}.}}{\usecounter{enumii}\setlength{\itemsep}{#1}}} 
+                                     % begin a numbered list.  The optional
+                                     % argument is the spacing between items
+\newcommand{\ealist}{\end{list}}      % end the list
+
+\newcommand{\vect}[1]{\langle #1 \rangle}   % angle brackets for a vector
+\newcommand{\tvec}[1]{\vect{#1_1, #1_2, #1_3}}
+\newcommand{\qq}{\quad\quad}
+\newcommand{\qqq}{\quad\quad\quad}
+\newcommand{\qqqq}{\quad\quad\quad\quad}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Rp}{\R^{+}}
+
+\newcommand{\DGreference}{\footnote{Reading, Writing, and Proving: A Closer Look at Mathematics, 2011, by Ulrich Daepp and Pamela Gorkin}}
+
+% --------------------------------------------- what to process
+
+\includeonly{DG_reading_assignment_chapter_5}
+
+% --------------------------------------------------- begin document
+\begin{document}        % What came before is the 'preamble'
+
+\include{syllabus}
+\include{homework_problems_week_12}
+\include{DG_reading_assignment_chapter_1}
+\include{DG_reading_assignment_chapter_2}
+\include{DG_reading_assignment_chapter_3}
+\include{DG_reading_assignment_chapter_4}
+\include{DG_reading_assignment_chapter_5}
+\include{DG_chapter_5_quiz}
+\include{DG_reading_assignment_chapter_6}
+\include{DG_reading_assignment_chapter_7}
+\include{DG_reading_assignment_chapter_8}
+\include{DG_reading_assignment_chapter_9}
+\include{DG_reading_assignment_chapter_10}
+\include{DG_reading_assignment_chapter_18}
+
+%-----------------------------------------------------------------------------
+
+\end{document}  % end of the document
+
