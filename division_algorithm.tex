@@ -1,29 +1,33 @@
 \yourname
 
-\activitytitle{The Division Algorithm}{Dividing integers with remainders will form the basis for several things we want to prove}
+\activitytitle{The Division Algorithm}{Dividing integers with remainders will form the basis for several things we want to prove.}
 
-\overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  We will investigate a procedure for doing this.  Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persion mathematician al-Khwarizmi, who worked on procedures for arithmetic.  The division algorithm itself dates to Euclid's {\em Elements} from around 300 BC.}
+\overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  We will investigate a procedure for doing this, which is called division, even though there will be no fractions in this activity.  Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persion mathematician al-Khwarizmi, who worked on procedures for arithmetic.  The division algorithm itself dates to Euclid's {\em Elements} from around 300 BC.}
 
-\example{\label{37among5} You are the dealer in a card game that has 37 cards.  (It's not a standard deck of cards.)  Everyone needs to end up with the same number of cards.  Dealing one card to each leaves 32.  Write down the numbers 37, 32, and continue until you cannot deal out any more cards evenly.  Let $r$ denote the number of cards left at the end, and let $q$ denote the number of times you subtracted 5, which is also the number of cards that each person got.  You see that $37 - 5q = r$, which you can rewrite as $37 = 5q + r$.  Fill in $q$ and $r$.}{1.5in}
+\example{\label{37among5} You are the dealer in a card game that has 37 cards.  (It's not a standard deck of cards.)  There are 5 people playing, and everyone needs to end up with the same number of cards.  Dealing one card to each player leaves 32 cards in your hands.  Write down the numbers 37, 32, and continue until you cannot deal out any more cards evenly.  Let $r$ denote the number of cards left at the end, and let $q$ denote the number of times you subtracted 5, which is also the number of cards that each person got.  You see that $37 - 5q = r$, which you can rewrite as $37 = 5q + r$.  Fill in $q$ and $r$ and write out these two equations.}{1.2in}
 
-\example{Now you're playing a card game that you have not played before, and you haven't taken the time to count how many cards are in the deck.  You are the dealer again, and there are 5 people who need cards.  Let $n$ denote the number of cards in the deck.  Repeat the procedure from the previous example until you can no longer deal out cards evenly.  Again, let $r$ denote the number of cards you have left at the end and $q$ denote the number of cards that each person got.  What do we know for sure about the possible values of $r$?  What do we know for sure about the possible values of $q$?  Write the relationship between $n$, 5, $q$, and $r$ analogous to $37 - 5q = r$ and the expression analogous to $37 = 5q + r$.  The last expression accounts for where all of the $n$ cards have gone; some are dealt out, some are in your hands.  Write out a sentence that explains this.}{2in}
+\example{Now you're playing a card game that you have not played before, and you haven't taken the time to count how many cards are in the deck.  You are the dealer again, and there are 5 people who need cards.  Let $n$ denote the number of cards in the deck.  Imagine that you repeat the procedure from the previous example until you can no longer deal out cards evenly.  Again, let $r$ denote the number of cards you have left at the end and $q$ denote the number of cards that each person got.  What do we know for sure about the possible values of $r$?  What do we know for sure about the possible values of $q$?  Write the relationship between $n$, 5, $q$, and $r$ analogous to $37 - 5q = r$ and the expression analogous to $37 = 5q + r$.  The last expression accounts for where all of the $n$ cards have gone; some are dealt out, some are left in your hands.  Write out a sentence that explains this.}{1.5in}
 
 \example{Continuing to divide by 5, complete this sentence:  Given an integer $n \geq 0$, there exist integers $q$ and $r$ where (list properties of $q$ here) \blank{2in} and (list properties of $r$ here) \blank{2in}, such that (write the relationship between $n$, $q$, and $r$ analogous to $37 = 5q + r$) \blank{2in}.}{0in}
 
-\example{\label{positivepositivedivision} Now let's divide by $k$, where $k > 0$ is an integer.
-Rewrite Example \ref{37among5}, replacing 37 by $n$ and replacing 5 by $k$, and tell what you can about the possible values of $q$ and $r$ and the final relationship between $n, k, q,$ and $r$.  Your goal is to write a general statement about how to divide $n$ objects among $k$ people, keeping track of the possible values of the remainder $r$.}{2in}
+\example{\label{positivepositivedivision} 
+Once again, we have $n$ cards, but now there are $k$ people playing, where $k > 0$ is an integer.
+Your fried is dealing.
+Write instructions telling your friend how to deal the cards out, when to stop dealing, and say what you can about how many cards she will have left over and how many cards each person will get.
+Using $q$ to denote the number of cards each person gets and $r$ to denote the number of cards left over, write out the relationship between $n, k, q,$ and $r$, and write inequalities concerning $q$ and $r$.}{2in}
 
 \stop Compare your work to the others in your group.  Work to get the best possible phrasing of \ref{positivepositivedivision}.
 
-\question{What happens when $k=0$?}{1in}
+\question{What happens when $k=0$?  Can you satisfy $n = qk + r$?  What goes wrong?}{1in}
 
-\note{You dealt $n$ cards to $k$ people.  Each one got $q$ cards and you had $r$ cards left over.  Could the numbers have worked out any other way?
-In \ref{positivepositivedivision}, you have shown that when you divide $n$ objects among $k$ people, you can write $n = qk + r$, where $q$ and $r$ are integers and $r$ can take values 0 to $k-1$.
-Suppose that, using some other procedure, someone else was able to write $n = ak + b$ where $a$ and $b$ are integers and $b$ can take values 0 to $k-1$.
-This would also be a way to divide $n$ objects evenly among $k$ people.
-{\bf Must these two ways in fact be the same?}
-Our goal is to show that they are, that $a = q$ and that $b = r$.
-This is called {\em uniqueness}.  It will take a few steps.}
+\note{As above, suppose that $n$ and $k$ are integers that are greater than 0.
+Suppose you find integers $q$ and $r$ for which $n = qk + r$ and $0 \leq r < k$.
+Suppose your friend tries to do the same thing and finds integers $q_2$ and $r_2$ for which $n = q_2 k + r_2$ and $0 \leq r_2 < k$.
+Must it be the case that $q = q_2$ and $r = r_2$?
+That is, are the values of $q$ and $r$ {\em unique}?
+If you think about dealing $n$ cards to $k$ people, it's pretty clear that you and your friend will get the same values of $q$ and $r$, but how could we see this without thinking about card dealing?
+It will take a few steps.
+}
 
 \show{Suppose that $r$ and $b$ are integers for which $0 \leq r < k$ and $0 \leq b < k$.
 Carefully combine these inequalities to show that $-k < r-b < k$.
