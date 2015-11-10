@@ -5,24 +5,38 @@
 \overview{Sets are absolutely fundamental to mathematics.
 This chapter focuses on building up set identities, relationships between sets that are always true.}
 
-\problem{Let $A$ and $B$ be sets.  Show that $(A \cup B)^{c} = A^{c} \cap B^{c}$ by showing set inclusion both ways.  This is one of de Morgan's laws.  Draw a really nice Venn diagram to illustrate.}{2in}
+\problem{Let $A$ and $B$ be sets.  Show that $(A \cup B)^{c} = A^{c} \cap B^{c}$ by showing set inclusion both ways.  The first part is done for you.  This is one of de Morgan's laws.  Draw a really nice Venn diagram to illustrate.\\
+\vspace*{-0.3in}
+\begin{itemize}
+\item Let $x \in (A \cup B)^{c}$.  
+Then $x \notin A \cup B$.  
+So $x \notin A$ and $x \notin B$.  
+That means that $x \in A^{c}$ and $x \in B^{c}$, and so $x \in A^{c} \cap B^{c}$.  
+Since $x$ was arbitrary, $(A \cup B)^{c} \subseteq A^{c} \cap B^{c}$.
+
+\item Let $x \in A^{c} \cap B^{c}$.
+
+\end{itemize}}{1in}
 
 \problem{Let $A$ and $B$ be sets.  Show that $(A \cap B)^{c} = A^{c} \cup B^{c}$ by showing set inclusion both ways.  This is the other one of de Morgan's laws.  Draw a really nice Venn diagram to illustrate.}{2in}
 
 \problem{\label{setsaslogic}Let $A$ and $B$ be sets.  Let $P$ be the logical statement $x \in A$, and let $Q$ be the logical statement $x \in B$.
-Use $P$ and $Q$ and logic symbols to fill in the simplest expressions:
+Use $P$ and $Q$ and logic symbols ($\wedge$ for {\em and}, $\vee$ for {\em or}, $\lnot$ for {\em not}) to translate statements about sets into logic statements:
 \blist{0.1in}
-\item $x \in A \cup B$ is \blank{1in}
-\item $x \in (A \cup B)^{c}$ is $\lnot (P \wedge Q)$
-\item $x \in A^c$ is \blank{1in}
-\item $x \in B^c$ is \blank{1in}
-\item $x \in A^c \cap B^c$ is \blank{1in}
+\item $x \in A \cup B$ is \blank{1.5in}
+\item $x \in A^c$ is \blank{1.5in}
+\item $x \in B^c$ is \blank{1.5in}
+\item $x \in A^c \cap B^c$ is \blank{1.5in}
+\item $x \in (A \cup B)^{c}$ is \blank{1.5in}
 \elist
-Make a truth table for $P$, $Q$, and each of the other logical statements here to establish that $x \in (A \cup B)^c$ is logically equivalent to $x \in A^c \cap B^c$.
+\pagebreak
+
+\noindent
+In the white space above and to the right, make a truth table for $P$, $Q$, and each of the other logical statements in the previous problem to establish that $x \in (A \cup B)^c$ is logically equivalent to $x \in A^c \cap B^c$.
 Compare the truth values in the columns corresponding to $x \in (A \cup B)^c$ to the Venn diagram you made above.  Explain how they agree.
 }{0in}
 
-\problem{Let $A$ and $B$ be sets.  Use the approach of the previous exercise to show that $x \in (A \cap B)^{c}$ is logically equivalent to $x \in A^{c} \cup B^{c}$.  Compare the truth table to the Venn diagram again.}{2in}
+\problem{Let $A$ and $B$ be sets.  Follow the previous exercise to use a truth table to show that $x \in (A \cap B)^{c}$ is logically equivalent to $x \in A^{c} \cup B^{c}$.  Compare the truth table to the Venn diagram again.}{2in}
 
 \problem{Let $D, E,$ and $F$ be sets.
 Use one of de Morgan's laws that you showed above to establish that $(D \cup E \cup F)^c = D^c \cap E^c \cap F^c$.
@@ -33,21 +47,25 @@ This proof works by rewriting, not by showing inclusion both ways.
 Use one of de Morgan's laws to show that $(D \cap E \cap F)^c = D^c \cup E^c \cup F^c$.}{1.5in}
 
 \problem{Let $A, B,$ and $C$ be sets.
-Use a proof by cases to show that $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.  Remember to show inclusion both ways.
-Organize your writing carefully to make the steps of this argument really clear.}{3in}
+Use logical statements $P, Q,$ and $R$ and a truth table to show that $x \in A \cup (B \cap C)$ is logically equivalent to $x \in (A \cup B) \cap (A \cup C)$.  Be sure to define $P$, $Q$, and $R$ at the beginning.}{2in}
 
 \problem{Let $A, B,$ and $C$ be sets.
-Use logical statements $P, Q,$ and $R$ and a truth table to show that $x \in A \cup (B \cap C)$ is logically equivalent to $x \in (A \cup B) \cap (A \cup C)$.  Be sure to define $P$, $Q$, and $R$ at the beginning.}{2.5in}
+Show that $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ by showing inclusion both ways.
+When you encounter a union, use a proof by cases.
+For example, if you know that $x \in A \cup B$, one case is that $x \in A$, the other is that $x$ is not in $A$, but $x \in B$.
+Organize your writing carefully to make the steps of this argument really clear.}{3in}
 
-\definition{Symmetric difference}{Let $A$ and $B$ be sets.  The {\em symmetric difference} of $A$ and $B$ is the set $A \bigtriangleup B = (A \backslash B) \cup (B \backslash A)$.}
+\definition{Set difference}{Let $A$ and $B$ be sets.  The {\em set difference} $A \backslash B$ is the set $A \cap B^{c}$, which is all points that are in $A$ but not in $B$.  Draw a Venn diagram to illustrate this definition.}
 
-\problem{Let $A$ and $B$ be sets.  Show that $A \bigtriangleup B = B \bigtriangleup A$ by showing set inclusion both ways.  Draw a nice Venn diagram to illustrate.}{2in}
+\definition{Symmetric difference}{Let $A$ and $B$ be sets.  The {\em symmetric difference} of $A$ and $B$ is the set $A \bigtriangleup B = (A \backslash B) \cup (B \backslash A)$.  Draw a Venn diagram to illustrate this definition.}
 
 \problem{Consider again the logical statements from \ref{setsaslogic}.  Write a logical statement that is equivalent to $x \in A \bigtriangleup B$.
 Make a truth table with 4 rows, labeled 1, 2, 3, 4, and three columns, one for $x \in A$, one for $x \in B$, and the third for $x \in A \bigtriangleup B$.
 Draw a Venn diagram and label the regions in it 1, 2, 3, 4 so that they correspond to the truth table.}{1in}
 
-\problem{Let $A, B,$ and $C$ be sets.  Show that $(A \bigtriangleup B) \bigtriangleup C = A \bigtriangleup (B \bigtriangleup C)$ in these ways.
+\problem{Let $A$ and $B$ be sets.  Show that $A \bigtriangleup B = B \bigtriangleup A$ by showing set inclusion both ways.  Draw a nice Venn diagram to illustrate.}{2in}
+
+\problem{Let $A, B,$ and $C$ be sets.  Show that $(A \bigtriangleup B) \bigtriangleup C = A \bigtriangleup (B \bigtriangleup C)$ in three ways.
 \blist{0.1in}
 \item Draw separate Venn diagrams for the two sets.
 \item Show set inclusion both ways.

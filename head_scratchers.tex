@@ -1,6 +1,6 @@
 \yourname
 
-\activitytitle{The Division Algorithm}{Dividing integers with remainders will form the basis for several things we want to prove.}
+\activitytitle{Head Scratchers}{Dividing integers with remainders will form the basis for several things we want to prove.}
 
 \overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  We will investigate a procedure for doing this, which is called division, even though there will be no fractions in this activity.  Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persion mathematician al-Khwarizmi, who worked on procedures for arithmetic.  The division algorithm itself dates to Euclid's {\em Elements} from around 300 BC.}
 
@@ -29,39 +29,36 @@ If you think about dealing $n$ cards to $k$ people, it's pretty clear that you a
 It will take a few steps.
 }
 
-\show{\label{remainderinequality} Suppose that $r$ and $b$ are integers for which $0 \leq r < k$ and $0 \leq b < k$.
+\show{Suppose that $r$ and $b$ are integers for which $0 \leq r < k$ and $0 \leq b < k$.
 Carefully combine these inequalities to show that $-k < r-b < k$.
 Your goal is to provide a crystal clear argument with no extra steps.
 You can add inequalities that run the same direction; for example, if $a < b$ and $c < d$, then $a+c < b+d$.
 }{2in}
 
-\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers, that $n \geq 0$ and $k > 0$, and that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$ and that $0 \leq r < k$ and $0 \leq r_2 < k$.
-Set $qk + r$ equal to $q_2 k + r_2$ and use \ref{remainderinequality} argue that $q = q_2$ and $r = r_2$.
-It will probably not be obvious how to get started; this proof requires a spark of genius.
-Use scratch paper, write down everything you know, including \ref{remainderinequality}, and then write a final argument here.
-}{2.6in}
+\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers, that $k > 0$, and that $q$, $r$, $a$, and $b$ are integers such that $n = qk + r$ and $n = ak + b$ and that $r$ and $b$ take values between 0 and $k-1$.
+Set $qk + r$ equal to $ak + b$ and argue that $q = a$ and $r = b$.
+Work on scratch paper and then write a final argument here.
+Take the time to write a clear argument that your whole group likes.
+If you use a proof by contradiction, say so.
+If you use a proof by cases, say so.}{3in}
 
-\theorem{\label{divisionalgorithm}{\bf The Division Algorithm.} Let $n$ and $k$ be integers greater than 0.
+\theorem{{\bf The Division Algorithm.} Let $n$ and $k$ be integers greater than 0.
 There are two parts to the theorem.
 \blist{0in}
-\item {\bf Existence.} There exist integers $q$ and $r$ for which $n = qk + r$ and for which $0 \leq r < k$.
+\item {\bf Existence.} There exist unique integers $q$ and $r$ for which $n = qk + r$ and for which $0 \leq r < k$.
 \item {\bf Uniqueness.}  The numbers $q$ and $r$ are unique; $n = qk + r$ is the only way to write $n$ as a multiple of $k$ plus a remainder from $0, 1, 2, \ldots, k-1$.
 \elist
 The number $q$ is called the {\em quotient} and $r$ is called the {\em remainder}.
-You have proven this theorem above in two problems.
-The existence part was proven in \blank{0.8in}.  The uniqueness part was proven in \blank{0.8in}.
+You have proven this theorem above.
+Identify where the existence part was proven, and where the uniqueness part was proven.
 }
 
-\example{Rewrite Theorem \ref{divisionalgorithm} for the case where $k=2$.
-Be specific about the possible values of $r$.}{0.6in}
+\prove{Let $n$ be an integer greater than 0.
+Use the existence part of the division algorithm to show that $n$ must be even or $n$ must be odd.
+That is, it must be at least one of them.}{2in}
 
 \prove{Let $n$ be an integer greater than 0.
-Recall the definitions of even and odd.
-Use the existence part of the division algorithm with $k=2$ to show that $n$ must satisfy at least one of these definitions.}{0.8in}
-
-\prove{Let $n$ be an integer greater than 0.
-Use the uniqueness part of the division algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, not both.
-}{0in}
+Use the division algorithm to divide $n$ by 2 and use the uniqueness part to conclude that $n$ cannot be both even and odd.}{2in}
 
 \note{Now we will divide negative numbers by positive numbers, with remainder.}
 
@@ -74,59 +71,38 @@ How does it differ from division of a positive number with remainder?}{2in}
 \prove{Let $n$ be an integer less than 0.
 Let $k$ be an integer greater than 0.
 Add $k$ to $n$ repeatedly until you reach a number between 0 and $k-1$.
-Can you be sure that you will ever get all the way to non-negative numbers?
+Can you be sure that you will ever get all the way to 0?
 Can you be sure that you don't jump over the numbers $0, 1, \ldots, k-1$ and keep adding $k$ forever?
 Use the result to argue that you can write $n + pk = r$ for some integer $p$, and rearrange it to read $n = qk + r$.
-What do you know about the values of $q$ and $r$?
+What do you know about the possible values of $q$ and $r$?
 }{2in}
 
 \prove{Let $n$ be an integer less than 0 and let $k$ be an integer greater than 0.
-Scrutinize your proof of \ref{DivisionAlgorithmUniqueness}.
-The problem assumed that $n \geq 0$, but where did the proof use $n \geq 0$?
-If it did not, then the proof was more general than we needed at the time.
-What can we conclude about uniqueness when writing $n = qk + r$ for negative values of $n$?
-}{0in}
-\pagebreak
+Argue that there exist {\em unique} integers $q$ and $r$ for which $n = qk + r$ and $0 \leq r < k$.
+This is like \ref{DivisionAlgorithmUniqueness}.
+What changes are needed, if any?}{2in}
 
 \show{Suppose that $n$ is an integer and $n = 3m + 1$ where $m$ is an integer.
-Use the division algorithm to argue clearly that $n$ cannot be a multiple of 3.}{1.5in}
+Show that $n$ cannot be a multiple of 3.}{2in}
 
 \show{Let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
 We would like to conclude that $n$ is a multiple of 3.
-Let's us the contrapositive:  We'll show that if $n$ is not a multiple of 3, then $n^2$ is not a multiple of 3.
-Use the division algorithm to explain that there are three ways to write $n$ as $3q+r$, and two of these make $n$ not be a multiple of 3.
-In each of these two cases, compute $n^2$ and check that $n^2$ is not a multiple of 3, again using the division algorithm.
-}{2in}
+Use the division algorithm to divide $n$ by 3, which will give three cases, one for each possible remainder.
+Consider each case.
+What can you conclude about $n$ being a multiple of 3?}{1in}
 
 \show{Suppose $n$ is an integer.
 Can $n^2$ be of the form $3m + 2$ where $m$ is an integer?
-Examine the cases in the previous question carefully.}{0in}
-\pagebreak
+Examine the cases in the previous question carefully.}{2in}
 
-\show{Let $n$ be an integer and consider the numbers $n$, $n+1$, and $n+2$.
+\show{Let $k$ be an integer and consider the numbers $k$, $k+1$, and $k+2$.
 Show that exactly one of these is a multiple of 3.
-Use three cases, $n = 3k$, $n = 3k + 1$, and $n = 3k + 2$, and follow the guide below.
+A proof by cases might be a good idea.
+Note that there are two things to show:  that one of $k$, $k+1$, and $k+2$ is a multiple of 3, and that the other two are not.}{2in}
 
-\vspace*{0.2in}
-\noindent
-Case 1:  $n = 3k$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
-Exactly one of these is a multiple of three (circle it).
-Use the division algorithm to argue that the other two are not multiples of 3.
+\show{Let $k$ be even and consider the numbers $k$ and $k+2$.
+Show that exactly one of these is a multiple of 4.}{2in}
 
-\vspace*{0.5in}
-\noindent
-Case 2:  $n = 3k+1$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
-Exactly one of these is a multiple of three (circle it).
-Use the division algorithm to argue that the other two are not multiples of 3.
-
-\vspace*{0.5in}
-\noindent
-Case 3:  $n = 3k+2$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.
-}{0.5in}
-
-\show{Let $n$ be even and consider the numbers $n$ and $n+2$.
-Use two cases to show that exactly one of these is a multiple of 4.}{2in}
-
-\show{Let $n$ be an odd integer.  Show that $n^3-n$ is a multiple of 24.  Here again, you will need a spark of genius.  Use scratch paper to brainstorm different approaches that you could try, then try the one that looks the most promising.}{0in}
+\show{Let $n$ be an odd integer.  Show that $n^3-n$ is a multiple of 24.}{0in}
 
 \vfill          % pad the rest of the page with white space
