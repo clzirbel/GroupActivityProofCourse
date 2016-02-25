@@ -1,8 +1,10 @@
 \activitytitle{Review questions for the final quiz}{Taken from a variety of sources without attribution.}
 
-\overview{The final quiz will consist of approximately 6 questions and will be worth approximately 30 points.
+\overview{The final quiz will consist of approximately 6 questions and will be worth approximately 60 points.
 I will try to make sure that it can be done by a prepared student in 2 hours.
 The best way to prepare is to work out problems on the review sheet and on the handouts that we have had in class.}
+
+Key things to review are all in-class activities about set theory and induction, plus the homework on set theory.
 
 \vspace{0.2in}
 
@@ -31,9 +33,31 @@ This result shows that the harmonic series diverges.
 \pagebreak
 
 \noindent
-{\bf Sample problems}
+{\bf Set theory and other problems}
 \blist{0.2in}
+\item Show that $[2,5) \cap (3,7) = (3,5)$ by showing inclusion both ways.
+Start by letting $x \in [2,5) \cap (3,7)$, so that $x \in [2,5)$ and $x \in (3,7)$, then write it as $2 \leq x < 5$ and $3 < x < 7$.
+There are four inequalities here.  Soon enough you can conclude that $x \in (3,5)$.
+Then show containment the other way as well.
+
+\item Let $x > 0$.
+Show that there exists an integer $n$ such that $0 < \frac{1}{n} < x$.
+
+\item Show that $\bigcup_{n=1}^{\infty} [\frac{1}{n}, 1] = (0,1]$ by showing inclusion in both directions.
+
+\item Show that $A \cup B = A$ if and only if $B \subseteq A$.
+
+\item Show that $A \subseteq C$ and $B \subseteq C$ if and only if $A \cup B \subseteq C$.
+
+\item Show that $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ by showing containment in both directions and using cases.
+Then show it again using logical statements such as $P = ``x \in A"$ and a truth table.
+Try to do this without looking back at problems we did in class.
+
+\item For each $n = 1, 2, 3, \ldots,$ let $A_n$ be a set.
+Show de Morgan's law:  $\left( \bigcup_{n = 1}^{\infty} A_n \right)^c = \bigcap_{n = 1}^{\infty} A_n^c$ by showing set containment in both directions.
+
 \item Show that if $n$ is odd, then $n^2 + 2n - 7$ is a multiple of 4.
+
 \item Let $a, b,$ and $c$ be integers.
 Suppose that $b$ is a multiple of $a$ or $c$ is a multiple of $a$.
 Show that $bc$ is a multiple of $a$.
@@ -56,56 +80,11 @@ Which way is easier?
 \item Show that an integer $n$ cannot be both even and odd.
 What kind of proof did you use?
 
-\item We used the Division Algorithm, number 73, a lot once we proved it.
-It has both an existence part and a uniqueness part.
-Please review the statements and arguments for both:
-
-Suppose that $n$ and $k$ are positive integers.
-Argue that there {\bf exist} integers $q$ and $r$ with $0 \leq r < k$ such that $n = kq + r$.
-
-Suppose that $n = kq + r$ where $q$ and $r$ and integers and $0 \leq r < k$ and also that $n = ka + b$ where $a$ and $b$ are integers and $0 \leq b < k$.
-Show that $q=a$ and $r=b$.
-
 \item Suppose that $m$ and $n$ are integers and that $3m = 7n$.
 Show that $n$ is a multiple of 3.
 Do this by writing $n$ as $3q+r$ for different possible values of $r$.
 
 \item Give a complete proof that $\sqrt{3}$ is irrational.
-
-\item Show that $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ by showing containment in both directions and using cases.
-Then show it again using logical statements such as $P = ``x \in A"$ and a truth table.
-Try to do this without looking back at Problems 124 and 125.
-
-\item Now that we have practiced inequalities, re--do Problem 130.
-
-\item (Problem 133).  Let $I$ be a set, and for each $i$ in $I$, let $A_i$ be a set, all subsets of the same universe $X$.
-Show de Morgan's law:  $\left( \bigcup_{i \in I} A_i \right)^c = \bigcap_{i \in I} A_i^c$ by showing set containment in both directions.
-
-\item Show that $[2,5) \cap (3,7) = (3,5)$ by showing inclusion both ways.
-Start by letting $x \in [2,5) \cap (3,7)$, so that $x \in [2,5)$ and $x \in (3,7)$, then write it as $2 \leq x < 5$ and $3 < x < 7$.
-There are four inequalities here.  Soon enough you can conclude that $x \in (3,5)$.
-Then show containment the other way as well.
-
-\item Let $x > 0$.
-Show that there exists an integer $n$ such that $0 < \frac{1}{n} < x$.
-
-\item Show that $\bigcup_{n=1}^{\infty} [\frac{1}{n}, 1] = (0,1]$ by showing inclusion in both directions.
-This should be easier now that we have practiced inequalities.
-
-\item Do Problem 137, about unions.
-
-\item Do Problem 138, about intersections.
-
-\item This is a challenge involving two--dimensional sets and the Cartesian product.
-Let $T = \{ (x,y) \in \R^2 : x \geq 0, y \geq 0, x+y\leq 1\}.$
-Let $U = \bigcup_{0 \leq a \leq 1} [0,a]\times[0,1-a]$.
-Show that $T = U$ by showing containment both directions.
-
-\item Do problem 169, about relations.
-
-\item Do problem 170, about relations.
-
-\item Finish problems 225, 226, 227, 229, 230, 231 about absolute value.
 
 \elist
 

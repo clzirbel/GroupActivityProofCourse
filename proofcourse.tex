@@ -57,7 +57,7 @@
 \newcommand{\recall}[2]{\begin{recallX}#1\end{recallX}\vspace*{#2}}
 \newcommand{\note}[1]{\begin{noteX}#1\end{noteX}}
 \renewcommand{\stop}[1]{\noindent{\bf \Large \underline{Stop.}} #1}
-\newcommand{\Hint}{{\bf Hint}}
+\newcommand{\Hint}{{\bf Hint:}}
 \newcommand{\guidedproof}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
 \newcommand{\prove}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
 \newcommand{\groupwork}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
@@ -71,7 +71,7 @@
 \newcommand{\exampleNN}[2]{\noindent{\bf Example.} #1 \\ \vspace*{#2}} \newcommand{\showNN}[2]{\noindent{\bf Show.} #1 \\ \vspace*{#2}}
 \newcommand{\recallNN}[2]{\noindent{\bf Recall.} #1 \\ \vspace*{#2}}
 \newcommand{\noteNN}[1]{\begin{noteX}#1\end{noteX}}
-\newcommand{\HintNN}{{\bf Hint}}
+\newcommand{\HintNN}{{\bf Hint:}}
 \newcommand{\guidedproofNN}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
 \newcommand{\proveNN}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
 \newcommand{\groupworkNN}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
@@ -119,8 +119,14 @@
 %\includeonly{set_operations}
 %\includeonly{infinite_set_operations_prequel}
 %\includeonly{DG_reading_assignment_chapter_8}
-\includeonly{infinite_set_operations}
-
+%\includeonly{infinite_set_operations}
+%\includeonly{square_roots_are_irrational_quiz}
+%\includeonly{set_theory_homework}
+%\includeonly{DG_reading_assignment_chapter_18_2015}
+%\includeonly{mathematical_induction}
+%\includeonly{set_theory_practice}
+%\includeonly{final_quiz_review_2}
+\includeonly{final_quiz_2}
 
 % --------------------------------------------------- begin document
 \begin{document}        % What came before is the 'preamble'
@@ -139,17 +145,19 @@
 \include{set_operations}
 \include{infinite_set_operations_prequel}
 \include{infinite_set_operations}
+\include{set_theory_homework}
+\include{mathematical_induction}
+\include{set_theory_practice}
 \include{power_set_cartesian_product}
 \include{relations}
 \include{homework_problems_week_12}
 \include{inequalities}
-\include{mathematical_induction}
 \include{inequalities_quiz}
 \include{induction_quiz}
 \include{absolute_value}
 \include{functions}
-\include{final_quiz_review}
-\include{final_quiz}
+\include{final_quiz_review_2}
+\include{final_quiz_2}
 \include{DG_reading_assignment_chapter_1}
 \include{DG_reading_assignment_chapter_1_alphabet}
 \include{DG_reading_assignment_chapter_2}
@@ -161,14 +169,14 @@
 \include{DG_reading_assignment_chapter_8}
 \include{DG_reading_assignment_chapter_9}
 \include{DG_reading_assignment_chapter_10}
-\include{DG_reading_assignment_chapter_18}
+\include{DG_reading_assignment_chapter_18_2015}
 
-\include{square_roots_are_irrational_quiz}
 \include{even_and_odd_and_vector_quiz}
 \include{vector_sum_dot_product_quiz}
 \include{division_algorithm_quiz_possibilities}
 \include{division_algorithm_quiz}
 \include{even_and_odd_quiz}
+\include{square_roots_are_irrational_quiz}
 \include{infinite_set_operations_quiz}
 \include{new_vector_operation_twist_quiz}
 \include{new_vector_operation_duplicate_quiz}
