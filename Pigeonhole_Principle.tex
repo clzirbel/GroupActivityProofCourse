@@ -1,25 +1,42 @@
 \yourname
 
-\activitytitle{Pigeonhole Principle}{It was stated by Johann Peter Gustav Lejeune Dirichlet in 1834 and it is sometimes called Dirichlet's Box Principle.}
+\activitytitle{The Pigeonhole Principle}{Surprising results can come from simple counting.}
 
-\overview{The principle simply states that if we have more pigeons than holes then at least one hole must contain more than one pigeon. The next problem asks you to prove this principle.}
+\overview{The Pigeonhole Principle says that if we have more pigeons than pigeonholes to put them in, then at least one pigeonhole must contain more than one pigeon. This idea was stated by Johann Peter Gustav Lejeune Dirichlet in 1834 and so is sometimes called Dirichlet's Box Principle.}
 
-\problem{If $N$ pigeons are placed in $n$ pidgeonholes and $N>n$, then one of the pidgeonholes must contain two or more pigeons. 
-{\bf Hint:} Prove by contradiction.}{.8in}
+\problem{If $N$ pigeons are placed in $n$ pigeonholes and $N>n$, then one of the pigeonholes must contain two or more pigeons. 
+{\bf Hint:} Prove by contradiction.  That is, pretend for a minute that none of the pigeonholes has more than one pigeon.  That leads to a contradiction.}{.8in}
 
-\problem{A classroom floor is painted white and black. Is it always possible to find two points of the same color, exactly one foot apart?} {.5in}
+\note{In each problem below, identify the ``pigeonholes'' and the rule you use to put each ``pigeon'' into a ``pigeonhole.''  The first one is done for you. Then write a nice solution of the problem.}
 
-\problem{A bag contains M\&M's in six different colors: Brown, Yellow, Green, Red, Orange and Blue. How many M\&M's do you need to take out of the bag in order to have at least two of the same color? How many do you need to take out of the bag if you want to have three of the same color?}{1in}
+\problem{A bag contains M\&M's in six different colors: Brown, Yellow, Green, Red, Orange and Blue. How many M\&M's do you need to take out of the bag in order to have at least two of the same color? How many do you need to take out of the bag if you want to have three of the same color?\\
+{\bf Pigeonholes:}  The colors Brown, Yellow, Green, Red, Orange, and Blue.\\
+{\bf Rule:} Put each M\&M in a pigeonhole according to its color.}{0.8in}
 
-\problem{Suppose we need to place $N$ items into $n$ boxes and $N>n$. Then at least one box must contain at least $\lceil \frac{N}{n} \rceil$ items. 
-{\bf Hint:} Let $N_i$ be the number of items in box $i$, where $1\leq i \leq n$. Then $N=N_1+N_2+ \ldots + N_n$. Suppose by the way of contradiction that $N_i<\lceil \frac{N}{n} \rceil$, for all $i\in \{1, 2, \ldots,n \}$. Prove the fact that $\lceil \frac{N}{n} \rceil< \frac{N}{n} +1$ and use it to reach a contradiction.}{2in}
+\problem{Prove that no matter how we choose $51$ distinct natural numbers from $\{1,2,3,\ldots,100\}$, at least two of them must be consecutive.\\
+{\bf Pigeonholes:} The sets $\{1,2\}, \{3,4\}, \ldots , \{99,100\}$.\\
+{\bf Rule:}}{1.2in}
 
-\problem{The human head contains less than $150,000$ hairs. Show that there are at least $500$ people with the same number of hairs in New York City. Assume that New York City has a population greater than $8,000,000$ people.}{1in}
+\problem{Prove that given ten integers we can choose two of them such that their difference is divisible by nine.\\
+{\bf Pigeonholes:}\\
+{\bf Rule: Calculate the remainder when dividing by 9.}} {0.5in}
 
-\problem{Prove that no matter how we choose $51$ natural numbers from $\{1,2,3,\ldots,100\}$, at least two of them must be consecutive.
-{\bf Hint:} Consider the pigeonholes to be the following sets: $\{1,2\}, \{3,4\}, \ldots , \{99,100\}$.}{2in}
+\pagebreak
 
-\problem{Prove that given any ten natural numbers we can choose two of them such that their difference is divisible by nine.
-{\bf Hint:} Consider the remainders when dividing by nine.}{1.5in}
+\problem{Prove that if six distinct numbers are selected from the set $\{1,2,3,4,5,6,7,8,9,10\}$ then some set of two of them add up to eleven.\\
+{\bf Pigeonholes:}\\
+{\bf Rule:}}{1in}
 
-\problem{Prove that if six integers are selected at random from the set $\{1,2,3,4,5,6,7,8,9,10\}$ then at least two of them add up to eleven.}{1in}
+\problem{A classroom floor is painted white and black. Is it always possible to find two points of the same color, exactly one foot apart?
+{\bf Hint:} Think about an equilateral triangle.\\
+{\bf Pigeonholes:}\\
+{\bf Rule:}}{1in}
+
+\problem{If you have even more pigeons, you sometimes need more than two pigeons in each pigeonhole.  Suppose we need to place $N$ items into $n$ boxes and $N>n$. Then at least one box must contain at least $\lceil \frac{N}{n} \rceil$ items, which is $\frac{N}{n}$ rounded up to the nearest integer.
+{\bf Hint:} Let $N_i$ be the number of items in box $i$, where $1\leq i \leq n$. Then $N=N_1+N_2+ \ldots + N_n$. Assume for the sake of contradiction that $N_i \leq \lceil \frac{N}{n} \rceil - 1$, for all $i = 1, 2, \ldots,n$. Prove the fact that $\lceil \frac{N}{n} \rceil< \frac{N}{n} +1$ and use it to reach a contradiction.
+{\bf Suggestion:}  Write $N = qn + r$ using the Division Algorithm.}{2.9in}
+
+\problem{The human head contains fewer than 150,000 hairs. Show that there are at least 50 people who all have the same number of hairs on their heads in New York City. You can assume that New York City has a population greater than 8,000,000 people.\\
+{\bf Pigeonholes:}\\
+{\bf Rule:}}{0.0in}
+

@@ -1,11 +1,9 @@
-\documentclass[11pt]{article}  % 11 point font
-
-\textheight  9.4in      % height of the text before a page break
-\topmargin  -0.8in      % extra distance from top of page to header, if any
-\textwidth   7in      % the default text width is much narrower
-\oddsidemargin -0.25in   % extra left margin on odd-numbered pages.
-\renewcommand{\baselinestretch}{1.15} % line spacing; use any decimal
+\documentclass[a6paper]{article}
 \pagestyle{empty}
+\usepackage[margin=2mm]{geometry}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
 
 \usepackage{amsmath}    % allows AMS math things like the cases environment
 \usepackage{amssymb}    % allows the use of AMS symbols like blackboard bold
@@ -57,7 +55,7 @@
 \newcommand{\recall}[2]{\begin{recallX}#1\end{recallX}\vspace*{#2}}
 \newcommand{\note}[1]{\begin{noteX}#1\end{noteX}}
 \renewcommand{\stop}[1]{\noindent{\bf \Large \underline{Stop.}} #1}
-\newcommand{\Hint}{{\bf Hint:}}
+\newcommand{\Hint}{{\bf Hint}}
 \newcommand{\guidedproof}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
 \newcommand{\prove}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
 \newcommand{\groupwork}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
@@ -66,12 +64,12 @@
 
 % ----------------------------- Facilitate repeating things with no number (NN)
 
-\newcommand{\definitionNN}[2]{\noindent{\bf Definition #1.} #2}
+\newcommand{\definitionNN}[2]{\noindent{\bf Definition. #1.} #2}
 \newcommand{\notationNN}[1]{\begin{notationX}#1\end{notationX}}
 \newcommand{\exampleNN}[2]{\noindent{\bf Example.} #1 \\ \vspace*{#2}} \newcommand{\showNN}[2]{\noindent{\bf Show.} #1 \\ \vspace*{#2}}
 \newcommand{\recallNN}[2]{\noindent{\bf Recall.} #1 \\ \vspace*{#2}}
 \newcommand{\noteNN}[1]{\begin{noteX}#1\end{noteX}}
-\newcommand{\HintNN}{{\bf Hint:}}
+\newcommand{\HintNN}{{\bf Hint}}
 \newcommand{\guidedproofNN}[1]{\begin{guidedproofX}#1\end{guidedproofX}}
 \newcommand{\proveNN}[2]{\begin{proveX}#1\end{proveX}\vspace*{#2}}
 \newcommand{\groupworkNN}[2]{\begin{groupworkX}#1\end{groupworkX}\vspace*{#2}}
@@ -103,86 +101,25 @@
 
 % --------------------------------------------- what to process
 
-%\includeonly{even_and_odd}
-%\includeonly{vector_sum_dot_product}
-%\includeonly{division_algorithm}
-%\includeonly{pigeonhole_principle}
-%\includeonly{square_roots_are_irrational}
-%\includeonly{DG_reading_assignment_chapter_3}
-%\includeonly{DG_reading_assignment_chapter_4}
-%\includeonly{even_and_odd_and_vector_quiz}
-%\includeonly{DG_reading_assignment_chapter_5}
-%\includeonly{DG_reading_assignment_chapter_6}
-%\includeonly{set_examples_and_relations}
-%\includeonly{new_vector_operation_duplicate_quiz}
-%\includeonly{DG_reading_assignment_chapter_7}
-%\includeonly{set_operations}
-%\includeonly{infinite_set_operations_prequel}
-%\includeonly{DG_reading_assignment_chapter_8}
-%\includeonly{infinite_set_operations}
-%\includeonly{square_roots_are_irrational_quiz}
-%\includeonly{set_theory_homework}
-%\includeonly{DG_reading_assignment_chapter_18_2015}
-%\includeonly{mathematical_induction}
-%\includeonly{set_theory_practice}
-%\includeonly{final_quiz_review_2}
-%\includeonly{final_quiz_2}
+\includeonly{DG_reading_assignment_chapter_18_2015}
 
 % --------------------------------------------------- begin document
 \begin{document}        % What came before is the 'preamble'
 
-\include{first_day_script}
-\include{even_and_odd}
-\include{background}
-\include{syllabus2015}
-\include{vector_sum_dot_product}
-\include{quantifier_assessment}
-\include{division_algorithm}
-\include{pigeonhole_principle}
-\include{class_survey_1}
-\include{square_roots_are_irrational}
-\include{set_examples_and_relations}
-\include{set_operations}
-\include{infinite_set_operations_prequel}
-\include{infinite_set_operations}
-\include{set_theory_homework}
-\include{mathematical_induction}
-\include{set_theory_practice}
-\include{power_set_cartesian_product}
-\include{relations}
+\include{syllabus}
 \include{homework_problems_week_12}
-\include{inequalities}
-\include{inequalities_quiz}
-\include{induction_quiz}
-\include{absolute_value}
-\include{functions}
-\include{final_quiz_review_2}
-\include{final_quiz_2}
 \include{DG_reading_assignment_chapter_1}
-\include{DG_reading_assignment_chapter_1_alphabet}
 \include{DG_reading_assignment_chapter_2}
 \include{DG_reading_assignment_chapter_3}
 \include{DG_reading_assignment_chapter_4}
 \include{DG_reading_assignment_chapter_5}
+\include{DG_chapter_5_quiz}
 \include{DG_reading_assignment_chapter_6}
 \include{DG_reading_assignment_chapter_7}
 \include{DG_reading_assignment_chapter_8}
 \include{DG_reading_assignment_chapter_9}
 \include{DG_reading_assignment_chapter_10}
 \include{DG_reading_assignment_chapter_18_2015}
-
-\include{even_and_odd_and_vector_quiz}
-\include{vector_sum_dot_product_quiz}
-\include{division_algorithm_quiz_possibilities}
-\include{division_algorithm_quiz}
-\include{even_and_odd_quiz}
-\include{square_roots_are_irrational_quiz}
-\include{infinite_set_operations_quiz}
-\include{new_vector_operation_twist_quiz}
-\include{new_vector_operation_duplicate_quiz}
-\include{new_vector_operation_twist_quiz}
-\include{DG_chapter_5_quiz}
-
 
 %-----------------------------------------------------------------------------
 

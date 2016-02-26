@@ -1,0 +1,34 @@
+\activitytitle{Reading assignment, Chapter 18}{Reading due on November 30, notes and exercises due on December 2.}
+
+Read and understand Chapter 18 of the textbook by Daepp and Gorkin, called ``Mathematical Induction,'' up to the statement, but not the proof, of Theorem 18.6.
+
+Mathematical induction and recursion play an important role especially in discrete mathematics. Prepare to move slowly and think carefully. To understand the proof of Theorem 18.1, you will need {\bf Well-ordering principle of the natural numbers}: Every nonempty subset of the natural numbers contains a minimum.
+
+Read Theorem 18.1 and then {\bf do Problem 18.1} and {\bf Problem 18.3}. Follow the steps in Theorem 18.1, defining the assertion $P(n)$ for the problem first. You will need the condition ``$P(n)$ is true'' to show the induction step. Work through Exercises 18.3 to 18.5 and then {\bf do Problem 18.9} without going back to Exercise 18.5. You can do it!
+
+Recursion is a very useful tool to define functions, sequences and sets. Before you move to Theorem 18.6, read the definition of $n$ factorial for $n\in \mathbb{N}$. Write out $3!, 4!$ and $5!$.  As an exercise, simplify $\frac{6!}{2!4!}$. More generally, simplify $\frac{n!}{m!(n-m)!}$ where $n$ and $m$ are two positive integers with $n\geq m$. These fractions are called {\em binomial coefficients} and are useful in probability.
+
+Here is another example of using recursion:  
+Let $n\in \mathbb{Z^+}$. Consider the function $S(n) = S(n-1) + n$ with $S(0) = 0$. Write out $S(1), S(2), S(3)$ and $S(4)$. Can you figure out what this function does for us?  Together with Problem 18.1, you should be able to see the connection between induction and recursion.
+
+Theorem 18.6 shows the existence and uniqueness of a recursive function $g: N \rightarrow X$ given a function $f: X \rightarrow X$ and $a\in X$, where $X$ is a nonempty set. The function $g$ satisfies
+\begin{itemize}
+\item[(i)] The base step: $g(0) = a$, and
+\item[(ii)] The recursive step: $g(n+1)=f(g(n))$ for all $n \in \mathbb{N}$.
+\end{itemize}
+
+\noindent The proof of Theorem 18.6 is too long for us to read this semester.  You can come back it later.
+
+\noindent As with the previous chapters,
+\blist{0.0in}
+\item Read somewhere quiet, minimizing distractions from phones and friends
+\item Note the time that you start and stop reading, and add up the minutes
+\item Read with a pencil in your hand and your notebook open in front of you
+\item Write a sentence to summarize each paragraph, re-draw diagrams, work out examples and exercises on your own
+\item Look up words you don't know, and write down ones you really don't know
+\item Read slowly.
+\item At the end, tally up how much time you have spent on reading this chapter.
+Write this number in your notebook and remember the number when you come to class.
+\elist
+
+\vfill          % pad the rest of the page with white space
