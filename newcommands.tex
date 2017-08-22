@@ -3,7 +3,10 @@
 \usepackage{amsmath}    % allows AMS math things like the cases environment
 \usepackage{amssymb}    % allows the use of AMS symbols like blackboard bold
 \usepackage{amsthm}     % allows AMS definitions for theorems, proofs, etc.
-%\usepackage{hyperref}
+
+
+%\usepackage{hyperref}     % seems to cause troubles with \ref and \label, not sure why
+\newcommand{\url}[1]{#1}  % use this when hyperref is not used
 
 % ---------------------------------- Personalization
 
