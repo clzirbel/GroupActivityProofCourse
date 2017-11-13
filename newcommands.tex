@@ -4,6 +4,16 @@
 \usepackage{amssymb}    % allows the use of AMS symbols like blackboard bold
 \usepackage{amsthm}     % allows AMS definitions for theorems, proofs, etc.
 
+% ----------------------------------- Packages for set theory activity
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+
+%\usepackage{geometry}
+%\geometry{margin = 0.5in}
+
 
 %\usepackage{hyperref}     % seems to cause troubles with \ref and \label, not sure why
 \newcommand{\url}[1]{#1}  % use this when hyperref is not used
@@ -35,6 +45,7 @@
 \newtheorem{definitionX}[theorem]{{\bf Definition}}
 \newtheorem{notationX}[theorem]{\bf Notation}
 \newtheorem{exampleX}[theorem]{\bf Example}
+\newtheorem{exerciseX}[theorem]{\bf Exercise}
 \newtheorem{problemX}[theorem]{\bf Problem}
 \newtheorem{showX}[theorem]{\bf Show}
 \newtheorem{recallX}[theorem]{\bf Recall}
@@ -50,6 +61,7 @@
 \newcommand{\definition}[2]{\begin{definitionX}{\bf #1.} #2\end{definitionX}}
 \newcommand{\notation}[1]{\begin{notationX}#1\end{notationX}}
 \newcommand{\example}[2]{\begin{exampleX}#1\end{exampleX}\vspace*{#2}}
+\newcommand{\exercise}[2]{\begin{exerciseX}#1\end{exerciseX}\vspace*{#2}}
 \newcommand{\problem}[2]{\begin{problemX}#1\end{problemX}\vspace*{#2}}
 \renewcommand{\show}[2]{\begin{showX}#1\end{showX}\vspace*{#2}}
 \newcommand{\recall}[2]{\begin{recallX}#1\end{recallX}\vspace*{#2}}
@@ -65,7 +77,7 @@
 % ----------------------------- Facilitate repeating sections with no number (NN)
 
 \newcommand{\definitionNN}[2]{\noindent{\bf Definition #1.} #2}
-\newcommand{\notationNN}[1]{\begin{notationX}#1\end{notationX}}
+\newcommand{\notationNN}[1]{\noindent{\bf Notation } #1}
 \newcommand{\exampleNN}[2]{\noindent{\bf Example.} #1 \\ \vspace*{#2}} \newcommand{\showNN}[2]{\noindent{\bf Show.} #1 \\ \vspace*{#2}}
 \newcommand{\recallNN}[2]{\noindent{\bf Recall.} #1 \\ \vspace*{#2}}
 \newcommand{\noteNN}[1]{\begin{noteX}#1\end{noteX}}
@@ -99,6 +111,7 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\Rp}{\R^{+}}
 
 \newcommand{\DGreference}{\footnote{Reading, Writing, and Proving: A Closer Look at Mathematics, 2011, by Ulrich Daepp and Pamela Gorkin}}
