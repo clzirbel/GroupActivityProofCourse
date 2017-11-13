@@ -1,0 +1,213 @@
+\yourname
+
+\activitytitle{Introduction to set theory}{This activity introduces sets, ways to write them, and the relations between them.}
+
+\overview{Many important ideas in mathematics are expressed using sets, and many proofs come down to dealing with sets in the right way.  Co-authored by Johanson Berlie.}
+
+\definition{Set}{A set is a well-defined collection of distinct objects. These objects are called \textbf{elements} or \textbf{members} of the set.
+}
+
+\example{
+Consider all students registered for at least one credit hour at this university this semester.
+The objects are students, and there is a clear criterion for deciding which students we have in mind, so the collection is well defined.
+It's OK that we don't have a list of the students, we can still talk about the set.
+}{0.0in}
+
+\example{
+Consider all the days last spring when it was somewhat gloomy. Here, the objects are days that are somewhat gloomy. Since `somewhat gloomy' is not defined precisely, this collection is not a set.
+}{0in}
+
+\exercise{Which of the following are sets?  Consider whether the set is well defined and explain your thinking.
+Mark sets with a check mark, non-sets with an X.
+If the set is small enough, list out its elements.
+
+\balist{0.2in}
+\item Your Facebook friends right now
+\item Your high school friends on graduation day
+\item All the stars in the Milky Way.
+\item All the small stars in the Milky Way.
+\item All the places that Waldo is hiding.
+\item The days in a year with exactly 20mm of rainfall.
+\item The days in 2016 in Bowling Green, Ohio with less than 20mm of rainfall.
+\item English letters that are vowels
+\item Planets in our solar system
+\item Construct your own example or non-example of a set and explain why it is or is not a set.
+\elist
+}{0.1in}
+
+\definition{Elements of a set}{
+If $A$ is a set and an object $x$ is an element of $A$, we say that $x$ \textbf{belongs to} $A$. Symbolically, we write $x \in A$. If $x$ is not an element of A, we write $x \notin A$. 
+}
+
+\remark{
+Note that sets are usually denoted by capital letters and their elements by lower case letters.
+}
+
+\definition{Tabular form}{
+We represent a set in \textbf{tabular form} by listing out its elements, separated by commas and enclosed in braces \{ \}.
+Order does not matter, only which objects are elements of the set.
+If the set has too many elements to list, establish a pattern and use $\ldots$.
+}
+
+\example{
+If the set $C$ consists of the primary colors, we could write $C$ = \{red, blue, yellow\} or $C$ = \{yellow, red, blue\}, because order doesn't matter.
+}{0in}
+
+\remark{
+For convenience or from lack of attention, sometimes an element is repeated when listing in tabular form; this does not change the actual elements of a set.
+Thus, the tabular forms $\{a,b\}$ and $\{a,b,b,a\}$  both refer to the same set.
+}
+
+\example{
+The set of Fibonacci numbers can be written $F = \{1, 1, 2, 3, 5, 8, 13, \ldots\}$ or as $F = \{1, 2, 3, 5, 8, 13, \ldots\}$ .
+The first way is how people usually write the Fibonacci numbers, the second way recognizes that since a set is a collection of distinct elements, listing 1 twice doesn't change the set.
+Be careful with the idea of establishing a pattern, if someone doesn't know what a Fibonacci number is, they might not be able to tell you the next element of the set.
+}{0.0in}
+
+\exercise{List out the next five elements of the set of Fibonacci numbers.}{0.1in}
+
+\definition{Set-builder form}{
+We represent a set in \textbf{set-builder form} by stating the properties which its elements must satisfy.
+}
+
+\example{
+If the set $B$ consists of the primary colors, then we can write $B = \{ x : x$ is a primary color$\}.$
+In this notation we wrote $x$ as a temporary name for an element of the set, and wrote the condition that $x$ needs to satisfy after the colon character :.
+Sometimes people use a vertical line $|$ instead of a colon.
+}{0in}
+
+\exercise{~
+
+\balist{0.2in}
+\item Express the set $A=\{x : x$ is a ``home row'' character on a keyboard$\}$ in tabular form.
+\item Express the set $B =\{A, L, G, E, B, R\}$ in set-builder form.
+\item Express the set $P = \{2, 3, 5, 7, 11, \ldots, 97\}$ in set-builder form. 
+\item Express the set $T = \{ x : x$ is a power of 2 $\}$ in tabular form.
+\item Suppose that $R = \{ x | x$ is a zero of $f(x) = 5x^3 - 2x^2 + 7x - 1 \}$.
+Suppose that $x \in R$.
+Write an equation that we know that $x$ satisfies.
+\item Suppose that $M = \{ m : m $ is a multiple of 7 $\}$.
+Let $k \in M$.
+Without using the word ``multiple,'' what do we know about $k$?
+\elist
+}{0.1in}
+
+% ======================================================================
+
+\definition{Empty set}{
+A set which contains no elements is called the \textbf{null set} or \textbf{empty set}.
+We denote it by the symbol $\varnothing$.
+}
+
+\example{
+The set of real-valued solutions of the equation $x^2 + 1 = 0$ is empty, since there is no real number that solves the equation.
+}{0in}
+
+\definition{Singleton set}{
+A set which contains only a single element is called a \textbf{singleton set}.
+}
+
+\example{
+The set of mountains on earth with height over 29,000 feet is a singleton set, since Mt. Everest is the only element of the set.
+}{0in}
+
+\exercise{
+For the following questions, identify the sets in the context of the definitions above.
+
+\balist{0.2in}
+\item The set of all mountains in the state of Ohio above 2000 feet in height.  This might require an internet search.
+
+\item If Jill has classes on Mondays, Wednesdays and Fridays and has work on Wednesdays and Saturdays, then what type of set is the set of days on which Jill has both work and classes?
+
+\item Suppose we draw two lines in the plane and consider the intersection of the two lines, that is, the set of all points that are on both lines.
+Can this set be empty?  If so, draw a picture.
+Can this set be a singleton?  If so, draw a picture.
+Can this set be anything else?  If so, draw a picture and describe it.
+\elist
+}{0.6in}
+
+% ======================================================================
+
+\definition{Subset of a set}{
+If every element in a set $A$ is also a member of a set $B,$ then $A$ is called a \textbf{subset} of $B$ and we write $A \subseteq B$.
+When $A$ is not a subset of $B$, we write $A \not\subseteq B$.
+}
+
+\remark{
+If $A$ is a set, then $A \subseteq A$, because every element of $A$ is also a member of $A$.
+}
+
+\remark{
+The notation $\subseteq$ is much like the inequality symbol $\leq$ for real numbers.
+We know that $3 \leq 5$ and writing $x \leq 5$ means that $x$ could be any number up to and including 5.
+It is always true that $x \leq x$ when $x$ is a real number.
+When you see the statement $A\subseteq B$, think that $A$ is a subset of $B$, and possibly equal to $B$.
+}
+
+\example{
+If $A$ = \{ green, yellow, red, black, dog, cat, mouse\} and $B$ = \{dog, cat\} then  $B \subseteq A$.
+In fact, $B \subset A$.
+However, $A \not\subseteq B$ because, for example, mouse $\in A$ but mouse $\notin B$.
+}{0in}
+
+\remark{
+From the two definitions above we can conclude that the null set is a subset of every set:
+Suppose $A$ is a set.
+Then it is true that every element of $\varnothing$ is a member of $A$.
+People sometimes say this is ``vacuously true.''
+We write $\varnothing \subseteq A$.
+}
+
+\exercise{
+For the following questions, identify the sets in the context of the definitions above.
+\balist{0.2in}
+\item If $A$ is the set of all cars manufactured by a Japanese car company and $B$ is the set of all Toyota sedans, then what is the relationship between $A$ and $B$?
+
+\item Let $M$ be the set of people you have communicated with on social media in the last week, and let $C$ be the set of people you are taking a class with now.
+Is $M \subseteq C$?  If not, name one person in $M$ but not in $C$.
+Is $C \subseteq M$?  If not, name one person in $C$ but not in $M$.
+\vspace*{0.2in}
+
+\item Let $V$ be the set of people who voted in the last US presidential election, and let $C$ be the set of US citizens.
+Is $V \subseteq C$?
+Under what condition would we have $V \not\subseteq C$?
+
+\elist
+}{0.3in}
+
+\definition{Proper subset}{
+If every element in a set A is also a member of a set B, and yet $B$ contains at least one element that is not in $A$, then A is called a \textbf{proper subset} of B and we write $A \subset B$.  Sometimes people write $A \subsetneq B$.
+}
+
+\remark{
+The notation $\subset$ is much like the strict inequality symbol $<$ for real numbers.
+We know that $3 < 5$ and writing $x < 5$ means that $x$ could be any number up to but not including 5.
+It is never true that $x < x$ when $x$ is a real number.
+When you see the statement $A\subset B$, think that $A$ is a subset of $B$ but not equal to $B$.
+That means that $B$ has an element that $A$ does not have.
+}
+
+\remark{
+If $A$ is a set, then $A \subset A$ is not true.  We could write $A \not\subset B$.
+}
+
+\example{
+If A = \{ green, yellow, red, black, dog, cat, mouse\} and B = \{dog, cat\} then  $B \subset A$.
+}{0in}
+
+\exercise{
+\balist{0.4in}
+\item Suppose that $C$ is the set of US citizens and $V$ is the set of US citizens who voted legally in the last election.
+Explain why $V \subseteq C$ is true.
+Explain why $V \subset C$ is true.
+Generally speaking, when you want to show that $A \subset B$, you need to check that $A \subseteq B$ and that $A$ and $B$ are not equal.
+
+\item Consider a class at the University.
+Let $R$ be the set of students who are registered for the class and let $F$ be the set of people who take the final exam.
+What needs to happen at the final exam to make $R = F$?
+What needs to happen to make $F \subset R$?
+What needs to happen to make $R \subset F$?
+Which of the three possibilities do you think is most likely to happen?   
+\elist
+}{0.2in}
+

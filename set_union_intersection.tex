@@ -1,0 +1,174 @@
+\yourname
+
+\activitytitle{Union and intersection of sets}{We introduce the union and intersection of sets and learn how to prove statements about them.}
+
+\noindent
+{\bf Note:}  The notation $x \in A$ is usually read ``$x$ is an element of $A$.''  The symbol $\in$ looks like the letter E because it stands for ``element''.  
+As far as I can tell, the E is not there to mean ``$x$ exists in $A$''.  Being an element is the point, not existing.
+
+\definition{Union of sets}{
+The {\em union} of sets A and B is a new set, consisting of all elements which belong to A or to B or to both. We denote this new set by $A \cup B$.
+The logical statement ``$x \in A \cup B$'' is true when ``$x \in A$ or $x \in B$'' is true.
+}
+
+\definition{Intersection of sets}{
+The {\em intersection} of sets A and B is a new set, consisting of all elements which belong to both A and B. We denote this new set by $A \cap B$.
+The logical statement ``$x \in A \cap B$'' is true when ``$x \in A$ and $x \in B$'' is true.
+}
+
+\example{
+Let $C$ be the set of Computer Science majors and $M$ be the set of Mathematics majors.
+Then $C \cap M$ is the set of students double majoring in Computer Science and Mathematics (a powerful combination!) while $C \cup M$ is the set of students majoring in one, the other, or both majors.
+}{0in}
+
+\example{Find $[1,5] \cup (3,7)$.  Draw a diagram on a number line to illustrate.}{0.4in}
+
+\example{Find $[1,5] \cap (3,7)$.  Draw a diagram on a number line to illustrate.}{0.4in}
+
+\problem{Let $3\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 3j\}$.
+Let $5\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 5j\}$, and similarly with other sets like $7\Z$ and $11\Z$.
+
+\balist{0.4in}
+\item Find $3\Z \cap 5\Z$ and write it in the most convenient form you can.
+\item Find $3\Z \cup 5\Z$ and write it in the most convenient form you can.
+\ealist
+}{0.4in}
+
+\remark{Remember that to show $S \subseteq T$, you need to show that for all $x$ in $S$, we have $x$ in $T$.
+In symbols, $\forall x \in S, x \in T$.  To do a proof like that, you need to start with ``Let $x \in S$.'' and you need to end with something like ``Thus $x \in T$.  Since $x \in S$ was arbitrary, $S \subseteq T$.''}
+
+\prove{Suppose that $A \cup B \subseteq C$.
+
+\balist{0in}
+\item Show that $A \subseteq C$ following the model.
+
+Let $x \in A$.  Then \blank{1in} by definition of union.  
+Thus \blank{1in} since $A\cup B \in C$.
+
+Since \blank{1in} was arbitrary, \blank{1in}.
+
+\item Show that $B \subseteq C$.  Use good form.
+\elist
+}{0in}
+
+\remark{For sets $A, B,$ and $C$, to show that $A \cap B \subseteq C$, you need to start with ``Let $x \in A \cap B$.''  This tells you that $x \in A$ and $x \in B$.
+Using those two pieces of information, you need to show that $x \in C$.  You will usually need to use both pieces of information.}
+
+\guidedproof{Show that $[1,5] \cap (3,7) \subseteq (3,5]$.
+
+\noindent
+Let $x \in [1,5] \cap (3,7)$.  Then $x \in $ \blank{1in} and $x \in$ \blank{1in} by definition of \blank{1.1in}.
+
+\noindent
+Thus, $1 \leq x \leq 5$ and \blank{1.5in}.
+
+\noindent
+Thus, \blank{0.5in} $<$ \blank{0.5in} $\leq$ \blank{0.5in}
+
+\noindent
+Thus, $x \in (3,5].$  Since $x\in [1,5] \cap (3,7)$ was arbitrary, we conclude that $[1,5] \cap (3,7) \subseteq (3,5]$.
+}
+
+\prove{Suppose that $A \subseteq C$ and $B \subseteq C$.
+Show that $A \cap B \subseteq C$ following the model above.
+
+\noindent
+Let \blank{1in}
+
+\vspace{0.8in}
+
+\noindent
+Thus \blank{1in}.
+Since \blank{1in} was arbitrary, \blank{3in}.
+
+}{-0.2in}
+
+\prove{Show that $2\Z \cap 7\Z \subseteq 14\Z$.  Use good form.  You do not need to prove any results about divisibility, simply use what you know is true.
+
+\noindent
+Let \blank{1.5in}
+
+\vspace{0.8in}
+
+\noindent
+Thus \blank{1in}.
+Since \blank{1.5in} was arbitrary, \blank{2.5in}.
+}{-0.2in}
+
+\remark{To show that $A \cup B \subseteq C$, you start with ``Let $x \in A \cup B$.'' This tells you that $x \in A$ or $x \in B$.
+This is not all that much to work with, since maybe only one of these is true, and you don't know which one.
+No matter which one is true, you need to show that $x \in C$.
+You should do this by considering two cases.  Case 1, when $x \in A$.  Case 2, when $x \in B$.
+In both cases, show that $x \in C$ and then no matter which case applies, you get the result you need.
+}
+
+\guidedproof{Suppose that $A \subseteq C$ and $B \subseteq C$.
+Show that $A \cup B \subseteq C$.
+
+\noindent
+Let $x \in A \cup B$.  Then $x \in A$ or $x \in B$ or both, by \blank{2.5in}.
+
+\noindent
+Case 1.  Suppose that $x \in A$.  Then $x \in C$ because \blank{1in}.
+
+\noindent
+Case 2.  Suppose that $x \in B$.  Then \blank{1in} because \blank{1in}.
+
+\noindent
+In both cases, \blank{0.7in}.  Thus, \blank{0.7in}.
+Since \blank{1in} was arbitrary, we conclude that \blank{1in}
+}
+
+\prove{Show that $[1,5] \cup (3,7) \subseteq [1,7)$.  Use good form.  You will use transitivity for inequalities.}{1in}
+
+\prove{Suppose that $B \subseteq A$.
+Show that $A \cup B \subseteq A$.
+Use good form.}{1in}
+
+\prove{Suppose that $A \cup B \subseteq A$.
+Show that $B \subseteq A$.
+Use good form.}{1in}
+
+\remark{To show that $A \subseteq B \cap C$, start with ``Let $x \in A$ and show that $x \in B$ and $x \in C$, so you can conclude that $x \in B \cap C$.
+Make sure to write that you have shown that $x \in B \cap C$ before you make a general conclusion.
+}
+
+\prove{Show that $14\Z \subseteq 2\Z \cap 7\Z$.  Use good form and make a general conclusion at the end.
+
+\noindent
+Let \blank{1in}
+
+\vspace{0.8in}
+
+\noindent
+Thus \blank{1in}.
+Since \blank{0.5in} was arbitrary, \blank{3in}.
+}{-0.2in}
+
+\prove{Show that $(3,5] \subseteq [1,5] \cap (3,7)$.  Use good form and make a general conclusion at the end.}{1in}
+
+\remark{To show that $A \subseteq B \cup C$, start with ``Let $x \in A$ and show that $x \in B$ or that $x \in C$.
+Often, some $x$ values are in $B$ and others are in $C$, and so you will want to introduce two cases that split the values of $x$ into two groups.  Unfortunately, the cases cannot be ``Case 1:  Suppose $x \in B$'' and ``Case 2:  Suppose $x \in C$'' because you do not yet know that those case cover all possibiliities.  Instead, you may need to use cases like ``Case 1: Suppose $x < 0$'' and ``Case 2:  Suppose $x \geq 0.$''
+The details will be different for each problem.}
+
+\prove{Show that $[1,7) \subseteq [1,5] \cup (3,7)$.  Use good form and make a general conclusion at the end.}{1in}
+
+\pagebreak
+
+\prove{Show that $(3,8) \cup [6,9] = (3,9]$.  There are two steps.
+\balist{2in}
+\item Step 1.  Show that $(3,8) \cup [6,9] \subseteq (3,9]$.
+\item Step 2.  Show that $(3,9] \subseteq (3,8) \cup [6,9]$.
+\elist
+}{2in}
+
+\prove{Show that $(3,8) \cap [6,9] = [6,8)$.  There are two steps.
+\balist{2in}
+\item Step 1. 
+\item Step 2. 
+\elist}{-0.2in}
+
+
+
+
+\vfill          % pad the rest of the page with white space

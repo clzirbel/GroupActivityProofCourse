@@ -4,129 +4,255 @@
 
 \overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  We will investigate a procedure for doing this, which is called division, even though there will be no fractions in this activity.  Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persion mathematician al-Khwarizmi, who worked on procedures for arithmetic.  The division algorithm itself dates to Euclid's {\em Elements} from around 300 BC.}
 
-\example{\label{37among5} You are the dealer in a card game that has 37 cards.  (It's not a standard deck of cards.)  There are 5 people playing, and everyone needs to end up with the same number of cards.  Dealing one card to each player leaves 32 cards in your hands.  Write down the numbers 37, 32, and continue until you cannot deal out any more cards evenly.  Let $r$ denote the number of cards left at the end, and let $q$ denote the number of times you subtracted 5, which is also the number of cards that each person got.  You see that $37 - 5q = r$, which you can rewrite as $37 = 5q + r$.  Fill in $q$ and $r$ and write out these two equations.}{1.2in}
+\example{\label{37among5} You are the dealer in a card game that has 37 cards.  (It's not a standard deck of cards.)  There are 5 people playing, and everyone needs to end up with the same number of cards.  Dealing one card to each player leaves 32 cards in your hands.  Write down the numbers 37, 32, and continue until you cannot deal out any more cards evenly:  
 
-\example{Now you're playing a card game that you have not played before, and you haven't taken the time to count how many cards are in the deck.  You are the dealer again, and there are 5 people who need cards.  Let $n$ denote the number of cards in the deck.  Imagine that you repeat the procedure from the previous example until you can no longer deal out cards evenly.  Again, let $r$ denote the number of cards you have left at the end and $q$ denote the number of cards that each person got.  What do we know for sure about the possible values of $r$?  What do we know for sure about the possible values of $q$?  Write the relationship between $n$, 5, $q$, and $r$ analogous to $37 - 5q = r$ and the expression analogous to $37 = 5q + r$.  The last expression accounts for where all of the $n$ cards have gone; some are dealt out, some are left in your hands.  Write out a sentence that explains this.}{1.5in}
+\vspace{0.2in}
+\noindent
+Let $r$ denote the number of cards left over at the end, and let $q$ denote the number of times you subtracted 5, which is also the number of cards that each person got.  Notice that $0 \leq 5q \leq 37$.
+You see that $37 - 5q = r$, which you can rewrite as $37 = 5q + r$.  Fill in $q$ and $r$ and write out these two equations.
 
-\example{Continuing to divide by 5, complete this sentence:  Given an integer $n \geq 0$, there exist integers $q$ and $r$ where (list properties of $q$ here) \blank{2in} and (list properties of $r$ here) \blank{2in}, such that (write the relationship between $n$, $q$, and $r$ analogous to $37 = 5q + r$) \blank{2in}.}{0in}
+\noindent
+$37-5q = r$ becomes:
+\vspace{0.2in}
+
+\noindent
+$37 = 5q +r$ becomes:
+}{0.2in}
+
+\example{Now you're playing a card game that you have not played before, and you haven't taken the time to count how many cards are in the deck.  You are the dealer again, and there are 5 people who need cards.  Let $n$ denote the number of cards in the deck.  Imagine that you repeat the procedure from the previous example until you can no longer deal out cards evenly.  Again, let $r$ denote the number of cards you have left over at the end and let $q$ denote the number of cards that each person got.  
+
+\vspace{0.05in}
+\noindent
+What inequalities do we know about the possible values of $r$?  
+\vspace{0.2in}
+
+\noindent
+What inequalities do we know about the possible values of $q$?  
+\vspace{0.2in}
+
+\noindent
+Write the relationship between $n$, 5, $q$, and $r$ analogous to $37 - 5q = r$ and the expression analogous to $37 = 5q + r$.  
+\vspace{0.2in}
+
+\noindent
+The last expression accounts for where all of the $n$ cards have gone; some are dealt out, some are left in your hands.  Write out a sentence that explains this.}{0.3in}
+
+\example{Continuing to divide by 5, complete this sentence:  Given an integer $n > 0$, there exist integers $q$ and $r$ where (list properties of $q$ here) \blank{2in} and (list properties of $r$ here) \blank{2in}, such that (write the relationship between $n$, $q$, and $r$ analogous to $37 = 5q + r$) \blank{2in}.}{0in}
 
 \example{\label{positivepositivedivision} 
 Once again, we have $n$ cards, but now there are $k$ people playing, where $k > 0$ is an integer.
-Your friend is dealing.
-Write instructions telling your friend how to deal the cards out, when to stop dealing, and say what you can about how many cards she will have left over and how many cards each person will get.
-Using $q$ to denote the number of cards each person gets and $r$ to denote the number of cards left over, write out the relationship between $n, k, q,$ and $r$, and write inequalities concerning $q$ and $r$.}{2in}
+You are dealing.
+Describe in words how you will deal out the cards and when you will stop.
 
-\stop Compare your work to the others in your group.  Work to get the best possible phrasing of \ref{positivepositivedivision}.
+\vspace{0.4in}
+\noindent
+Describe in words how many cards you will have left over.
 
-\question{What happens when $k=0$?  Can you satisfy $n = qk + r$?  What goes wrong?}{1in}
+
+\vspace{0.4in}
+\noindent
+Using $q$ to denote the number of cards each person gets and $r$ to denote the number of cards left over, write out the relationship between $n, k, q,$ and $r$, and write inequalities concerning $q$ and $r$.}{1in}
+
+\stop Compare your work to the others in your group and reconcile any differences.
+
+\question{What happens when $k=0$?  Can you satisfy $n = qk + r$?  What goes wrong?  Describe in words, and take your time to get it right, because this explains why we don't divide by 0.}{1in}
 
 \note{As above, suppose that $n$ and $k$ are integers that are greater than 0.
 Suppose you find integers $q$ and $r$ for which $n = qk + r$ and $0 \leq r < k$.
 Suppose your friend tries to do the same thing and finds integers $q_2$ and $r_2$ for which $n = q_2 k + r_2$ and $0 \leq r_2 < k$.
 Must it be the case that $q = q_2$ and $r = r_2$?
 That is, are the values of $q$ and $r$ {\em unique}?
-If you think about dealing $n$ cards to $k$ people, it's pretty clear that you and your friend will get the same values of $q$ and $r$, but how could we see this without thinking about card dealing?
+If you think about dealing $n$ cards to $k$ people, it's pretty clear that you and your friend will get the same values of $q$ and $r$, but how can we see this without thinking about card dealing?
 It will take a few steps.
 }
 
-\show{\label{remainderinequality} Suppose that $r$ and $b$ are integers for which $0 \leq r < k$ and $0 \leq b < k$.
-Carefully combine these inequalities to show that $-k < r-b < k$.
+\show{\label{remainderinequality} Suppose that $r$ and $r_2$ are integers for which $0 \leq r < k$ and $0 \leq r_2 < k$.
+Carefully combine these inequalities to show that $-k < r-r_2 < k$.
 Your goal is to provide a crystal clear argument with no extra steps.
-You can add inequalities that run the same direction; for example, if $a < b$ and $c < d$, then $a+c < b+d$.
+Note:  You can add inequalities that run the same direction; for example, if $a < b$ and $c < d$, then $a+c < b+d$.
 }{2in}
 
-\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers, that $n \geq 0$ and $k > 0$, and that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$ and that $0 \leq r < k$ and $0 \leq r_2 < k$.
-Set $qk + r$ equal to $q_2 k + r_2$ and use \ref{remainderinequality} argue that $q = q_2$ and $r = r_2$.
+\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers, that $n \geq 0$ and $k > 0$, that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$, and that $0 \leq r < k$ and $0 \leq r_2 < k$.
+Note that $qk + r$ is equal to $q_2 k + r_2$ and use \ref{remainderinequality} to argue that $q = q_2$ and $r = r_2$.
 It will probably not be obvious how to get started; this proof requires a spark of genius.
 Use scratch paper, write down everything you know, including \ref{remainderinequality}, and then write a final argument here.
 }{2.6in}
 
-\theorem{\label{divisionalgorithm}{\bf The Division Algorithm.} Let $n$ and $k$ be integers greater than 0.
-There are two parts to the theorem.
+\theorem{\label{divisionalgorithm}{\bf The Division Algorithm.} Let $n$ and $k$ be integers greater than 0.  Then,
 \blist{0in}
 \item {\bf Existence.} There exist integers $q$ and $r$ for which $n = qk + r$ and for which $0 \leq r < k$.
 \item {\bf Uniqueness.}  The numbers $q$ and $r$ are unique; $n = qk + r$ is the only way to write $n$ as a multiple of $k$ plus a remainder from $0, 1, 2, \ldots, k-1$.
 \elist
 The number $q$ is called the {\em quotient} and $r$ is called the {\em remainder}.
+Note that there are two parts to the theorem.
 You have proven this theorem above in two problems.
 The existence part was proven in \blank{0.8in}.  The uniqueness part was proven in \blank{0.8in}.
 }
 
 \example{Rewrite Theorem \ref{divisionalgorithm} for the case where $k=2$.
-Be specific about the possible values of $r$.}{0.6in}
+Be specific about the possible values of $r$.
+
+\vspace{0.1in}
+\noindent
+Let $n$ be an integer greater than 0.  Then,
+\blist{0in}
+\item {\bf Existence:} 
+\item {\bf Uniqueness:}  
+\elist
+}{0.0in}
 
 \prove{Let $n$ be an integer greater than 0.
 Recall the definitions of even and odd.
-Use the existence part of the division algorithm with $k=2$ to show that $n$ must satisfy at least one of these definitions.}{0.8in}
+Use the existence part of the division algorithm with $k=2$ to show that $n$ must satisfy at least one of these definitions.}{0.7in}
 
 \prove{Let $n$ be an integer greater than 0.
-Use the uniqueness part of the division algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, not both.
-}{0in}
+Use the uniqueness part of the division algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, never both.
+}{0.1in}
 
+% ===================================================================
 \note{Now we will divide negative numbers by positive numbers, with remainder.}
 
-\example{Start with $-37,$ add 5 to get $-32$, and add 5 repeatedly, writing down the numbers you come to, until you reach a number between 0 and 4.
-Count the number of 5's that you added to write $-37 + 5k = r$, where you fill in $k$ and $r$.
-Rewrite this as $-37 = 5q + r$ and note the sign of $q$.
-This represents division of a negative number with remainder.
-How does it differ from division of a positive number with remainder?}{2in}
+\example{Start with $-37,$ add 5 to get $-32$, and add 5 repeatedly, writing down the numbers you come to, until you reach a number from 0 to 4.
+
+\vspace{0.4in}
+\noindent
+Count the number of 5's that you added to write $-37 = 5q + r$; you fill in $q$ and $r$.
+Note the sign of the quotient $q$.
+
+\vspace{0.4in}
+\noindent
+This represents division of a negative number by 5, with remainder.
+How does it differ from division of a positive number with remainder?
+
+\vspace{0.4in}
+\noindent
+In what ways is it the same as division of a positive number with remainder?
+}{0.2in}
 
 \prove{Let $n$ be an integer less than 0.
 Let $k$ be an integer greater than 0.
-Add $k$ to $n$ repeatedly until you reach a number between 0 and $k-1$.
-Can you be sure that you will ever get all the way to non-negative numbers?
-Can you be sure that you don't jump over the numbers $0, 1, \ldots, k-1$ and keep adding $k$ forever?
-Use the result to argue that you can write $n + pk = r$ for some integer $p$, and rearrange it to read $n = qk + r$.
-What do you know about the values of $q$ and $r$?
-}{2in}
+Add $k$ to $n$ repeatedly until you reach a number from 0 to $k-1$.
+
+\vspace{0.1in}
+\noindent
+How can you be sure that you will ever get all the way to non-negative numbers?
+
+\vspace{0.4in}
+\noindent
+How can you be sure that you won't jump over the numbers $0, 1, \ldots, k-1$ and keep adding $k$ forever?
+
+\vspace{0.4in}
+\noindent
+Use these facts to argue that you can write $n = qk + r$ for some integer $q$.
+
+\vspace{0.4in}
+\noindent
+What inequalities do you know for $q$ and $r$?
+}{0.2in}
 
 \prove{Let $n$ be an integer less than 0 and let $k$ be an integer greater than 0.
 Scrutinize your proof of \ref{DivisionAlgorithmUniqueness}.
-The problem assumed that $n \geq 0$, but where did the proof use $n \geq 0$?
-If it did not, then the proof was more general than we needed at the time.
-What can we conclude about uniqueness when writing $n = qk + r$ for negative values of $n$?
+We assumed $n \geq 0$, but did your proof actually use this assumption?
+
+\vspace{0.2in}
+\noindent
+Will your proof work for $n < 0$?  Explain.
+
+\vspace{0.4in}
+\noindent
+What can we conclude about writing $n = qk + r$ for negative values of $n$?
+Use the word ``uniqueness'' or ``existence'' in your explanation.
+
+\vspace{0.4in}
+\noindent
+Rewrite \ref{divisionalgorithm} to reflect what you have just learned.
+Do a really good job on this.
+
+% Note to instructor:  the case n = 0 has not been covered.  Good quiz question, maybe.  Or good if a student notices it.
+
 }{0in}
 \pagebreak
 
-\show{Suppose that $n$ is an integer and $n = 3m + 1$ where $m$ is an integer.
-Use the division algorithm to argue clearly that $n$ cannot be a multiple of 3.}{1.5in}
+
+% =====================================================================
+\show{Let $n$ be an integer and suppose that $n = 3m + 1$ for some integer $m$.
+Use the Division Algorithm to argue that $n$ cannot be written as $n = 3k$ where $k$ is an integer.
+Thus, $n$ is not a multiple of 3.
+Take your time and work together to write a really clear argument.
+
+\vspace{1in}
+\noindent
+Which part(s) of the Division Algorithm did you use, existence, uniqueness, or both?
+}{0.0in}
 
 \show{Let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
 We would like to conclude that $n$ is a multiple of 3.
-Let's use the contrapositive:  We'll show that if $n$ is not a multiple of 3, then $n^2$ is not a multiple of 3.
-Use the division algorithm to explain that there are three ways to write $n$ as $3q+r$, and two of these make $n$ not be a multiple of 3.
-In each of these two cases, compute $n^2$ and check that $n^2$ is not a multiple of 3, again using the division algorithm.
-}{2in}
+It's hard to do this directly, but it can be done indirectly.
+
+\vspace{0.1in}
+\noindent
+Use the Division Algorithm to write $n= 3q + r$ where $r$ can take on only three values.
+Start with ``There exist integers ....''
+
+\vspace{0.4in}
+\noindent
+Your previous step gives three cases to consider.
+For each case, use algebra to compute $n^2$ and see whether or not $n^2$ can be a multiple of 3.
+
+\vspace{1.4in}
+\noindent
+Once again, let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
+Use your cases above to rule out the possibilities that $n = 3q+1$ or $n=3q+2$, and conclude that $n$ must be a multiple of 3.
+This is harder than you might think to do clearly; work hard on it.
+}{0.6in}
 
 \show{Suppose $n$ is an integer.
 Can $n^2$ be of the form $3m + 2$ where $m$ is an integer?
-Examine the cases in the previous question carefully.}{0in}
+Examine the cases in the previous question carefully.}{1.5in}
+
+\example{In the triple of consecutive integers 5, 6, 7, exactly one number is a multiple of 3.
+Same thing for 13, 14, 15.
+Write down 5 more triples of consecutive integers.
+Do you always get a multiple of 3?
+More than one multiple of 3?}{0in}
+
 \pagebreak
 
 \show{Let $n$ be an integer and consider the numbers $n$, $n+1$, and $n+2$.
 Show that exactly one of these is a multiple of 3.
 Use three cases, $n = 3k$, $n = 3k + 1$, and $n = 3k + 2$, and follow the guide below.
 
-\vspace*{0.2in}
+\vspace*{0.1in}
 \noindent
-Case 1:  $n = 3k$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
+{\bf Case 1:}  $n = 3k$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
 Exactly one of these is a multiple of three (circle it).
-Use the division algorithm to argue that the other two are not multiples of 3.
+Use the Division Algorithm to argue that the other two are not multiples of 3.
 
-\vspace*{0.5in}
+\vspace*{0.4in}
 \noindent
-Case 2:  $n = 3k+1$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
+{\bf Case 2:}  $n = 3k+1$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
 Exactly one of these is a multiple of three (circle it).
-Use the division algorithm to argue that the other two are not multiples of 3.
+Use the Division Algorithm to argue that the other two are not multiples of 3.
 
-\vspace*{0.5in}
+\vspace*{0.4in}
 \noindent
-Case 3:  $n = 3k+2$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.
-}{0.5in}
+{\bf Case 3:}  $n = 3k+2$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.
+}{0.2in}
 
-\show{Let $n$ be even and consider the numbers $n$ and $n+2$.
-Use two cases to show that exactly one of these is a multiple of 4.}{2in}
+\example{Think about pairs of consutive even numbers, like 8 and 10, or 14 and 16.
+One is a multiple of 4, the other is not.  Check a few more pairs.}{0in}
 
-\show{Let $n$ be an odd integer.  Show that $n^3-n$ is a multiple of 24.  Here again, you will need a spark of genius.  Use scratch paper to brainstorm different approaches that you could try, then try the one that looks the most promising.}{0in}
+\show{
+Let $n$ be even and consider the numbers $n$ and $n+2$.
+Use two cases to show that exactly one of these is a multiple of 4.
+What two cases?
+You will need a new idea.}{2in}
+
+\example{Let $n=1$ and compute $n^3-n$.  
+Let $n=3$ and compute $n^3-n$.
+Let $n=5$ and compute $n^3-n$.}{0.0in}
+
+\show{Let $n$ be an odd integer.  Show that $n^3-n$ is a multiple of 24.  Here you will need a few sparks of genius.
+Use scratch paper to brainstorm different approaches that you could try, then try the one that looks the most promising.}{0in}
 
 \vfill          % pad the rest of the page with white space

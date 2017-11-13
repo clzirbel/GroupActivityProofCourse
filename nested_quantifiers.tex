@@ -1,0 +1,117 @@
+\yourname
+
+\activitytitle{Nested quantifiers}{}
+
+\overview{Quantification is a key part of mathematics.
+The phrases ``for all'' and ``there exists'' can be combined in different ways to express important relationships between concepts.
+Note that the order of the two is very important.}
+
+\definition{For all}{The phrase {\em for all} means that what follows is supposed to be true for many cases, and will probably require a generic proof to cover all cases, or split all cases into a few sub-cases.
+Alternative words are ``for each.''
+Sometimes people write ``for any'' but please avoid that because it can be ambiguous, as we will see below.
+The notation $\forall$ is often used to represent ``for all''.}
+
+\definition{There exists}{The phrase {\em there exists} claims that what follows can be shown to exist.
+Often, you prove this by doing a construction of the object that is needed, but occasionally the proof works differently.
+The notation $\exists$ is often used to represent ``there exists.''}
+
+\definition{Let}{The word ``let'' has two distinct mathematical meanings which will become apparent in the proofs you write below.
+First, when you want to introduce some generic new objects which have some particular property but you want to make no further assumptions about them, you can say something like ``Let $r$ be a rational number.''
+This calls into existence a new object $r$ and all you know about it is that it is a rational number.
+Second, when you want to construct a new object with a specific value, you also use the word ``let.''
+For example, ``Let $x=\sqrt{2}$.''
+}
+
+\prove{Show that for all odd integers $m$ and $n$, there exists an integer $p$ such that $m+n = 2p$.
+Start your proof by writing ``Let $m$ and $n$ be odd integers.'' After that, be sure to construct the integer $p$.
+It's OK to define $p$ after you know what value it needs to have.
+At the end, generalize by noting that you made no further assumptions about $m$ and $n$.}{1in}
+
+\prove{Show that for every rational number $r$, there exists a rational number $s$ such that $rs = 1$.
+Remember to generalize at the end.
+Is there more than one possible value for $s$?}{1.2in}
+
+\prove{Show that for every real number $y$ there is a value of $x$ for which $x^3 = y$.
+Is there more than one possible value for $x$?}{1.2in}
+
+\prove{(Calculus required.)  Show that for every continuous function $f:\R \to \R$, there exists a function $F$ with $F' = f$ and $F(0) = 0$.
+Is there more than one possible choice for $F$?}{1.2in}
+
+\prove{(Linear algebra required.)  Suppose that the 3 by 3 matrix $A$ is invertible.
+Show that for all 3-dimensional vectors $b$, the equation $Ax = b$ has a solution $x$.
+Is there more than one possible value for $x$?}{1.2in}
+
+
+\exercise{~
+\balist{0.5in}
+\item Show that for every integer $p$, there is an integer $n$ with $2^n > p$.
+\item Using the integer $n$ that you constructed, show that for all $m > n$, we have $2^m > p$.
+\elist
+}{0.3in}
+
+\exercise{~
+\balist{0.5in}
+\item Show that for every real number $a > 0$, there is an integer $n$ with $\frac{1}{n^2 + 10} < a$.
+\item Using the integer $n$ that you constructed, show that for all $m > n$, we have $\frac{1}{m^2+10}$.
+\elist
+}{0.3in}
+
+\exercise{~
+\balist{0.5in}
+\item Show that for every real number $a > 0$, there is an integer $n$ with $\frac{1}{n^2 - 100} < a$.
+\item Using the integer $n$ that you constructed, show that for all $m > n$, we have $\frac{1}{m^2 - 100}$.
+\elist
+}{0.3in}
+
+\exercise{Write the following statements symbolically.
+Introduce new notation as you need it.
+The first one is done for you.
+\balist{0.5in}
+\item Between every two locations in the US, there is a shortest driving route.  Use the variables $L_1, L_2,$ and $r$.\\
+$\forall$ locations $L_1$ and $L_2$, $\exists$ route $r$ such that $r$ starts at $L_1$ and ends at $L_2$.\\
+\vspace*{-0.5in}
+\item Every rose has a thorn.  Use the variables $r$ and $t$.
+\item Every broken (analog) clock is right twice a day.  Use the variables $c, t_1, t_2$.
+\item Every married couple with a child gets a tax deduction.  Use variables $m, c$, and $d$.
+\elist
+}{0.1in}
+
+\exercise{
+Write the following statements symbolically:
+\balist{0.4in}
+\item For every $a$, there is a $b$ for which $b^2 = a$
+\item For every $b$, there is an $a$ for which $b^2 = a$
+\item For every $a$ and every $b$, it is the case that $b^2 = a$
+\item There exists an $a$ and there exists a $b$ such that $b^2 = a$
+\elist
+}{0.1in}
+
+\exercise{Which of the statements in the previous problem are true if the universe for both $a$ and $b$ is the set of non--negative integers?
+If not true, explain why not.
+\balist{0.2in}
+\item
+\item
+\item
+\item
+\elist
+}{0.1in}
+
+\definition{Suppose}{The word ``suppose'' is  used to restrict a generic object to have one more property.
+For example, you might want to consider a generic integer, but you might want your proof to break into two cases.
+So you might write, ``Let $n$ be an integer.  First, suppose that $n \geq 0$.''  Then you write a proof that covers this first case.  Later, you can write ``Second, suppose that $n < 0$.''  This is useful when the proof is different for the case $n \geq 0$ than it is for $n < 0$.}
+
+\exercise{Explain how existence in the Division Algorithm is covered by the previous idea of using ``let'' and ``suppose.''}{0.1in}
+
+
+\exercise{
+Show that there exists a number $a$ such that for all $x \in \R$, $5\sin(x) + 7\cos(3x) < a$.
+Note that in this problem, you first construct $a$ and then you show a ``for all'' statement.
+}{0.1in}
+
+\exercise{
+Show that for the integers, there exists a number $a$ for which, for all integers $b$, $ab = b$.
+}{0.1in}
+
+
+
+\vfill          % pad the rest of the page with white space
