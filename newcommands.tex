@@ -99,6 +99,11 @@
                                      % argument is the spacing between items
 \newcommand{\ealist}{\end{list}}      % end the list
 
+\newcommand{\bilist}[1]{\begin{list}{{\bf \roman{enumii}.}}{\usecounter{enumii}\setlength{\itemsep}{#1}}} 
+                                     % begin a numbered list.  The optional
+                                     % argument is the spacing between items
+\newcommand{\eilist}{\end{list}}      % end the list
+
 % ----------------------------- Math shortcuts
 
 \newcommand{\vect}[1]{\langle #1 \rangle}   % angle brackets for a vector
@@ -113,5 +118,12 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Rp}{\R^{+}}
+
+\newcommand{\beqnarray}[1]{\vspace*{#1}\begin{eqnarray*}}
+\newcommand{\eeqnarray}[1]{\end{eqnarray*}\vspace*{#1}}
+
+\newcommand{\zero}{\boldsymbol{0}}
+\newcommand{\one}{\boldsymbol{1}}
+
 
 \newcommand{\DGreference}{\footnote{Reading, Writing, and Proving: A Closer Look at Mathematics, 2011, by Ulrich Daepp and Pamela Gorkin}}

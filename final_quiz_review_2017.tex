@@ -1,0 +1,117 @@
+\activitytitle{Review questions for the final quiz}{Taken from a variety of sources without attribution.}
+
+\overview{The final quiz will consist of approximately 6 questions and will be worth approximately 100 points, which is just under 20\% of the total points for the course.
+I will try to make sure that it can be done by a prepared student in 2 hours.
+The best way to prepare is to work out problems on the review sheet and on the handouts that we have had in class.}
+
+Key things to review are all in-class activities about set theory, constructions, and induction, plus the review exercises.
+Note that some of these questions have already appeared in review questions or activities.
+
+\vspace{0.2in}
+
+\noindent
+{\bf Induction problems}
+\blist{0.2in}
+\item Show that $1 + 2 + 2^2 + 2^3 + \cdots + 2^n = 2^{n+1} - 1$ for all $n \geq 0$.
+\item Show that $\sum_{j=0}^n r^j = \frac{r^{n+1} - 1}{r-1}$ for all $n \geq 0$ and all real numbers $r \ne 1$.  (There is an easier formula when $r = 1!$)
+\item Show that $2^n < n!$ for all $n \geq 4$.
+\item Show that $3^n < n!$ for all $n \geq 7$.
+\item Show that $n! < n^n$ for all $n > 1$.
+\item Show that $1\cdot 2 + 2\cdot 3 +3 \cdot 4 + \cdots + n(n+1) = \frac{n(n+1)(n+2)}{3}$ for all $n \geq 1$.
+\item Show that $1 + \frac{1}{4} + \frac{1}{9} + \cdots + \frac{1}{n^2} < 2-\frac{1}{n}$ for all $n \geq 2$.
+\item Show that $n^5 - n$ is a multiple of 5 for all $n$.
+\item Show that $n^2 - 1$ is a multiple of 8 for all odd $n$.
+{\bf Hint:} You could try showing $P(1)$ and then show that $P(n)$ implies $P(n+2)$.
+\item Use the product rule to show that, for every integer $n \geq 1$, the derivative of $x^n$ is $n x^{n-1}$.
+\item Show that $1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{2^n} \geq 1 + \frac{n}{2}$.  This is too hard for the final quiz, but you may enjoy working on it.  Notice that increasing $n$ by 1 will double the number of terms, unlike most of the other problems you have worked on.
+This result shows that the harmonic series diverges.
+\item Draw $n$ lines in the plane such that no two lines are parallel and no three lines go through a common point.
+Show that this divides the plane into $\frac{n^2+n+2}{2}$ regions.
+{\bf Hint:} How many regions does the $n+1$st line add?
+\elist
+
+\pagebreak
+
+\noindent
+{\bf Set theory}
+\blist{0.2in}
+\item Show that $[2,5) \cap (3,7) = (3,5)$ by showing inclusion both ways.
+Start by letting $x \in [2,5) \cap (3,7)$, so that $x \in [2,5)$ and $x \in (3,7)$, then write it as $2 \leq x < 5$ and $3 < x < 7$.
+There are four inequalities here.  Soon enough you can conclude that $x \in (3,5)$.
+Then show containment the other way as well.
+
+\item Show that $\bigcup_{n=1}^{\infty} [3,5-\frac{1}{n}] = [3,5)$ by showing inclusion in both directions.
+
+\item Show that $\bigcap_{n=1}^{\infty} [2-\frac{1}{n},8] = [2,8]$ by showing inclusion in both directions.
+
+\item Show that $A \cup B = A$ if and only if $B \subseteq A$.
+
+\item Show that $A \subseteq C$ and $B \subseteq C$ if and only if $A \cup B \subseteq C$.
+
+\item Let $A = \bigcup_{n=1}^{\infty} H_n$.  Write an outline of a proof that $A = B$, where you show set inclusion both ways.
+For example, to show $A \subseteq B$, start with ``Let $x \in A$, then $x \in H_n$ for some $n$.  Now we need to show that $x \in B$.  Since $x \in A$ was arbitrary, $A \subseteq B$.
+For the other direction, there will be a construction.
+
+\item Let $A = \bigcap_{n=1}^{\infty} H_n$.  Write an outline of a proof that $A = B$, where you show set inclusion both ways.
+Will you need a construction in this proof?
+
+\item Let ${\displaystyle A = \bigcup_{r \in \Q}} (r-\frac{1}{10}, r+\frac{1}{10})$.
+Here, $\Q$ is the set of all rational numbers.
+Show that $A = \R$.
+
+\elist
+
+\noindent
+{\bf Constructions}
+\blist{0.2in}
+\item Let $x < 6$.
+Show that there exists an integer $n$ such that $x + \frac{1}{n} < 6$.
+
+\item Let $x > 0$.
+Show that there exists an integer $n$ such that $n \leq x < n^2$.
+
+\item Let $p$ be a rational number with $p < 0$.
+Construct a rational number $q$ with $p < q < 0$.
+
+\elist
+
+\noindent
+{\bf Other problems}
+\blist{0.2in}
+
+
+
+\item Show that if $n$ is odd, then $n^2 + 2n - 7$ is a multiple of 4.
+
+\item Let $a, b,$ and $c$ be integers.
+Suppose that $b$ is a multiple of $a$ or $c$ is a multiple of $a$.
+Show that $bc$ is a multiple of $a$.
+
+\item Let $a$ and $b$ be integers.
+Suppose that $a$ is a multiple of $b$ and that $b$ is a multiple of $a$.
+Show that $a = \pm b$.
+
+\item Suppose that $n$ is an integer and $n^2$ is a multiple of 5.
+Show that $n$ is a multiple of 5.
+Try to do this without looking back at your notes!
+
+\item Suppose that $n$ is an odd integer.
+Show that $n^3 - 25n$ is a multiple of 24.
+This is similar to something we did in class.
+See if you can do it that way.
+Can you do it by induction instead?
+Work with $P(n)$ and $P(n+2)$.
+Which way is easier?
+
+\item Show that an integer $n$ cannot be both even and odd.
+What kind of proof did you use?
+
+\item Suppose that $m$ and $n$ are integers and that $3m = 7n$.
+Show that $n$ is a multiple of 3.
+Do this by writing $n$ as $3q+r$ for different possible values of $r$.
+
+\item Give a complete proof that $\sqrt{3}$ is irrational.
+
+\elist
+
+\vfill          % pad the rest of the page with white space
