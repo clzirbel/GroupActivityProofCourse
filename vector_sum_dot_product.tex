@@ -2,11 +2,13 @@
 
 \activitytitle{Sum and dot product of 3--dimensional vectors}{\vspace*{-0.2in}}
 
-\overview{In Calculus III and Linear Algebra, one defines vectors and works with them.  They have a geometric interpretation, but here we will simply give an algebraic definition of 3--dimensional vectors and some operations on them and work with their algebraic properties.
-This activity illustrates proofs in which all that is needed is the definition and some rewriting.
+\overview{In Calculus III and Linear Algebra, we define vectors and work with them.  
+They have a geometric interpretation, but here we will simply give an algebraic definition of 3--dimensional vectors and some operations on them and work with their algebraic properties.
+This activity illustrates proofs in which all that is needed is the definition and a ``rewrite'' proof, where you can work forward and backward to show a series of equalities.
 Notice how we often use the same definition twice in one proof, once to ``unpack'' and the second time to ``re--pack.''}
 
 \definition{3--dimensional vector\label{3dvectordef}}{A three--dimensional vector is an ordered triple $\vect{ a_1, a_2, a_3 }$, where $a_1, a_2,$ and $a_3$ are real numbers.
+The numbers  $a_1, a_2,$ and $a_3$ are called {\em components} of the vector.
 }
 
 \notation{A 3--dimensional vector $\vect{ a_1, a_2, a_3 }$ is often denoted by a single letter with an arrow over the top, like this $\vec{a}$.  When it is written like $\vect{ a_1, a_2, a_3 }$ it is said to be in {\em open form.}
@@ -26,8 +28,6 @@ Is it equal to $\vect{12,3,9}$?  Explain.}{0.1in}
 
 \example{Is $\vect{ 8,13.35321,\pi,-7 }$ a 3--dimensional vector? Explain.}{0.3in}
 
-\example{Is $\vect{ 1,\pm 7,\heartsuit }$ a 3--dimensional vector? Explain.}{0.3in}
-
 \example{Is $\vect{ 3 + 9 + 12 }$ a 3--dimensional vector? Explain.}{0.3in}
 
 \example{Is $\vect{ \left[ \begin{array}{cc} 6 & 0 \\ 2 & 5 \end{array} \right], -4, 7 }$ a 3--dimensional vector? Explain.}{0.4in}
@@ -37,16 +37,18 @@ Is it equal to $\vect{12,3,9}$?  Explain.}{0.1in}
 \stop{Compare your answers to the questions above with the members of your group.  Make sure you agree on everything.}
 \pagebreak
 
-\example{Calculate the sum of $\vec{a} = \vect{ 12,-5,3 }$ and $\vec{b} = \vect{ 6,4,-11 }$.  Start by writing $\vec{a} \oplus \vec{b} = \ldots$ and write the vectors in open form next.
+\example{Calculate the sum of $\vec{c} = \vect{ 12,-5,3 }$ and $\vec{d} = \vect{ 6,4,-11 }$.  Start by writing $\vec{c} \oplus \vec{d} = \ldots$ and write the vectors in open form next.
 
 
 \vspace*{0.2in}
 \noindent
-Also calculate $\vec{b} \oplus \vec{a}$.
+Calculate $\vec{d} \oplus \vec{c}$ in the same way.
 }{0.1in}
 
 \show{You are going to show that addition of 3--dimensional vectors is commutative.  
-Fill in the blanks starting from the top and also starting from the bottom.\\
+Fill in the blanks.
+This is a ``rewrite'' proof.
+You can work forward from the top, backward from the bottom, or a bit of both.\\
 Let $\vec{a}$ and $\vec{b}$ be 3--dimensional vectors.  Then,
 \begingroup
 \addtolength{\jot}{0.7em}
@@ -72,10 +74,10 @@ In the middle you will use the fact that addition of real numbers is commutative
 Thus, at the heart of it, commutativity of vector addition comes from commutativity of addition of real numbers.}{0in}
 
 \show{Show that addition of 3--dimensional vectors is associative.
-Let $\vec{a}, \vec{b},$ and $\vec{c}$ be 3--dimensional vectors.
-Start with $(\vec{a} \oplus \vec{b}) \oplus \vec{c}$ and rewrite it until it becomes $\vec{a} \oplus (\vec{b} \oplus \vec{c})$.
-Take small steps, so that there is exactly one reason for each equality.
-Work from the top and from the bottom.\\
+Start with arbitrary 3--dimensional vectors $\vec{a}, \vec{b},$ and $\vec{c}$.
+Write $(\vec{a} \oplus \vec{b}) \oplus \vec{c}$ and rewrite it until it becomes $\vec{a} \oplus (\vec{b} \oplus \vec{c})$.
+Take small steps and write exactly one reason for each equality.
+Since you know what equality you need to show, you can work forward from the top, backward from the bottom, or both.\\
 Let $\vec{a}, \vec{b},$ and $\vec{c}$ be \blank{3in}.
 \begingroup
 \addtolength{\jot}{0.7em}
@@ -83,8 +85,8 @@ Let $\vec{a}, \vec{b},$ and $\vec{c}$ be \blank{3in}.
     (\vec{a} \oplus \vec{b}) \oplus \vec{c}
     &=&  \qqqq \qqqq \qqqq \qqqq \qqqq\qqqq\qqqq\qqqq \qqqq \\
     &=&  \\
-    &=&  \\
-    &=&  \\
+    &=&  \vect{ ( \qqq + \qqq ) + \qqq, ( \qqq + \qqq ) + \qqq, ( \qqq + \qqq ) + \qqq} \\
+    &=&  \vect{ \qqq + ( \qqq + \qqq), \qqq + ( \qqq + \qqq), \qqq + ( \qqq + \qqq)} \\
     &=&  \\
     &=&  \\
     &=& \vec{a} \oplus (\vec{b} \oplus \vec{c})
@@ -107,9 +109,10 @@ We have seen that ...
 
 \example{Calculate $(2+\sqrt{3}) \vect{5,b,c}$ = }{0.2in}
 
-\show{You are going to show that the scalar product is distributive over vector addition.  First use the word ``Let'' to settle on one real number $c$ and two 3--dimensional vectors, $\vec{a}$ and $\vec{b}$.  Then write $c(\vec{a} \oplus \vec{b})$ and rewrite it until it equals $c\vec{a} \oplus c\vec{b}$.  
-Work from the top and from the bottom and take small steps.
-Provide one reason for each step, as in the proofs above.
+\show{You are going to show that the scalar product is distributive over vector addition.  First use the word ``Let'' to settle on one real number $c$ and two 3--dimensional vectors, $\vec{a}$ and $\vec{b}$.  
+Then start with the expression $c(\vec{a} \oplus \vec{b})$ and rewrite it three times.
+Then, move to the last expression and work backwards, until you meet in the middle.  
+Provide one reason for each equality, on the right, on the same line as the equality.
 At the end, follow the model to conclude that you have shown distributivity in general.
 
 \vspace{0.2in}
@@ -143,8 +146,8 @@ We have seen that ...
 \show{Show that the scalar product is distributive over real number addition.  
 Start with ``Let.''  
 Write $(c+d)\vec{a}$ and rewrite it until it equals $c\vec{a} \oplus d\vec{a}$.
-Work from the top and also from the bottom.
-Provide one reason for each step.
+Work forward from the top and backward from the bottom.
+Provide one reason for each equality.
 At the end, follow the model to conclude that this shows distributivity in general.
 Explain why some addition signs are $+$ and others are $\oplus$.}{4in}
 
@@ -155,11 +158,13 @@ We denote it by $\vec{0}$.}
 Define a new vector by $-\vec{a} = \vect{-a_1,-a_2,-a_3}.$
 It is called the {\em additive inverse} of $\vec{a}$.}
 
-\show{Let $\vec{a}$ be a 3--dimensional vector.  Show that $\vec{a} \oplus \vec{0} = \vec{a}$.  
+\show{Let $\vec{a}$ be a 3--dimensional vector.  
+Use a rewrite proof to show that $\vec{a} \oplus \vec{0} = \vec{a}$.  
 This is called the {\em additive identity} property.
 It's not very exciting.  Make a general conclusion.}{1.2in}
 
-\show{Let $\vec{a}$ be a 3--dimensional vector, and let $-\vec{a}$ be its additive inverse.  Show that $\vec{a} \oplus (-\vec{a}) = \vec{0}$.  
+\show{Let $\vec{a}$ be a 3--dimensional vector, and let $-\vec{a}$ be its additive inverse.  
+Use good form to show that $\vec{a} \oplus (-\vec{a}) = \vec{0}$.  
 This is called the {\em additive inverse} property.
 This is also not very exciting.  Make a general conclusion.}{0in}
 
@@ -178,7 +183,8 @@ This makes the calculation just a matter of rewriting, so it is a good way to do
 
 \show{Show that the dot product is commutative, just as multiplication of real numbers is commutative.
 Start with ``Let''.
-Work from the top and from the bottom.
+Write one expression at the top of the space below, and write your goal expression at the bottom, and then work
+forward and backward until you have a rewrite proof.
 Follow the models from previous examples, and be sure to make a general conclusion.}{3.5in}
 
 \example{Calculate $\vec{a} \bullet \vec{0}$.  Is this a general result?  If so, make your calculation into a general result.}{0in}
@@ -188,9 +194,9 @@ Follow the models from previous examples, and be sure to make a general conclusi
 \show{Show that the dot product is distributive over vector addition.
 That is, show that $(\vec{a} \oplus \vec{b}) \bullet \vec{c} = \vec{a} \bullet \vec{c} + \vec{b} \bullet \vec{c}.$  
 Start with ``Let''.  
-Work from the top and from the bottom.
-Please explain why one addition symbol is $\oplus$ and the other is $+$.}{3.5in}
+Write the first expression at the top, the last expression at the bottom, and then work forward and backward.
+Also explain why one addition symbol is $\oplus$ and the other is $+$.}{3.5in}
 
-\show{Let $\vec{a}$ and $\vec{b}$ be 3--dimensional vectors and let $c$ be a real number.  Show in general that $c(\vec{a} \bullet \vec{b}) = (c\vec{a}) \bullet \vec{b} = \vec{a} \bullet (c\vec{b})$.  Since there are two equalities to show, you might want to think about how you will go about it.}{0in}
+\show{Let $\vec{a}$ and $\vec{b}$ be 3--dimensional vectors and let $c$ be a real number.  Show in general that $c(\vec{a} \bullet \vec{b}) = (c\vec{a}) \bullet \vec{b} = \vec{a} \bullet (c\vec{b})$.  Since there are two equalities to show, think about how you will organize the equalities.}{0in}
 
 \vfill          % pad the rest of the page with white space
