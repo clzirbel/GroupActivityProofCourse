@@ -1,25 +1,69 @@
 \yourname
 
-\activitytitle{Inequalities}{We can define the $<$ relation for real numbers and establish its properties.}
+\activitytitle{Deriving properties of inequalities}{We can define the $<$ relation for real numbers and establish its properties.}
 
-\overview{Most students at your level take the real numbers as things that simply exist and have a number of properties such as commutativity.  In fact, the real numbers can be {\em constructed} from the rational numbers, and the rational numbers from the integers, and the integers from the positive integers.  In this activity, we back up to the point that the real numbers have been constructed, but before inequalities have been defined.  We define the $<$ relation and prove a number of useful properties that it satisfies.  Since the $>$ relation is so similar, we will not define it or show its properties.}
+\overview{In this activity, we back up to the point after the real numbers have been constructed, but before subtraction and inequalities have been defined.  We define the $<$ relation and prove a number of useful properties that it satisfies.  Since the $>$ relation is so similar, we will not define it or show its properties.}
+
+\remark{Most of us first learned numbers by counting, using 1, 2, 3, \ldots, which we will call {\em positive integers}.
+Later, we learned about addition of positive integers and multiplication of positive integers.
+Both operations give back positive integers; we say that the set of positive integers is {\em closed} under addition and multiplication.
+Later, we learned about zero, negative numbers, rational numbers, and real numbers.
+It is not always made clear, but the negative integers can be constructed from the positive integers, the rationals from the integers, and the reals from the rationals.
+In this activity, we assume that the real numbers have been constructed and have been shown to have their usual algebraic properties, and work from there to prove some basic (and very familiar) facts.}
 
 \note{\label{realnumberproperties}Let $\R$ denote the set of real numbers, and denote addition and multiplication of real numbers in the usual ways.
 {\bf Addition} has these properties:  commutativity ($a+b = b+a$), associativity ($a + (b+c) = (a+b) +c$), additive identity (there exists a unique real number called 0 for which $a + 0 = a$ for all $a \in \R$), and additive inverse (for each number $a$ in $\R$, there exists a unique real number $-a$ for which $a + (-a) = 0$).
 {\bf Multiplication} has these properties:  commutativity ($ab = ba$), associativity ($a(bc) = (ab)c$), multiplicative identity (there exists a unique real number called 1, with $1 \ne 0$, such that $a\cdot 1 = a$ for all $a$ in $\R$), multiplicative inverse (for each $a$ in $\R$ with $a \ne 0$, there exists a unique number called $a^{-1}$ for which $a \cdot a^{-1} = 1$.
 {\bf Addition and multiplication} are related by the distributive property: ($(a+b)c = ac + bc$).}
 
-\definition{Subtraction}{Let $a$ and $b$ be real numbers.  The difference of $a$ and $b$, denoted $a - b$, is the real number $a + (-b)$, where $(-b)$ denotes the additive inverse of $b$.}
+\note{In this activity, subtraction is not defined, so be careful not to use it!}
 
-\note{\label{negativeproperties}At the end of this activity, you will see how to establish the following useful properties regarding additive inverses and subtraction:
-\balist{0in}
-\item $a\cdot 0 = 0$ for all real numbers $a$.
-\item The additive inverse $(-a)$ is equal to $(-1)\cdot a$, where $(-1)$ is the additive inverse of 1
-\item $(-1)(-1) = 1$.
-\item The additive inverse of $a+b$ is $(-a)+(-b)$.  Using subtraction notation, $-(a+b) = -a-b$.
-\item $-(-a) = a$.
-\ealist
-You can use subtraction as usual in this activity, but if you would like to avoid subtraction notation and just use additive inverses, that is worth attempting.}
+\show{Let $a$ be a real number.  Justify each line in the following proof to show that $0 \cdot a = 0$.
+\beqnarray{-0.1in}
+  a + (-a) &=& 0 \qqqq\qqqq\qqqq\qqqq ~\\
+  1 \cdot a + (-a) &=& 0 \\
+  (0+1) \cdot a + (-a) &=& 0 \\
+  (0 \cdot a + 1 \cdot a) + (-a) &=& 0 \\
+  (0 \cdot a + a) + (-a) &=& 0 \\
+  0 \cdot a + (a + (-a)) &=& 0 \\
+  0 \cdot a + 0 &=& 0 \\
+  0 \cdot a &=& 0
+\eeqnarray{-0.5in}
+}{0.0in}
+
+\show{People sometimes ask if the additive inverse $(-a)$ is the same as the product $(-1)\cdot a$, where $(-1)$ is the additive inverse of 1.
+It's true, and here is how you show it; fill in steps and write the justifications at the right side of each line.
+\beqnarray{-0.1in}
+  a + (-1)\cdot a &=& 1\cdot a + (-1) \cdot a \qqqq\qqqq\qqqq\qqqq ~ \\
+                  &=& (1 + (-1)) \cdot a \\
+                  &=&  \\
+                  &=& 0,
+\eeqnarray{-0.5in}
+This shows that $(-1) \cdot a$ is the additive inverse of $a$, because that number is unique.}{0in}
+
+\show{You might think that it is obvious that $(-1)(-1) = 1$, where $(-1)$ is the additive inverse of 1, but this takes a few steps.
+Fill in steps and write justifications.
+\beqnarray{-0.1in}
+(-1) + (-1)(-1) &=& (-1)(1) + (-1)(-1) \qqqq\qqqq\qqqq\qqqq ~\\
+                &=& (-1)(1 + (-1)) \\
+                &=& \\
+                &=& 0
+\eeqnarray{-0.25in}
+
+\noindent
+Why does this show that $(-1)(-1)$ is the additive inverse of $-1$?}{0in}
+
+\show{The additive inverse of a sum works out nicely.
+Let $a$ and $b$ be real numbers and think about the additive inverse of $a+b$.
+Write justifications to the right of each statement.
+\beqnarray{-0.1in}
+-(a+b) &=& (-1)(a+b) \\
+       &=& (-1)(a) + (-1)(b) \\
+       &=& (-a) + (-b)
+\eeqnarray{-0.5in}
+}{0in}
+
+\show{Let $a \in \R$.  The statement $-(-a) = a$ is just a statement about additive inverses.  Prove that it is true.}{0.4in}
 
 \definition{Positive real numbers\label{positivereals}}{By construction, the real numbers have a subset $\Rp$, called the {\em positive real numbers,} for which:
 \balist{0.3in}
@@ -29,107 +73,89 @@ You can use subtraction as usual in this activity, but if you would like to avoi
 \ealist
 \vspace{0.2in}
 
-Under each property above, write a sentence that states it in plain English.
-Think of $\Rp$ as being the positive, non--zero numbers.
-We can't use interval notation to write what $\Rp$ is, because intervals are defined in terms of inequalities, and we have not defined inequalities yet!}
+\noindent
+Note that the positive real numbers are exactly analogous to the positive integers that you learned first.
+We can't use interval notation to write what $\Rp$ is, because intervals are defined in terms of inequalities, and we have not defined inequalities yet!
+}
+
+\exercise{
+Under each property in \ref{positivereals}, write a sentence that states it in plain English
+}{0in}
 
 \show{Let $a \in \R$ and suppose that $a \ne 0$.
-Show that $a\cdot a \in \Rp$.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
-{\bf Hint:} There are two cases left in \ref{positivereals}c.}{0.9in}
+Show that $a\cdot a \in \Rp$, justifying each step, citing previous definitions or results by number.
+{\bf Hint:} Use a proof by cases, using the two remaining cases in \ref{positivereals}c.
+For future reference, this gives us a new way to show that a number is in $\Rp$.
 
-\show{Show that $1 \in \Rp$.  Be careful to cite any previous properties that you use.}{0.5in}
+\balist{0.3in}
+\item Suppose that $a \in $ \blank{0.5in}.
+\item Suppose that $(-a) \in $ \blank{0.5in}.
+\elist
+}{0.4in}
+
+\show{Show that $1 \in \Rp$.  Justify each step.}{0.5in}
 
 \show{Show that $(-1) \notin \Rp$.
-{\bf Hint:} Assume that $(-1) \in \Rp$ and use \ref{positivereals}a.}{0.5in}
+{\bf Hint:} Pretend for a minute that $(-1) \in \Rp$ and use \ref{positivereals}a.}{0.5in}
 
-\definition{Less than}{\label{lessthan}Let $a$ and $b$ be real numbers.  We write that $a < b$ if $b - a \in \Rp$.}
+\definition{Less than}{\label{lessthan}Let $a$ and $b$ be real numbers.  We write that $a < b$ if $b + (-a) \in \Rp$.}
 
 \note{All of the following problems rely on  Definition \ref{lessthan}, so you will use it over and over.
 Note that $>$ has not been defined yet, so be careful not to use it.}
 
-\show{Show that $-1 < 0$. {\bf Hint:} use \ref{negativeproperties}d.}{0.5in}
+\show{Show that $-1 < 0$.}{0.5in}
 
 \show{Show that $1 < 1$ is not true.
 Thus, the $<$ relation is not reflexive.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
-}{0.9in}
+Justify each step, citing previous results by number.
+}{0.7in}
 
-\show{Show that $0 < 1$ but that $1 < 0$ is not true.
-Thus, the $<$ relation is not symmetric.}{0.9in}
+\show{Show that $0 < 1$.
+
+\vspace{0.5in}
+\noindent
+Show that $1 < 0$ is not true.
+Thus, the $<$ relation is not symmetric.}{0.5in}
 
 \show{Show that the $<$ relation on $\R$ is transitive.
-Follow good form by first letting $a, b, c$ be real numbers and supposing that $a < b$ and $b < c$.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
-You may enjoy ticking off the properties of the real numbers that you use.
-For example, in this proof, you are likely to use the fact that $(-b) + b = 0$, which is the additive inverse property.}{0.9in}
+Follow good form by first letting $a, b, c$ be real numbers and supposing that $a < b$ and $b < c$, then showing $a < c$.
+Justify each step by number.
+In this proof, you are likely to use the fact that $(-b) + b = 0$, which is the additive inverse property.}{0.9in}
 
 \show{Let $a,b \in \R$ and suppose that $a < b$.
 Show that $-b < -a$.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
-}{0.9in}
+Justify each step.
+}{0.7in}
 
 \show{Let $a, b, c \in \R$.  Suppose that $a < b$.  Show that $a+c < b+c$.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
-}{0.9in}
+Justify each step.
+}{0.7in}
 
 \show{Let $a, b, c, d \in \R$.  Suppose that $a < b$ and $c < d$.  Show that $a+c < b+d$.
-When you use properties from \ref{negativeproperties} or \ref{positivereals}, cite them by number.
+Justify each step.
 }{0.9in}
 
 \show{Let $a, b, c$ be real numbers.  Suppose that $a < b$ and $0 < c$.
 Show that $ac < bc$.
-}{0.9in}
+}{0.7in}
 
 \show{Let $a, b, c$ be real numbers.  Suppose that $a < b$ and $c < 0$.
 Show that $bc < ac$.
 }{0.9in}
 
 \show{Let $a,b \in \R$ and suppose that $0 < a$ and $b < 0$.
-Use a previous result to show that $ab < 0$.}{0.9in}
+Use a previous result to show that $ab < 0$.}{0.7in}
 
 \show{Let $a \in \R$ and suppose that $0 < a$.
 Show that $0 < a^{-1}$.
 Here $a^{-1}$ is the multiplicative inverse of $a$.
 {\bf Hint:}  This one take a bit more effort than the previous ones.
-Note that division has not been defined yet, so just use addition, subtraction, and multiplication.}{0.9in}
+Note that division has not been defined yet, so just use addition and multiplication.}{0.9in}
 
 \show{Let $a,b \in \R$ and suppose that $0 < a$ and $a < b$.
 Show that $b^{-1} < a^{-1}$.}{0.9in}
 
-\note{Below, you are asked to prove basic properties of additive inverses and subtraction.}
-
-\show{Let $a$ be a real number.  Show that $a \cdot 0 = 0$.}{0.4in}
-
-\show{People sometimes ask if the additive inverse $(-a)$ is the same as $(-1)\cdot a$, where $(-1)$ is the additive inverse of 1.
-It's true, and here is how you show it; you should fill in steps and write the justifications at the right side of each line.
-\begin{eqnarray*}
-  a + (-1)\cdot a &=& 1\cdot a + (-1) \cdot a \\
-                  &=& (1 + (-1)) \cdot a \\
-                  &=&  \\
-                  &=& 0,
-\end{eqnarray*}
-This shows that $(-1) \cdot a$ is the additive inverse of $a$.}{0in}
-
-\show{You might think that it is obvious that $(-1)(-1) = 1$, where $(-1)$ is the additive inverse of 1, but this takes a few steps beyond the properties of the real numbers in \ref{realnumberproperties}.  Write justifications and complete the following steps to show it.
-\begin{eqnarray*}
-(-1) + (-1)(-1) &=& (-1)(1) + (-1)(-1) \\
-                &=& (-1)(1 + (-1)) \\
-                &=& \\
-                &=& 0,
-\end{eqnarray*}
-which shows that $(-1)(-1)$ is the additive inverse of $-1$, which is 1.}{0in}
-
-\show{The additive inverse of a sum works out nicely.
-Let $a$ and $b$ be real numbers and think about the additive inverse of $a+b$.
-Write justifications to the right of each statement.
-\begin{eqnarray*}
--(a+b) &=& (-1)(a+b) \\
-       &=& (-1)(a) + (-1)(b) \\
-       &=& (-a) + (-b)
-\end{eqnarray*}}{0in}
-
-\show{Let $a \in \R$.  The statement $-(-a) = a$ is just a statement about additive inverses.  Prove that it is true.}{0in}
-
-
 \vfill          % pad the rest of the page with white space
+
+
+

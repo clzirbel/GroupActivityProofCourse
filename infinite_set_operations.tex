@@ -1,63 +1,185 @@
 \yourname
 
-\activitytitle{Infinite operations on sets}{Unions and intersections of infinitely many sets}
+\activitytitle{Infinite unions and intersections}{}
 
-\overview{We are working with sets of real numbers.  These exercises will give you practice with sets and teach you things about the real numbers as well.}
+\overview{We are working with infinitely many sets of real numbers.  These exercises will give you practice with sets and teach you things about the real numbers as well.}
+
+\definition{Union}{Let $A_1, A_2, \ldots$ be sets.
+The {\em union} of $A_1, A_2, \ldots$, which is denoted $\bigcup_{n=1}^{\infty} A_n$, is all elements which are in $A_n$ for some $n = 1, 2, 3, \ldots.$}
+
+\definition{Intersection}{Let $A_1, A_2, \ldots$ be sets.
+The {\em intersection} of $A_1, A_2, \ldots$, which is denoted $\bigcap_{n=1}^{\infty} A_n$, is all elements which are in $A_n$ for all $n = 1, 2, 3, \ldots.$}
+
+\problem{Use quantifiers to express what it means that $x \in \bigcup_{n=1}^{\infty} A_n.$\\
+{\bf Solution:} $\exists n$ such that $x \in A_n$.
+In words, there is at least one $n$ for which $x$ is in $A_n$; that is what it takes to be in the union.}{0.0in}
+
+\problem{Use quantifiers to express what it means that $x \in \bigcap_{n=1}^{\infty} A_n.$}{0.2in}
+
+\exercise{To show $A \subseteq \bigcap_{n=1}^{\infty} B_n:$  Let $x \in A$, and show that $x \in B_n$ for all $n = 1, 2, 3, \ldots$.
+What kind of proof do you need to write in order to show that $x \in B_n$ for all $n = 1, 2, 3, \ldots$?
+What is the first line of that part of the proof?}{0.1in}
+
+\exercise{To show $A \subseteq \bigcup_{n=1}^{\infty} B_n:$  Let $x \in A$, and show that $x \in B_n$ for some $n = 1, 2, 3, \ldots$.
+In other words, show that $\exists n$ such that $x \in B_n$.
+What kind of proof do you need to write in order to show that $x \in B_n$ for some $n = 1, 2, 3, \ldots$?
+What is going to have to happen first in the proof?}{0.1in}
+
+\remark{To show $\bigcap_{n=1}^{\infty} A_n \subseteq B:$  Let $x \in \bigcap_{n=1}^{\infty} A_n$.
+Then you know that $x \in A_n$ for all $n$, which is a lot of information about $x$.
+Use this information to show that $x \in B$.
+Exactly how that will work depends on the problem.
+}
+
+\remark{To show $\bigcup_{n=1}^{\infty} A_n \subseteq B:$  Let $x \in \bigcap_{n=1}^{\infty} A_n$.
+Then you know that $x \in A_n$ for some $n$, but you don't know which $n$, so that is not very informative.
+There are infinitely many cases, one for each possible value of $n$.
+The best you can do is to start with, ``Suppose $x \in A_n$'' and work forward from there to show that $x \in B$.
+In the end, this is the same as showing that $A_n \subseteq B$ for all $n$.
+}
+
+% =========================================================================
 
 \problem{Let $\displaystyle A = \bigcup_{n=1}^{\infty} [n,n+1)$.  
-As indicated below, write $A$ in open form, listing out the first 5 sets in the union.
-Figure out what interval $A$ is equal to, call the interval $B$, then show that $A = B$ by showing containment both ways, as indicated below.
 
-\noindent $A = \blank{0.75in} \cup \blank{0.75in} \cup \blank{0.75in} \cup  \blank{0.75in} \cup \blank{0.75in} \cup \cdots$
+\balist{0.2in}
+\item Write $A$ in open form, listing out the first five sets in the union:
 
-\noindent $B = \blank{1in}$
+$A = \blank{0.75in} \cup \blank{0.75in} \cup \blank{0.75in} \cup  \blank{0.75in} \cup \blank{0.75in} \cup \cdots$
+
+\item Figure out what interval $A$ is equal to and call the new interval $B$.  $B$ = \blank{1in}.
+
+\item Show that $A \subseteq B$.
 
 \noindent
-1) Let $x \in A$.  Then \blank{1.5in} for some $n = 1, 2, 3, \ldots$.
+Let $x \in A$.
+Then $x \in [n,n+1)$ for \blank{1.5in}.
 
-\vspace*{0.9in}
-
-\noindent Thus $x \in B$.  Since $x \in A$ was arbitrary, $A \subseteq B$.  (Always end a proof of inclusion this way!)\\
+\vspace{0.8in}
 \noindent
-2) Let $x \in B$.  {\bf Note:} You need to show that there exists an $n$ for which $x \in [n,n+1)$.  Tell us how to get the right value of $n$, starting with $x$.
-}{0.9in}
+Thus, $x \in B$.  Since $x \in A$ was arbitrary, $A \subseteq B$.
+
+\item Show that $B \subseteq A$.
+
+\noindent
+Let $x \in B$.  
+You need to show that there exists an $n$ for which $x \in [n,n+1)$.  
+You need to construct the value of $n$, starting with $x$.
+
+\vspace{0.8in}
+\noindent
+Thus, $x \in [n,n+1)$, and so $x \in A$.  Since $x \in B$ was arbitrary, $B \subseteq A$.
+\elist
+}{0.0in}
 
 \problem{Let $\displaystyle A = \bigcup_{n=1}^{\infty} [-n,n]$.  
-As indicated below, write $A$ in open form, listing out the first 5 sets in the union.
-Figure out what interval $A$ is equal to, call the interval $B$, then show that $A = B$ by showing containment both ways, as indicated below.
 
-\noindent $A = \blank{0.75in} \cup \blank{0.75in} \cup \blank{0.75in} \cup  \blank{0.75in} \cup \blank{0.75in} \cup \cdots$
+\balist{0.2in}
+\item Write $A$ in open form, listing out the first five sets in the union.
 
-\noindent $B = \blank{1in}$
+\item Figure out what interval $A$ is equal to and call the new interval $B$.  $B =$ \blank{1.5in}.
 
-\noindent
-1) Let $x \in A$.  Then \blank{1.5in} for some $n = 1, 2, 3, \ldots$.
+\item Show that $A \subseteq B$.  Use good form.
 
-\vspace*{0.9in}
+\vspace*{0.2in}
 
-\noindent
-2) Let $x \in B$.  {\bf Note:} You need to show that there exists an $n$ for which $x \in [-n,n]$.  Tell us how to get the right value of $n$, starting with $x$.
-}{0.9in}
+\item Show that $B \subseteq A$.  Use good form.
 
-\problem{Let $\displaystyle A = \bigcap_{n=1}^{\infty} (-n,n)$.  
-As indicated below, write $A$ in open form, listing out the first 5 sets in the intersection.
-Figure out what interval $A$ is equal to, call the interval $B$, then show that $A = B$ by showing containment both ways, as indicated below.
-
-\noindent $A = \blank{0.75in} \cap \blank{0.75in} \cap \blank{0.75in} \cap  \blank{0.75in} \cap \blank{0.75in} \cap \cdots$
-
-\noindent $B = \blank{1in}$
-
-\noindent
-1) Let $x \in A$.  Then \blank{1.5in} for all $n = 1, 2, 3, \ldots$.
-
-\vspace*{0.8in}
-
-\noindent
-2) Let $x \in B$.
+\elist
 }{0.8in}
 
+\problem{Let $\displaystyle A = \bigcap_{n=1}^{\infty} (-n,n)$.  
+
+\balist{0.2in}
+\item Write $A$ in open form, listing out the first five sets in the intersection.
+
+\item Figure out what interval $A$ is equal to and call the interval $B$.  $B = $\blank{1in}.
+
+\item Show that $A \subseteq B$.
+
+\vspace*{0.4in}
+
+\item Show that $B \subseteq A$.
+
+\noindent
+Let $x \in B$.  You need to show that $x \in (-n,n)$ for all $n$.  How do you do that?
+
+\elist
+}{0.5in}
+
+\problem{Let $\displaystyle A = \bigcup_{n=0}^{\infty} [n, n^2]$.
+
+\balist{0.2in}
+\item List out the first five sets in this union, as you did above.
+Draw them on a number line if it helps.
+
+\item Make a conjecture about how you can write $A$ in a simpler way and call the new set $B$.
+It should be the union of three simpler things.
+
+\item Show that $A \subseteq B$.
+Let $x \in A$.  Then $x \in [n,n^2]$ for some $n = 0, 1, 2, \ldots.$.
+You want to show that $x \in B$.
+You can do this with three cases, depending on whether $n=0$, $n=1$, or $n > 1$.
+Each case needs to end with $x \in B$.
+
+\vspace*{1in}
+
+\item Show that $B \subseteq A$.
+Let $x \in B$.
+There are three cases, and in each one, you will need to construct $n$ so that $x \in [n, n^2]$.
+Each case needs to end with $x \in A$.
+
+\elist
+}{1.5in}
+
+\problem{Let ${\displaystyle A = \bigcup_{r \in \Q}} (r-\frac{1}{10}, r+\frac{1}{10})$.
+Here, $\Q$ is the set of all rational numbers.
+Think of a simpler way to describe the set $A$, then prove your conjecture by showing set containment both ways.}{2in}
+
+
+\problem{Let $n$ be an integer greater than 0.  
+
+\balist{0.0in}
+\item Show that $[5+\frac{1}{n},6] \subseteq (5,6]$
+
+\item Show that $(5,6] \subseteq [5,6]$.
+\elist
+}{0.0in}
+
+\problem{Let ${\displaystyle A = \bigcup_{n=1}^{\infty}} [\frac{1}{n}, 1]$.  
+List out the first five sets in this union, as you did above.  
+Draw a picture of them above a number line.  
+Make a conjecture about what interval $A$ is equal to, call the new interval $B$, then show that $A = B$ by showing containment both ways.
+You will need to use this property of real numbers:  if $x > 0$, then there exists a positive integer $n$ with $0 < \frac{1}{n} < x$.}{3in}
+
+\problem{Suppose that $x \leq 5 + \frac{1}{n}$ for all $n = 1, 2, 3, \ldots$.
+Show that $x \leq 5$.
+\Hint Consider different types of proof including direct, contrapositive, contradiction, etc.}{1in}
+
+\problem{Let ${\displaystyle A = \bigcap_{n = 1}^{\infty}} [0, 1+\frac{1}{n}]$.
+List out the first five sets in this intersection, as you did above.  
+Draw a picture of them above a number line.  
+Make a conjecture about what interval $A$ is equal to, call the new set $B$, then prove that $A = B$ by showing containment both ways.
+}{0in}
+
+% -----------------
+\pagebreak
+
+\problem{Let $a < b$.  Show that ${\displaystyle \bigcup_{n=1}^{\infty}} [a, b-\frac{1}{n}] = [a,b)$.  
+(If $b - \frac{1}{n} < a$, the interval is empty.)
+Draw pictures, then show set inclusion both ways.  
+}{2in}
+
+\problem{Let $a < b$.  Show that ${\displaystyle \bigcap_{n=1}^{\infty}} (a-\frac{1}{n},b+\frac{1}{n}) = [a,b]$.  Draw pictures, then show set inclusion both ways.}{2in}
+
+\problem{Let $\displaystyle A = \bigcup_{k \in \Z} (k, k+1)$.
+\blist{0.2in} 
+\item Draw out some of the intervals on a number line.
+\item Make a conjecture about what set $A$ is.  You do not need to prove the conjecture.
+\elist}{0.5in}
+
 \problem{For $n = 2, 3, 4, \ldots,$ let $A_n = \{ 2n, 3n, 4n, \ldots \}$.
-\blist{0.8in}
+\balist{0.8in}
 \item Write out the first five of the $A_n$.
 \item Let $\displaystyle B = \bigcup_{n=2}^{\infty} A_n$.
 Describe the set $B$ in simpler terms, perhaps by writing out the smallest 10 elements of $B$, then describe $B$ in a sentence.
@@ -65,41 +187,23 @@ Describe the set $B$ in simpler terms, perhaps by writing out the smallest 10 el
 \elist
 }{0in}
 
-\problem{Let $\displaystyle A = \bigcup_{n=0}^{\infty} [n, n^2]$.
-List out the first five sets in this union, as you did above.
-Draw them on a number line if it helps.
-Make a conjecture about how you can write $A$ in a simpler way, call the new set $B$, then prove that $A = B$ by showing containment in both directions.
-In each direction, you will need to use three cases.}{2in}
+\problem{
+Use quantifiers to write down what it means that $x \in \bigcup_{n=1}^{\infty} A_n$.
+Use quantifiers to express what it means that $x \notin \bigcup_{n=1}^{\infty} A_n$ by negative quantifiers and rewriting until the expression is as simple as possible.}{1in}
 
-\problem{Let ${\displaystyle A = \bigcup_{n=1}^{\infty}} [\frac{1}{n}, 1]$.  
-List out the first five sets in this union, as you did above.  
-Draw a picture of them above a number line.  
-Make a conjecture about what interval $A$ is equal to, call the new set $B$, then show that $A = B$ by showing containment both ways.
-You will need to use this property of real numbers:  if $x > 0$, then there exists a positive integer $n$ with $0 < \frac{1}{n} < x$.}{3in}
+\problem{
+Use quantifiers to write down what it means that $x \in \bigcap_{n=1}^{\infty} A_n$.
+Use quantifiers to express what it means that $x \notin \bigcap_{n=1}^{\infty} A_n$ by negative quantifiers and rewriting until the expression is as simple as possible.}{1in}
 
-\problem{Let ${\displaystyle A = \bigcup_{r \in \Q}} (r-\frac{1}{10}, r+\frac{1}{10})$.
-Here, $\Q$ is the set of all rational numbers.
-Think of a simpler way to describe the set $A$, then prove your conjecture by showing set containment both ways.}{2in}
+\definition{Set complement}{If $A$ is a set, then $A^c$ is all elements under consideration that are not in $A$.  For example, if $A = [0,8)$, then $A^c = (-\infty,0) \cup [8,\infty)$.}
 
-\problem{Let ${\displaystyle A = \bigcap_{n = 1}^{\infty}} [0, 1+\frac{1}{n}]$.
-List out the first five sets in this intersection, as you did above.  
-Draw a picture of them above a number line.  
-Make a conjecture about what interval $A$ is equal to, call the new set $B$, then prove that $A = B$ by showing containment both ways.
+\problem{de Morgan's law.  Show that $\left( \bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n = 1}^{\infty} A_n^c$ by writing logical expressions for $x$ being in the set on the left side and for the right side.
+Start by writing a logical expression that means the same thing as $x \in \left( \bigcup_{n=1}^{\infty} A_n \right)^c$ and work with it until it is a logical expression for $x \in \bigcap_{n = 1}^{\infty} A_n^c$.
+When you write the proof this way, you do not need to show containment both ways to show that the two sets are equal.
 
-{\bf Hint:} You may want to show that $A \subseteq B$ by showing the logically equivalent statement that $B^c \subseteq A^c$ (thinking of the universal set as $[0,\infty)$ so you can avoid negative numbers).
-This is the same as the contrapositive:  suppose that $x \notin B$, then show that $x \notin A$.
-You may find it useful to keep in mind that if $x > 0$, then there exists an integer $n$ for which $0 < \frac{1}{n} < x$.
-}{3in}
+$x \in \left( \bigcup_{n=1}^{\infty} A_n \right)^c$ means $\lnot (\exists $integer $n$ such that $x \in A_n)$, which means \ldots
+}{1.0in}
 
-\problem{Let $\displaystyle A = \bigcup_{k \in \Z} (k, k+1)$.
-\blist{0.1in} 
-\item Draw out some of the intervals on a number line.
-\item Make a conjecture about what set $A$ is.
-\elist}{0in}
-
-\problem{Let $a < b$.  Show that ${\displaystyle \bigcup_{n=1}^{\infty}} [a, b-\frac{1}{n}] = [a,b)$.  Draw pictures, then show set inclusion both ways.  If  $b - \frac{1}{n} < a$, the interval is empty.}{2in}
-
-\problem{Let $a < b$.  Show that ${\displaystyle \bigcap_{n=1}^{\infty}} (a-\frac{1}{n},b+\frac{1}{n}) = [a,b]$.  Draw pictures, then show set inclusion both ways.}{0in}
 
 
 \vfill          % pad the rest of the page with white space

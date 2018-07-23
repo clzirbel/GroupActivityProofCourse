@@ -1,0 +1,65 @@
+\yourname
+
+\activitytitle{Special words in mathematics}{A short guide to how to use certain words}
+
+\overview{Using the right words in the right situation shows that you understand the logical structure of what you are writing.
+It also makes it clear to the reader what you mean.}
+
+\definition{Let}{The word ``Let'' has two main uses in mathematics.
+
+\balist{0.1in}
+\item The word ``Let'' is used to introduce a new variable or other object and give it a specific value.  This is often used in proofs where you need to show the existence of some object, but is also used in many other contexts.
+\begin{itemize}
+\item Let $n = \frac{1}{a} + 1$, rounded up to the nearest integer.
+\item Let $x = \frac{-b + \sqrt{b^2-4ac}}{2a}.$
+\item Let $f(x) = \sin(x) + \cos(x)$.
+\end{itemize}
+The word ``set'' can also be used here.
+\item The word ``Let'' can also be used to introduce a new variable with a generic value, which is used when writing a generic proof that is supposed to work for many values of the variable.
+\begin{itemize}
+\item Let $n \geq 1$.
+\item Let $x > 0$.
+\item Let $r \in \Q$.
+\item Let $0 < x < 1$.
+\end{itemize}
+\elist
+A very important point is that whenever you use the word ``Let'', you change the value of the variable.  So for example, if you start a proof by saying ``Let $a > 0$, then $a$ becomes a specific real number, but it could be any real number greater than 0.  
+Based on this $a$, you may construct other variables like $n$ which depend on $a$.  For example, $n = 1/a$.
+Later in the same proof, if you say, ``Let $a > 1$, then this changes the value of $a$, and any variable that depends on $a$ will lose its connection.
+}
+
+\definition{Suppose}{The word ``Suppose'' has two main uses in mathematics.
+\balist{0.1in}
+\item The word ``Suppose'' can be used to introduce cases, for example, to restrict consideration of an already--introduced variable to a smaller range of variables.  Using ``suppose'' this way does not introduce a new variable.
+\begin{itemize}
+\item Let $x \in \R$.  Case 1.  Suppose $x \geq 0$. ... Case 2. Suppose $x < 0$.
+\item Let $x \in [3,7]$.  Case 1.  Suppose that $x < 4$.  ... Case 2.  Suppose that $x \geq 4$.
+\end{itemize}
+\item The word ``Suppose'' is also used to introduce a logical statement at the beginning of a theorem or proof.
+\begin{itemize}
+\item Suppose that the function $f$ is continuous on the interval $[a,b]$.
+\item Suppose that $n$ is an odd integer.
+\end{itemize}
+These are the only ways that ``Suppose'' can be used to introduce a new variable.  Note that ``Let'' could also have been used.
+\elist
+}
+
+\definition{Assume}{The word ``Assume'' is most often used to introduce a proof by contradiction.
+Because it is helpful to know that a proof by contradiction is coming, it is helpful to use familiar wording.
+You can say things like:
+\balist{0in}
+\item Assume that $\sqrt{2}$ is rational.
+\item Assume for the sake of contradiction that $\sqrt{2}$ is rational.
+\item Pretend for a minute that $\sqrt{2}$ is rational.  (Recommended in this class, but unconventional outside this class.
+\elist}
+
+\remark{The word ``Any'' is ambiguous and I recommend that you avoid using it.  Sometimes it means ``for all'' and sometimes it means ``there exists''.
+Consider this example:
+\balist{0.1in}
+\item Suppose that $n > a$ for any non-negative integer $n$.  This would be true {\bf for all} non-negative integers $n$ if $a = -5$.  But it would be true for {\bf some} non-negative integer $n$ if $a=10$.  The meaning is ambiguous.
+\elist
+}
+
+
+
+\vfill          % pad the rest of the page with white space

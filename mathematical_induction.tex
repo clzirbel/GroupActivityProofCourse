@@ -1,13 +1,13 @@
 \yourname
 
-\activitytitle{Mathematical Induction}{Proving that a claim is true for all $n=1, 2, 3, \ldots$.  }
+\activitytitle{Mathematical Induction}{Proving that a claim is true for all $n=1, 2, 3, \ldots$ by building on previous results.  }
 
 \overview{One important task in mathematics is to find regular patterns and prove that they hold.
 The main method we use for this is mathematical induction.
 Co-authored by Ying-Ju Chen.}
 
 \theorem{\bf Mathematical induction\label{MItheorem}}\\
-{For each integer $n=1, 2, 3, \ldots$, let $P(n)$ denote a true/false statement involving $n$.
+{For each integer $n=1, 2, 3, \ldots$, let $P(n)$ denote a true/false logical statement involving $n$.
 \begin{itemize}
 \item[(i)] (The basis step) Prove that $P(1)$ is true.
 \item[(ii)] (The inductive step) For each $n = 1, 2, 3, \ldots$, suppose that $P(n)$ is true, and use $P(n)$ to prove that $P(n+1)$ is true.
@@ -17,10 +17,6 @@ From the above two steps, we can conclude that $P(n)$ is true for all $n = 1, 2,
 \note{Proving the inductive step is usually done as a ``rewrite'' proof, where you start with the left hand side of what you want to show and rewrite until you come to the desired right hand side.
 Often, some quantity in the statement $P(n+1)$ can be written in terms of a similar quantity in the statement $P(n)$ plus a new part.
 You will always use the fact that $P(n)$ is true.}
-
-\question{A student working on an induction problem wrote $P(n+1) = P(n) + \frac{1}{n^2}$.
-How can you tell that this must be wrong?}
-{0.2in}
 
 \guidedproof{\label{inductionguidedproof}
 Use mathematical induction to show that $3^n$ is odd for all $n = 1, 2, 3, \ldots$.
@@ -39,6 +35,11 @@ Since $n \geq 1$ was arbitrary, by mathematical induction, $P(n)$ is true for al
 \elist
 }
 
+\question{With induction proofs, $P(n)$ is always a true/false logical statement.
+A student working on an induction problem wrote $P(n+1) = P(n) + \frac{1}{n^2}$.
+How can you tell that this must be wrong?}
+{0.2in}
+
 \exercise{Fill in the table using your powers of pattern recognition.
 
 \vspace*{0.1in}
@@ -47,7 +48,7 @@ Since $n \geq 1$ was arbitrary, by mathematical induction, $P(n)$ is true for al
 \begin{tabular}[c]{c|c|c|c|c|c|c|c|c|c|c}
   $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & $\cdots$ & $n$ & $n+1$ \\
   \hline
-  first $n$ odd integers & 1 & 3 & 5 & 7 & & & & $\cdots$ & & \\
+  $n$th odd integer & 1 & 3 & 5 & 7 & & & & $\cdots$ & & \\
   \hline
   sum of first $n$ odd integers & ~1~ & ~4~ & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & $\cdots$ & \hspace{0.5in} & \hspace{0.5in} \\
 \end{tabular}}
@@ -61,10 +62,11 @@ In the next problem, you will use mathematical induction to prove it.
 \pagebreak
 \guidedproof{\label{oddsum}
 Prove the conjecture in \ref{examplesum} using mathematical induction.
-\balist{0.1in}
-\item State $P(n)$:  $P(n)$ is that the sum of the first $n$ odd integers equals \blank{1in}
-\item Basis step:  $P(1)$ is that \blank{2.25in}.  This is true because \blank{0.75in}.
-\item Write out $P(n+1)$:  $P(n+1)$ is that \blank{4in}
+\balist{0.05in}
+\item State $P(n)$:  $P(n)$ is that ``the sum of the first $n$ odd integers equals \blank{1in}''
+\item Basis step:  $P(1)$ is that the sum of the 1st odd integer is $1^2.$  
+This is true because the sum is 1 and because $1^2 = 1$.
+\item Write out $P(n+1)$:  $P(n+1)$ is that ``the sum of the first \blank{3in}''
 \item Inductive step: Let $n \geq 1$.  suppose that $P(n)$ is true, and use that to show that $P(n+1)$ is true.
 \begin{eqnarray*}
 \lefteqn{\mbox{the sum of the first $n+1$ odd integers}} \\
@@ -77,21 +79,23 @@ Since \blank{1in} was arbitrary, by \blank{2in} we conclude that the sum of the 
 \elist
 }
 
-\notation{Summation notation for $a_1+a_2+a_3+\cdots+a_n$ is $\displaystyle \sum_{k=1}^{n}a_k$.}
+\notation{Summation notation for $a_1+a_2+a_3+\cdots+a_n$ is $\displaystyle \sum_{k=1}^{n}a_k$.
+For example, $\sum_{k=1}^{n} k = 1 + 2 + \cdots + n$.}
 
-\example{Use summation notation to rewrite the result in \ref{oddsum}.}{0.2in}
+\example{Use summation notation and the formula for the $n$th odd integer in \ref{examplesum} to rewrite $P(n)$ in \ref{oddsum}:
+$P(n)$ is that \blank{1.5in} = \blank{0.5in}}{0in}
 
-\exercise{Fill in the blanks.
+\exercise{Fill in the blanks to practice splitting off the last term of a sum.
 
-{\bf a.} $\displaystyle \sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + \blank{1in}$
+{\bf a.} $\displaystyle \sum_{k=1}^{n+1} k^2 = \left( \sum_{k=1}^{n} k^2 \right) + \blank{1in}$
 \qqqq
-{\bf b.} $\displaystyle \sum_{k=1}^{n+1} \frac{1}{k^3} = \sum_{k=1}^{n} \frac{1}{k^3} + \blank{1in}$
-}{0in}
+{\bf b.} $\displaystyle \sum_{k=1}^{n+1} \frac{1}{k^3} = \left( \sum_{k=1}^{n} \frac{1}{k^3} \right) + \blank{1in}$
+}{-0.1in}
 
 \show{Show that $\sum_{k=1}^n 4k-3 = n(2n-1)$ for all $n = 1, 2, 3, \ldots$.
 \balist{0.0in}
 \item State $P(n)$:  $P(n)$ is that
-\item Basis step:  $P(1)$ is that  \hfill Check: \blank{1.5in}
+\item Basis step:  $P(1)$ is that  \hfill This is true because: \blank{1.5in}
 \item State $P(n+1)$:  $P(n+1)$ is that
 
 \vspace*{0.2in}
@@ -102,7 +106,7 @@ Suggestion:  Use algebra to simplify the right hand side.
 
 \vspace*{-0.2in}
 \begin{eqnarray*}
-\sum_{k=1}^{n+1} 4k-3 &=& \blank{1.5in} + \blank{1.5in} \\
+\sum_{k=1}^{n+1} 4k-3 &=& \sum_{k=1}^{n} \blank{1.5in} + \blank{1.5in} \\
                                          &=& \blank{1.5in} + \blank{1.5in} \qq \mbox{since $P(n)$ is true} \\
                                          &=& \\
                                          &=& 
@@ -138,7 +142,7 @@ Suggestion:  Multiply out the right hand side.
 \begin{eqnarray*}
 2(n+1) + 1 = \blank{1.5in} &=& \blank{1.5in} \\
                                             &<& \blank{1.5in} \qq \mbox{since $P(n)$ is true}\\
-                                            &<& \blank{1.5in} \\
+                                            &<& 2^n + 2^n \\
                                             &=& 2^{n+1}.
 \end{eqnarray*}
 Thus, \blank{1.5in}.  Since ... 
@@ -164,14 +168,16 @@ Let $x$ be such that $1+x > 0$.
 Where did you use the assumption that $1+x > 0$?
 }{0in}
 
-\show{Use induction to prove that $\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \cdots+\frac{1}{n\cdot (n+1)} = \frac{n}{n+1}$ for all positive integers $n$. \label{sumeq}}{1.5in}
+\show{Use induction to prove that $\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \cdots+\frac{1}{n\cdot (n+1)} = \frac{n}{n+1}$ for all positive integers $n$. \label{sumeq}
+Start by writing $P(n)$ using summation notation.
+}{1.5in}
 
 \note{It is possible to show that the statement in \ref{sumeq} is true without using mathematical induction, but using a different algebraic technique.  How?}
 
 \show{For each $n\in \Z^+$, let $P(n)$ denote the statement ``$n^2+5n+1$ is an even integer.''
 \balist{0.05in}
 \item State $P(n+1)$
-\item Suppose that $P(n)$ is true, and use that to prove that $P(n+1)$.
+\item Suppose that $P(n)$ is true, and use that to prove that $P(n+1)$ is true.
 \vspace*{0.5in}
 \item For which $n$ is $P(n)$ actually true? 
 \item What is moral of this exercise?
@@ -183,52 +189,72 @@ Do the induction step as a ``rewrite'' proof.}{1.5in}
 
 \show{Use induction to prove that $11^n-4^n$ is a multiple of 7 for all $n = 0, 1, 2, \ldots$.
 Do the induction step as a ``rewrite'' proof.
-\Hint Use the equation $11^n-4^n = 7k$ once.}{1.5in}
+\Hint Use the equation $11^n-4^n = 7k$ once.}{1.3in}
 
-\show{Prove that $1^2-2^2+3^2-4^2+5^2+\cdots-(2n)^2+(2n+1)^2 = (n+1)(2n+1)$ for all $n = 0, 1, 2, \ldots$. \Hint{ It would be helpful to write down $P(0)$ and $P(1)$ first.}}{1.5in}
+\example{Write the following numbers as multiples of 5 plus a remainder from 0 to 4.
+
+37 = 5 $\cdot$ \blank{0.5in} + \blank{0.5in}
+
+38 = 5 $\cdot$ \blank{0.5in} + \blank{0.5in}
+
+39 = 5 $\cdot$ \blank{0.5in} + \blank{0.5in}
+
+40 = 5 $\cdot$ \blank{0.5in} + \blank{0.5in}
+
+41 = 5 $\cdot$ \blank{0.5in} + \blank{0.5in}
+
+}{-0.2in}
 
 \prove{Let $k > 0$ be an integer.
-For each integer $n = 0, 1, 2, \ldots$, let $P(n)$ be the statement: ``There exist integers $q$ and $r$ with $0 \leq r < k$ such that $n = kq + r$.''
+For each integer $n$, let $P(n)$ be the statement: ``There exist integers $q$ and $r$ with $0 \leq r < k$ such that $n = kq + r$.''
 Use mathematical induction to show that $P(n)$ is true for all integers $n$.
 
-\balist{0.5in}
+\balist{0.4in}
 \item Show that $P(0)$ is true.
 
-\item Suppose that $P(n)$ is true and show that $P(n+1)$ is true.
-It is helpful to do this with two cases.
+\item Let $n$ be an integer.
+Suppose that $P(n)$ is true, so that $n = kq+r$ for some integers $q$ and $r$, with $0 \leq r < k$.
+Show that there exist integers $q'$ and $r'$ with $0 \leq r' < k$ so that $n+1 = kq' + r'$, and thus conclude that $P(n+1)$ is true.
+Note that you will define $q'$ and $r'$ in terms of $q$ and $r$.
+It is helpful to do this with two cases, depending on the value of $r$:
 
 \noindent
-Case 1.  Suppose that $n = qk + r$ where $0 \leq r < k-1$.
+Case 1.  Suppose $0 \leq r < k-1$.
 
 \vspace*{0.5in}
 
 \noindent
-Case 2.  Suppose that $n = qk + r$ where $r = k-1$.
+Case 2.  Suppose $r = k-1$.
 
 \item Suppose that $P(n)$ is true and show that $P(n-1)$ is true.
 It is helpful to do this with two cases.
 \elist
 
-\vspace*{1.5in}
+\vspace*{1in}
 \noindent
-Use steps b and c and the idea of mathematical to conclude the proof.
+Use steps b and c and the idea of mathematical induction to conclude the proof that $P(n)$ is true for all $n$.
 
 }{0in}
 
+\pagebreak
+
+\show{Prove that $1^2-2^2+3^2-4^2+5^2+\cdots-(2n)^2+(2n+1)^2 = (n+1)(2n+1)$ for all $n = 0, 1, 2, \ldots$. 
+Start by writing $P(n)$ using summation notation, starting from $k=0$.}{1.4in}
+
 \show{
 Use mathematical induction to prove that $\displaystyle \sum_{k=1}^{n} k = \frac{1}{2}n(n+1)$ for all integers $n = 1, 2, 3, \ldots$.
-}{1.5in}
+}{1.4in}
 
 \show{
 Use mathematical induction to prove that $\displaystyle \sum_{k=1}^{n} k^2 = \frac{1}{6}n(n+1)(2n+1)$ for all integers $n = 1, 2, 3, \ldots$.
-}{1.5in}
+}{1.4in}
 
 \show{Let $r$ be a real number not equal to 1.
 Use induction to prove that $\displaystyle \sum_{k=0}^{n} r^k = \frac{1-r^{n+1}}{1-r}$ for all integers $n = 0, 1, 2, \ldots$.
 Note where you use the assumption on $r$.
-}{1.5in}
+}{1.4in}
 
-\show{Use mathematical induction to show that $n! > 3^n$ for all $n = 7, 8, 9, \ldots$.}{1.5in}
+\show{Use mathematical induction to show that $n! > 3^n$ for all $n = 7, 8, 9, \ldots$.}{0in}
 
 
 \vfill          % pad the rest of the page with white space
