@@ -1,0 +1,332 @@
+\yourname
+
+\activitytitle{Construction of the real numbers}{Construction of the real numbers using Dedekind cuts}
+
+\overview{
+Many things can be defined and written about that don't actually exist; unicorns, little green men from Mars, and others may come to mind.
+To this point in your mathematical career, you have worked with real numbers and used many of their properties, but how do we know that they really exist?
+The mathematical answer is that we {\em construct} them from simpler numbers and show that they have the right properties.
+ }
+
+\note{{\bf Natural numbers.}  At some point in your life you learned the counting numbers 1, 2, 3, \ldots.
+Then you learned to add and multiply, and these operations have the familiar algebraic properties like commutativity, associativity, distributivity.
+Their biggest claim to fame:  No matter how high you count, there is always a next number.
+Note, however, that we are not {\em defining} the natural numbers.}
+
+\definition{Zero}{Subtraction problems like $9-5$ have answers that are whole numbers, but subtraction problems like $3-3$ and $12-12$ call for a new number.
+You can define $0$ as $3-3$ or as $12-12$; there are many ways to write this new number.}
+
+\definition{Negative numbers}{Subtraction problems like $5-9$ and $8-12$ need another set of new numbers to be defined.
+You can define $-4$ to be $5-9$ but also $8-12$.
+Anytime you want to work with $-4$, you can substitute in $5-9$ instead.
+Or $8-12$.}
+
+\exercise{With negative numbers, we say that $a-b = c-d$ if $a+d = c+b$.  Check that this is the case for $5-9$ and $8-12$.
+It's important that to check, and you only need to work with natural numbers.}{0in}
+
+\definition{Integers}{The natural numbers, zero, and the negative numbers make up the integers.
+Each integer can be written as $a-b$ where $a$ and $b$ are natural numbers.
+The integers are closed under addition and multiplication, and these operations have the usual algebraic properties like commutativity and associativity, additive inverses, additive identity, and multiplicative identity.}
+
+\definition{Rational numbers}{\label{rationaldefinition}
+Division problems like $15 \div 5$ have answers that are integers, but problems like $5 \div 15$ need yet more new numbers to be defined.
+For some reason people decided to write the new numbers as $\frac{5}{15}$ but we could have chosen some other notation like $(5,15)$ or $5 \# 15$.
+At any rate, these new ``rational'' numbers are made up of two integers, the second of which needs to be non-zero.
+The rules for rational numbers are worth noting in some detail:
+\balist{0.0in}
+\item Rational numbers $\frac{a}{b}$ and $\frac{c}{d}$ are {\em equal} if $ad = bc$, which is a matter of integer multiplication.
+\item We say that $\frac{a}{b} < \frac{c}{d}$ if $ad < bc$, which again comes down to integers
+\item The sum of $\frac{a}{b}$ and $\frac{c}{d}$ is the rational number $\frac{ad+bc}{bd}$.  Note that you only need to use integer arithmetic to find the sum of two rational numbers.
+\item The product of $\frac{a}{b}$ and $\frac{c}{d}$ is the rational number $\frac{ac}{bd}$.
+\elist
+It's important to note that everything about these new rational numbers is defined in terms of integers.
+There are multiple ways to define each rational number; $\frac{3}{12} = \frac{1}{4}$ for example.
+The rational numbers can be shown to have the usual algebraic properties, always because the integers have the property.
+Bonus:  non-zero rational numbers have multiplicative inverses.
+The set of all rational numbers is denoted by $\Q$.
+}
+
+\exercise{Use Definition \ref{rationaldefinition} for each part.
+\balist{0.1in}
+\item Check that $\frac{1}{3} = \frac{5}{15}$ using the definition.
+\item Check that $\frac{1}{4} < \frac{2}{7}$ using the definition.
+\item Add $\frac{1}{3} + \frac{1}{4}$ using the definition.
+\item Show that $\frac{a}{b} + \frac{c}{d} = \frac{c}{d} + \frac{a}{b}$ using a rewrite proof.
+Proofs of other algebraic properties are similar.
+\elist
+}{0.1in}
+
+\definition{Complex numbers}{Once the real numbers have been defined, we can define the complex numbers by letting $i = \sqrt{-1}$ and then thinking about numbers of the form $a + ib$ where $a$ and $b$ are real numbers.}
+
+\remark{To construct the integers, the rational numbers, and the complex numbers, you put together two numbers of a simpler sort.  As it happens, constructing the real numbers is harder.
+The basic idea is this:  to refer to a real number like $\pi$, think of the rational numbers $3,$ $3.1,$ $3.14,$ $3.141$, $3.1415$, and all other rational numbers less than $\pi$.
+Then $\pi$ is the ``top'' of this set of rational numbers.
+This is how we can use rational numbers to get our hands on real numbers like $\pi$ that are not rational.
+In fact, we will literally {\em define} real numbers to be sets of rational numbers like this.}
+
+\remark{\label{rationalsets}
+Here are a few examples of the sets we'll be using.
+After each set, describe it in words.
+\balist{0.1in}
+\item $A = \{ q \in \Q : q < 0 \}$
+\item $B = \{ q \in \Q : q \leq 7 \}$
+\item $C = \{ q \in \Q: q^3 < 5 \}$
+\item $D = \{ q \in \Q: q< 0$ or $q^2 < 2 \}$
+\elist
+It's OK to use words like ``cube root of 5'' in your description, even though that is not a rational number, and so has not been constructed yet.
+}
+
+\definition{Closed below}{A set $A$ of rational numbers is said to be {\em cl4osed below} if for all $q \in A$, for all $p \in \Q$ with $p < q$, we have $p \in A$.  In words, if $A$ contains the rational number $q$, then it contains every rational number less than $q$ as well.}
+
+\exercise{Is the set $\{\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \ldots \}$ closed below?  Why or why not?}{0in}
+
+\remark{\label{closedbelowremark}
+Note that ``closed below'' is unusual in that it has two ``for all'' quantifiers.
+To prove that a set $A$ is closed below, follow this format:  ``Let $q \in A$.  Let $p \in \Q$ such that $p < q$.  Show that $p \in A$.}
+
+\exercise{Show that each of the following sets is closed below, following Remark \ref{closedbelowremark}.
+\balist{0.5in}
+\item $A = \{ q \in \Q : q < 0 \}$.  \Hint Use transitivity.
+\item $B = \{ q \in \Q : q \leq 7 \}$
+\item $C = \{ q \in \Q: q^3 < 5 \}$.  Do not write $\sqrt[3]{5}$, just use rational numbers and integers.
+\item $D = \{ q \in \Q: q< 0$ or $q^2 < 2 \}$.  \Hint Consider two cases, $p < 0$ and $p \geq 0$. Do not write $\sqrt{2}$.
+\elist
+}{0.6in}
+
+\remark{Sets $C$ and $D$ illustrate how we can use sets of rational numbers to point to a number that we know is irrational, in this case $\sqrt[3]{5}$ and $\sqrt{2}$.  The irrational number we have in mind is at the ``top'' of the set, just like 0 is at the ``top'' of the set $A$.}
+
+\definition{Dedekind cut}{\label{Dedekind}
+A set $A \subseteq \Q$ is called a {\em Dedekind cut} if all of the following happen:
+\bilist{0in}
+\item $A$ is closed below
+\item $A$ has no greatest element, meaning that for all $p \in A$, there is a number $q \in A$ with $p < q$.
+Keep in mind that $q$ has to be a rational number.
+\item There exists an integer $m$ with $m \in A$
+\item There exists an integer $n$ with $n \notin A$
+\elist
+}
+
+\exercise{Check each of the sets below to see if it is a Dedekind cut.  
+You have already shown that they are closed below.
+If the set is a Dedekind cut, show that.  If not, explain why not.
+\balist{0.0in}
+\item $A = \{ q \in \Q : q < 0 \}$.  Let $m =$ \blank{1in}.  Let $n = $ \blank{1in}.  To show (ii), let $p \in A$.  Let $q = $ \blank{1in}.
+\item $B = \{ q \in \Q : q \leq 7 \}$
+
+\vspace*{0.5in}
+
+\item $C = \{ q \in \Q: q^3 < 5 \}$.  Let $m =$ \blank{1in}.  Let $n = $ \blank{1in}.  To show (ii), given $p \in A$, I suggest you consider two cases.  When $p < 1$, let $q = 1$.  When $p \geq 1,$ let $q = p + c$ where $c =\frac{5-p^3}{100}$ when $p \geq 1$.  Calculate $(p+c)^3$ and use the fac that $c < 1$, so $c^2 < c$ and $c^3 < c$.  Also keep in mind that $p < 2$.
+
+\vspace*{1in}
+
+\item $D = \{ q \in \Q: q< 0$ or $q^2 < 2 \}$.
+\elist
+}{0.7in}
+
+\pagebreak
+\exercise{\label{sumisDedekind}
+Let $A$ and $B$ be Dedekind cuts.
+Define a new set $C$ by $C = \{ z : $ there exist $a \in A$ and $b \in B$ such that $z = a + b \}$.
+Show that $C$ is a Dedekind cut by checking all four requirements in \ref{Dedekind}.
+\blist{0.0in}
+\item $C$ is closed below.  Let $d \in C$, and let $c \in \Q$ with $c < d$.  We need to show that $c \in C$, so we need to write it as the sum of an element of $A$ and an element of $B$.
+Because \blank{0.75in}, there exist $a \in A$ and $b \in B$ such that $d = a + b$.
+Let $p = a - (d-c)/2$ and $q = b - (d-c)/2$.
+It's clear that $p$ and $q$ are \blank{1in} numbers and that $p < a$ and that \blank{1in}.
+Since $p < a$ and $A$ is closed below, we know that $p \in A$.
+Since $q < b$ and \blank{1.5in}, we know that \blank{1in}.
+Finally, $p+q = \blank{3.5in} = c$, and so \blank{1in}.
+
+\item $C$ has no greatest element.  Let $p \in C$.  Show that there is a number $q \in C$ with $p < q$.
+\vspace*{0.5in}
+
+\item There exists an integer $m$ with $m \in C$.  \Hint Use $m_A \in A$ and $m_B \in B$ from \ref{Dedekind}(c).
+\vspace*{0.5in}
+
+\item There exists an integer $n$ with $n \notin C$.  \Hint Use $n_A \in A$ and $n_B \in B$.  Then $a < n_A$ for all $a \in A$ and $b < n_B$ for all $b \in B$.  Then $a + b < n_A + n_B$ for all $a \in A$ and all $b \in B$.
+Now ... why does that mean that $n_A + n_B$ is not in $C$?
+\elist
+
+}{0.5in}
+
+\definition{Real numbers}{We will refer to each Dedekind cut as a ``real number.''  The set of real numbers will be written as $\R$.}
+
+\remark{Yes, you read that right.  A real number is being defined as nothing more, and nothing less, than a Dedekind cut, which is a set of rational numbers.  This is simply one way to use rational numbers to describe and work with real numbers.  It was easier to define 0 as $3-3$ or to define fractions as things you get from pairs of integers.  You'll get used to it.}
+
+\definition{Equality of real numbers}{If $A$ and $B$ are real numbers, we say that $A$ and $B$ are equal if $A \subseteq B$ and $B \subseteq A$.  We write $A =  B$.}
+
+\definition{Less than for real numbers}{If $A$ and $B$ are real numbers we say that $A$ is less than $B$ if $A \subset B$.  We write $A < B$.}
+
+\definition{The real number zero}{Let $\zero = \{ q \in \Q : q < 0\}$.}
+\definition{The real number one}{Let $\one = \{ q \in \Q : q < 1\}$.}
+
+\definition{Addition of real numbers}{Let $A$ and $B$ be real numbers.
+The sum of $A$ and $B$ is the real number $C = \{ z : $ there exist $a \in A$ and $b \in B$ such that $z = a + b \}$.
+This set is a Dedekind cut as explained in \ref{sumisDedekind}.
+We write $A \oplus B$ for the sum.
+}
+
+\prove{Show that $\zero \oplus \one = \one$ by showing set inclusion both ways.
+\balist{0.5in}
+\item Show $\zero \oplus \one \subseteq \one$.  Let $c \in \zero \oplus \one$.  
+Then $c = a + b$ for some $a \in \zero$ and $b \in \one$.
+Thus $a < 0$ and $b< 1$.
+Thus, \blank{1in} and so $c \in \one$.
+\item Show $ \one \subseteq \zero \oplus \one$.  Let $c \in \one$.  Then $\blank{1in}$.
+Write $c = \frac{c-1}{2} + \frac{c+1}{2}$ and check that this means that $c \in \zero \oplus \one$.
+\elist
+}{0.5in}
+
+\prove{{\bf Commutativity}.  Let $A$ and $B$ be real numbers.  Show that $A \oplus B = B \oplus A$.
+Instead of showing set inclusion both ways, do this as a rewrite proof:
+\beqnarray{-0.1in}
+A \oplus B &=& \{ a + b : a \in A, b \in B \} \\
+                 &=& \{ b + a :  \\
+                 &=& 
+\eeqnarray{-0.5in}
+}{0in}
+
+\prove{{\bf Associativity}.  Let $A$, $B$, and $C$ be real numbers.  Show that $A \oplus (B \oplus C) = (A \oplus B) \oplus C$.
+Do this as a rewrite proof, abbreviating the definition of the sum.
+\beqnarray{-0.1in}
+A \oplus (B \oplus C) &=& A \oplus \{ b + c : b \in B, c \in C\} \\
+                                  &=& \{ a + (b+c) : \\
+                                  &=& 
+\eeqnarray{0in}
+}{0.0in}
+
+\prove{{\bf Additive identity}.  Let $A$ be a real number.  Show that $A \oplus \zero = A$.
+\balist{0.5in}
+\item Let $p \in A \oplus \zero$.  Then $p = a + b$ where $a \in$ \blank{1in} and $b $ \blank{1in}.
+\Hint You will use the fact that $A$ is closed below.
+
+\item Let $p \in A$.  We need to write $p$ as the sum of an element $a$ of $A$ and a rational number $b$ less than zero.
+That means that $a$ will be greater than $p$.  Fortunately, such a number exists because $A$ has no greatest element.
+
+\noindent Let $a \in A$ such that $p < a$.  Let $b = p-a$.  Then ...
+\elist
+}{0.3in}
+
+\definition{Additive inverse.}{  Let $A$ be a real number.  Define a new set $-A$ by
+\[
+    -A = \{ b-c : b, c \in Q, b < 0, c \notin A \}
+\]
+Think of $b$ as being very close to 0, so the elements of $(-A)$ are like the negatives of the rational numbers bigger than the elements of $A$.
+It may be hard to understand this set intuitively, and so it may be easier just to work with the definition and not try to get the intuition straight.
+}
+
+\guidedproof{
+Show that $-A$ is a Dedekind cut.
+\bilist{0in}
+\item $A$ is closed below.  Let $q \in -A$.  Let $p \in \Q$ with $p < q$.
+Since $q \in -A$, we can write $q = b-c$ where $b < 0$ and $c \notin A$.
+Check that $p = b+(p-q) - c$ by substituting in for $q$.
+Thus, we have written $p = b' - c'$ where $b' < 0$ and $c' \notin A$, by setting $b'=$\blank{1in} and $c'=$\blank{1in}.
+This tells us that $p \in -A$, so $-A$ is closed below.
+
+\item $A$ has no greatest element.  Let $p \in -A$.  Then we can write $p = b-c$ where $b < 0$ and $c \notin A$.
+Let $q = (b/2) -c $.  Check that $q \in -A$ and that $p < q$.
+
+\vspace*{0.3in}
+
+\item There exists an integer $m$ with $m \in -A$.
+Check that $-1-n_A$ where $n_A \notin A$ from \ref{Dedekind}(d) will work.
+
+\vspace*{0.3in}
+
+\item {\bf Challenge:} There exists an integer $n$ with $n \notin -A$.
+Probably $-m_A+1$ from \ref{Dedekind}(c) will work.
+
+\vspace*{0.3in}
+
+\elist
+}
+
+\prove{{\bf Additive inverse property.} Let $A$ be a real number.  Show that $A \oplus (-A) = \zero$.
+\balist{0.1in}
+\item Let $z \in A \oplus (-A)$.  Then $z = p + q$ where $p \in A$ and $q = b-c$ where $b < 0$ and $c \notin A$.
+That is, $z = p + b - c$.
+Since $c \notin A$, we know that $c > p$, because \blank{2in}.
+Then $z < 0$ because \blank{2in}.
+Thus $z \in \zero$, and so $A \oplus (-A) \subseteq \zero$.
+
+\item Let $z \in \zero$.  Then $z$ is a rational number and $z < 0$.
+We need to write $z = p + q$ where $p \in A$ and $q \in (-A)$, and $q$ needs to be written as $b-c$ where $b < 0$ and $c \notin A$.
+If $z$ is close to 0, then $p$ and $c$ will need to be close to the ``top'' of the set $A$.
+The next result will show that there exists $p \in A$ and $c \notin A$ with $p-c = z/2$.
+Also let $b = z/2$.
+Then $z = z/2 + z/2 = p - c + b$ as required.
+So $z \in A \oplus (-A)$ and thus $\zero \subseteq A \oplus (-A)$.
+\elist
+}{0in}
+
+\guidedproof{Let $A$ be a real number.
+Let $c > 0$ be a rational number.
+Then there exists $a \in A$ and $b \notin A$ such that $b-a = c$.
+
+\noindent
+By the definition of a Dedekind cut, there are integers $m \in A$ and $n \notin A$.
+Consider the numbers $m + kc$ for $k = 0, 1, 2, \ldots$.
+Draw a picture of these on a number line below.
+When $k = 0$, $m+kc \in A$.
+When $k > (n-m)/c$, $m+kc > n$ and so $m+kc \notin A$.
+Thus, for some value of $k$, $m+kc \in A$ but $m+(k+1)c \notin A$. 
+Let $a = m+kc$ and $b = m+(k+1)c$.
+}
+
+\vspace*{0.2in}
+
+\challenge{$\zero$ is unique.
+That is, if there is another real number $Z$ for which $A \oplus Z = A$ for all real numbers $A$, then $Z = \zero$.}{0.5in}
+
+\challenge{Given a real number $A$, the additive inverse $-A$ is unique.}{0.5in}
+
+\definition{Multiplication of positive real numbers}{Let $A$ and $B$ be real numbers with $\zero < A$ and $\zero < B$.
+The product of $A$ and $B$ is the real number $\{ z : z \in \Q $ and $ z \leq 0$ or there exists $a \in A$ with $a > 0$ and $b \in B$ with $b > 0$ such that $z = ab \}$.
+We write $A \otimes B$ to denote the product.}
+
+\remark{It is easiest to define multiplication of positive real numbers.  The definition is very much like the definition of the sum, only a bit more complicated because of the need to include the negative rational numbers.}
+
+\challenge{Show that $A \otimes B$ is a Dedekind cut.}{1in}
+
+\prove{{\bf Multiplicative identity for positive real numbers.} Let $A$ be a real number with $0 < A$.  Then $A \otimes \one = A$.}{1.5in}
+
+\prove{{\bf Distributivity for positive real numbers.} Let $A$, $B$, and $C$ be real numbers with $0<A$, $0<B$, and $0<C$.
+Show that $A \otimes (B \oplus C) = (A \otimes B) \oplus (A \otimes C)$.}{1.5in}
+
+\definition{Multiplicative inverse of positive real numbers}{Let $A$ be a real number with $0 < A$.
+Define $A^{-1}$ to be $\{ z : z \in \Q$ and $z \leq 0$ or $1/z \in A \}$.}
+
+\prove{Show that $A^{-1}$ is a Dedekind cut.}{1.5in}
+
+\prove{Show that $A \otimes A^{-1} = \one$}{1.5in}
+
+\prove{Let $D = \{ q \in \Q: q< 0$ or $q^2 < 2 \}$ and let $E = \{ q \in \Q: q< 2 \}$.  Show that $D \otimes D = E.$
+This confirms that $D$ corresponds to the square root of 2.}{2in}
+
+\prove{Let $A$ and $B$ be real numbers.  Show that $A \otimes B = B \otimes A$.}{0.1in}
+
+\prove{Let $A$, $B$, and $C$ be real numbers.  Show that $A \otimes (B \otimes C) = (A \otimes B) \otimes C$.}{0.1in}
+
+\prove{Prove that the multiplicative identity $\one$ is unique}{0.1in}
+
+\prove{Prove that the multiplicative inverse $A^{-1}$ is unique}{0.1in}
+
+\definition{Multiplication of non-positive real numbers.}{Let $A$ and $B$ be real numbers.
+\balist{0in}
+\item If $0 < A$ and $B < 0$, then $A \times B = A \times (-B)$
+\item If $A < 0$ and $0 < B$, then $A \times B = (-A) \times B$
+\item If $A < 0$ and $B < 0$, then $A \times B = (-A) \times (-B)$
+\elist
+}
+\prove{Show that the properties of multiplication extend to multiplication of non-positive numbers.}{0.1in}
+
+\definition{Least upper bound}{Let $S$ be a collection of real numbers.  A number $B$ is the least upper bound of $S$ if $A \leq B$ for all $A \in S$, and if for all other upper bounds $C$ of $S$, we have $B \leq C$.}
+
+\prove{Given a set $S$ of real numbers, the number $B = \cup_{A \in S} A$ is the least upper bound of $S$.
+Thus, every collection of real numbers has a least upper bound.}{0in}
+
+\vfill          % pad the rest of the page with white space
+
+
+
