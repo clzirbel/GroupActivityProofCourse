@@ -48,14 +48,15 @@ Describe in words how you will deal out the cards and when you will stop.
 \noindent
 Describe in words how many cards you will have left over.
 
-
 \vspace{0.4in}
 \noindent
-Using $q$ to denote the number of cards each person gets and $r$ to denote the number of cards left over, write out the relationship between $n, k, q,$ and $r$, and write inequalities concerning $q$ and $r$.}{1in}
+Using $q$ to denote the number of cards each person gets and $r$ to denote the number of cards left over, write out the relationship between $n, k, q,$ and $r$, and write inequalities concerning $q$ and $r$.}{0.5in}
 
 \stop Compare your work to the others in your group and reconcile any differences.
 
-\question{What happens when $k=0$?  Can you satisfy $n = qk + r$?  What goes wrong?  Describe in words, and take your time to get it right, because this explains why we don't divide by 0.}{1in}
+\question{What happens when $k=1$?  What is $r$?  What is $q$?}{0.4in}
+
+\question{What happens when $k=0$?  What inequality must $r$ satisfy?  Can you satisfy $n = qk + r$?  For what value(s) of $q$?   Describe in words, and take your time to get it right, because this explains why we don't divide by 0.}{1in}
 
 \note{As above, suppose that $n$ and $k$ are integers that are greater than 0.
 Suppose you find integers $q$ and $r$ for which $n = qk + r$ and $0 \leq r < k$.
@@ -67,26 +68,44 @@ It will take a few steps.
 }
 
 \show{\label{remainderinequality} Suppose that $r$ and $r_2$ are integers for which $0 \leq r < k$ and $0 \leq r_2 < k$.
-Carefully combine these inequalities to show that $-k < r-r_2 < k$.
-Your goal is to provide a crystal clear argument with no extra steps.
-Note:  You can add inequalities that run the same direction; for example, if $a < b$ and $c < d$, then $a+c < b+d$.
-}{2in}
+Show that $-k < r-r_2 < k$.
+Starting and ending expressions are shown; your goal is to provide crystal clear intermediate steps with no extra steps.
+Note:  You can add inequalities that run the same direction; for example, if $a < b$ and $c \leq d$, then $a+c < b+d$.
 
-\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers, that $n \geq 0$ and $k > 0$, that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$, and that $0 \leq r < k$ and $0 \leq r_2 < k$.
-Note that $qk + r$ is equal to $q_2 k + r_2$ and use \ref{remainderinequality} to argue that $q = q_2$ and $r = r_2$.
-It will probably not be obvious how to get started; this proof requires a spark of genius.
-Use scratch paper, write down everything you know, including \ref{remainderinequality}, and then write a final argument here.
-}{2.6in}
+\vspace*{0.1in}
+\noindent
+Suppose \circone ~ $0 \leq r < k$ and \circtwo ~ $0 \leq r_2 < k$.
+
+\vspace*{1.5in}
+\noindent
+Thus $-k < r-r_2 < k$.
+}{0in}
+
+\show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers with $k > 0$, that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$, and that $0 \leq r < k$ and $0 \leq r_2 < k$.
+Use \ref{remainderinequality} to show that $q = q_2$ and $r = r_2$.
+Starting and ending points are suggested.
+This is not simply a rewrite proof; it requires a spark of genius to complete it, so work on scratch paper, write down everything you know including \ref{remainderinequality},work together, and be patient.
+Write a final argument here.
+
+\vspace*{0.1in}
+\noindent
+To start, note that because $n = qk + r$ and $n = q_2 k + r_2$, we have $qk+r = q_2 k + r_2$.
+
+\vspace*{2.2in}
+\noindent
+Thus $q = q_2$ and $r = r_2$.
+}{0in}
 
 \theorem{\label{divisionalgorithm}{\bf The Division Algorithm.} Let $n$ and $k$ be integers greater than 0.  Then,
 \blist{0in}
 \item {\bf Existence.} There exist integers $q$ and $r$ for which $n = qk + r$ and for which $0 \leq r < k$.
-\item {\bf Uniqueness.}  The numbers $q$ and $r$ are unique; $n = qk + r$ is the only way to write $n$ as a multiple of $k$ plus a remainder from $0, 1, 2, \ldots, k-1$.
+\item {\bf Uniqueness.}  The numbers $q$ and $r$ are unique:  there is only one way to choose $q$ and $r$ so that $n = qk + r$ and $0 \leq r < k$.
 \elist
 The number $q$ is called the {\em quotient} and $r$ is called the {\em remainder}.
 Note that there are two parts to the theorem.
 You have proven this theorem above in two problems.
 The existence part was proven in \blank{0.8in}.  The uniqueness part was proven in \blank{0.8in}.
+Check that your group agrees.
 }
 
 \example{Rewrite Theorem \ref{divisionalgorithm} for the case where $k=2$.
@@ -103,10 +122,10 @@ Let $n$ be an integer greater than 0.  Then,
 
 \prove{Let $n$ be an integer greater than 0.
 Recall the definitions of even and odd.
-Use the existence part of the division algorithm with $k=2$ to show that $n$ must satisfy at least one of these definitions.}{0.7in}
+Use the existence part of the Division Algorithm with $k=2$ to show that $n$ must satisfy at least one of these definitions.}{0.7in}
 
 \prove{Let $n$ be an integer greater than 0.
-Use the uniqueness part of the division algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, never both.
+Use the uniqueness part of the Division Algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, never both.
 }{0.1in}
 
 % ===================================================================
@@ -141,83 +160,91 @@ How can you be sure that you will ever get all the way to non-negative numbers?
 \noindent
 How can you be sure that you won't jump over the numbers $0, 1, \ldots, k-1$ and keep adding $k$ forever?
 
-\vspace{0.4in}
+\vspace{0.5in}
 \noindent
-Use these facts to argue that you can write $n = qk + r$ for some integer $q$.
+Use these facts to argue that you can write $n = qk + r$ for some integer $q$ and a small value of $r$.
 
-\vspace{0.4in}
+\vspace{0.5in}
 \noindent
 What inequalities do you know for $q$ and $r$?
 }{0.2in}
 
 \prove{Let $n$ be an integer less than 0 and let $k$ be an integer greater than 0.
 Scrutinize your proof of \ref{DivisionAlgorithmUniqueness}.
-We assumed $n \geq 0$, but did your proof actually use this assumption?
-
-\vspace{0.2in}
-\noindent
+We did not assume $n \geq 0$.
 Will your proof work for $n < 0$?  Explain.
+}{0.3in}
 
-\vspace{0.4in}
-\noindent
-What can we conclude about writing $n = qk + r$ for negative values of $n$?
-Use the word ``uniqueness'' or ``existence'' in your explanation.
+\theorem{
+Rewrite Theorem \ref{divisionalgorithm} to reflect what you know now about both positive and negative values of $n$.
+Be specific about the assumptions on $n$ and $k$.
+}
+% Note to instructor:  existence for the case n = 0 has not been covered.  Good quiz question, maybe.  Or good if a student notices it.
 
-\vspace{0.4in}
-\noindent
-Rewrite \ref{divisionalgorithm} to reflect what you have just learned.
-Do a really good job on this.
-
-% Note to instructor:  the case n = 0 has not been covered.  Good quiz question, maybe.  Or good if a student notices it.
-
-}{0in}
 \pagebreak
 
 
 % =====================================================================
 \show{Let $n$ be an integer and suppose that $n = 3m + 1$ for some integer $m$.
+Identify $k$, $q$, and $r$.
 Use the Division Algorithm to argue that $n$ cannot be written as $n = 3k$ where $k$ is an integer.
 Thus, $n$ is not a multiple of 3.
 Take your time and work together to write a really clear argument.
 
-\vspace{1in}
+\vspace{0.9in}
 \noindent
-Which part(s) of the Division Algorithm did you use, existence, uniqueness, or both?
+Which part(s) of the Division Algorithm did you use, existence, uniqueness, or both? \blank{1.5in}
 }{0.0in}
 
 \show{Let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
+For example, $n^2$ could be 36.
+List two more possible values of $n^2$:
+
+\noindent
 We would like to conclude that $n$ is a multiple of 3.
 It's hard to do this directly, but it can be done indirectly.
-
-\vspace{0.1in}
-\noindent
-Use the Division Algorithm to write $n= 3q + r$ where $r$ can take on only three values.
-Start with ``There exist integers ....''
+Use the Division Algorithm to write $n= 3q + r$.
+Start with ``There exist integers ....'' and be specific about the possible values of $r$.
 
 \vspace{0.4in}
 \noindent
 Your previous step gives three cases to consider.
-For each case, use algebra to compute $n^2$ and see whether or not $n^2$ can be a multiple of 3.
+For each case, write the expression for $n$, then use algebra to compute $n^2$.
 
-\vspace{1.4in}
+\vspace{0.1in}
 \noindent
-Once again, let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
-Use your cases above to rule out the possibilities that $n = 3q+1$ or $n=3q+2$, and conclude that $n$ must be a multiple of 3.
-This is harder than you might think to do clearly; work hard on it.
+{\bf Case 0:}  $r = 0$, $n = 3q$, \qq so $n^2 = $
+
+\vspace{0.3in}
+\noindent
+{\bf Case 1:}  $r = 1$, $n = \blank{0.5in}$, so $n^2 = $
+
+\vspace{0.3in}
+\noindent
+{\bf Case 2:}  
+
+\vspace{0.3in}
+\noindent
+Knowing that $n^2$ is in fact a multiple of 3, use your cases above to rule out one or more of the cases, and so rule out one or more of the possible values of $r$.
+Can you conclude that $n$ is a multiple of 3?
+This is harder than you might think to explain clearly; work hard on it.
 }{0.6in}
 
 \show{Suppose $n$ is an integer.
 Can $n^2$ be of the form $3m + 2$ where $m$ is an integer?
-Examine the cases in the previous question carefully.}{1.5in}
+Examine the cases in the previous question carefully.}{0.8in}
 
 \example{In the triple of consecutive integers 5, 6, 7, exactly one number is a multiple of 3.
+Circle it.
 Same thing for 13, 14, 15.
+Circle the multiple of 3.
 Write down 5 more triples of consecutive integers.
 Do you always get a multiple of 3?
-More than one multiple of 3?}{0in}
+Can you get more than one multiple of 3?}{0in}
 
 \pagebreak
 
+% =====================================================================
 \show{Let $n$ be an integer and consider the numbers $n$, $n+1$, and $n+2$.
 Show that exactly one of these is a multiple of 3.
 Use three cases, $n = 3k$, $n = 3k + 1$, and $n = 3k + 2$, and follow the guide below.
@@ -240,7 +267,7 @@ Use the Division Algorithm to argue that the other two are not multiples of 3.
 }{0.2in}
 
 \example{Think about pairs of consutive even numbers, like 8 and 10, or 14 and 16.
-One is a multiple of 4, the other is not.  Check a few more pairs.}{0in}
+One number is a multiple of 4 (circle it), the other is not.  Check five more pairs.}{0in}
 
 \show{
 Let $n$ be even and consider the numbers $n$ and $n+2$.
@@ -253,6 +280,8 @@ Let $n=3$ and compute $n^3-n$.
 Let $n=5$ and compute $n^3-n$.}{0.0in}
 
 \show{Let $n$ be an odd integer.  Show that $n^3-n$ is a multiple of 24.  Here you will need a few sparks of genius.
-Use scratch paper to brainstorm different approaches that you could try, then try the one that looks the most promising.}{0in}
+Use scratch paper to brainstorm different approaches that you could try, then try the one that looks the most promising.
+Fortunately there are several ways to do this proof.
+}{0in}
 
 \vfill          % pad the rest of the page with white space
