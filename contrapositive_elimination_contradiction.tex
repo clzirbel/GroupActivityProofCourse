@@ -1,0 +1,289 @@
+\yourname
+
+\activitytitle{Contrapositive, process of elimination, contradiction}{}
+\vspace*{-0.2in}
+
+\overview{
+A central part of mathematics is identifying logical statements and showing which statements imply other statements.
+This activity introduces logical statements and four ways to prove implications: direct proof, contrapositive, the process of elimination, and proof by contradiction.
+You may have seen this same material presented using truth tables, but this particular activity specifically avoids truth tables.
+}
+
+\definition{Logical statement}{A {\em logical statement} is a sentence that is either true or false.  
+Sometimes logical statements have an unknows such as $n$, but for each value of $n$, the statement is either true or false.
+We often label logical statements with capital letters.}
+
+\example{For each of the logical statements below, write its truth value T or F.
+If the sentence is not a logical statement, explain why not.
+
+\balist{0.0in}
+\item $P$: 18 is even
+\item $Q$: 19 is even
+\item $R$: 19 is a large number
+\item $S$: 13 is prime
+\item $T$: $2^5-1$ is prime
+\item $U$: $\sqrt{2}$ is rational
+\elist
+}{0.0in}
+
+\example{For each of the logical statements below, give five values of the integer $n$ for which the statement is true, if possible, and five values of the integer $n$ for which the statement is false, if possible.
+
+\balist{0.0in}
+\item \parbox{1.5in}{$2^n-1$ is prime}             \parbox{2in}{ T: $n=$}  F:  $n=$
+\item \parbox{1.5in}{$n$ is a perfect square}   \parbox{2in}{T: $n=$}  F:  $n=$
+\item \parbox{1.5in}{$n^2$ is a prime number} \parbox{2in}{T: $n=$}  F:  $n=$
+\item \parbox{1.5in}{$n^2 + 3n + 1$ is odd}    \parbox{2in}{T: $n=$}  F:  $n=$
+\elist
+}{0.0in}
+
+\definition{Conjunction, logical and}{The {\em conjunction} of two logical statements $P$ and $Q$ is a new logical statement denoted $P \wedge Q$ which is true when both $P$ and $Q$ are true, and false otherwise.
+It is usually read as ``and''.
+The symbol $\wedge$ is only used between logical statements.
+We don't write ``Suppose $x > 3~\wedge \leq 9$'' but rather ``Suppose $x > 3 \wedge x \leq 9.$''}
+
+\definition{Disjunction, logical or}{The {\em disjunction} of two logical statements $P$ and $Q$ is a new logical statement denoted $P \vee Q$ which is true when $P$ is true, when $Q$ is true, or when both are true, but false when both are false.
+The symbol $\vee$ is only used between logical statements.
+Instead of writing ``Suppose $n=3 \vee 5$,'' you could write ``Suppose $n=3 \vee n=5$.''
+}
+
+%===============================================================
+\pagebreak
+\exercise{Give the truth value T or F of each of the new statements below, using the statements from the previous page.
+
+\balist{0.0in}
+\item $P \vee Q$
+\item $Q \wedge S$
+\item $P \wedge Q \wedge T$
+\item $P \vee (Q \wedge U)$
+\elist
+}{0.0in}
+
+\definition{Negation}{The {\em negation} of a logical statement $P$ is a new statement denoted $\lnot P$ which is true when $P$ is false and false when $P$ is true.
+$\lnot P$ is read as ``not $P$''.}
+
+\exercise{Give the truth value T or F of each of the new statements below.
+
+\balist{0.0in}
+\item $\lnot Q$
+\item $P \wedge \lnot Q$
+\item $Q \vee \lnot S$
+\elist
+}{0.0in}
+
+\definition{Implication}{For logical statements $P$ and $Q$, we say that $P$ implies $Q$ and write $P \to Q$ if $P$ being true guarantees that $Q$ is true.  
+}
+
+\exercise{For each line below, identify the statement corresponding to $P$ and the statement corresponding to $Q$ in the implication $P \to Q$.
+In every case, $n$ is an integer.
+
+\balist{0.2in}
+\item If $n$ is even, this implies that $n^2$ is even.
+\item If $n^2$ is odd, then $n$ is odd.
+\item If $n$ is odd, then $n^3-n$ is a multiple of 24.
+\elist
+}{0.0in}
+
+\definition{Direct proof}{A {\em direct proof} of an implication is where we start with the statement $P$ and use the information in it together with a series of valid logical steps to show that $Q$ is true.  This establishes that $P \to Q$.
+We have seen a number of direct proofs, including proofs by rewriting.}
+
+\prove{Let $n$ be an integer.  Consider $S: n$ is even and $T: n^2+6n+7$ is odd.
+Write a direct proof that $S \to T$.
+Start with ``Let $n$ ...''}{0.8in}
+
+\example{\label{trydirectoddeven}
+Let $n$ be an integer.
+Consider $A: n^2$ is even and $B: n$ is even.
+Try to write a direct proof that $A \to B$.
+If you don't see a way to do it, you can stop trying.
+}{0.0in}
+
+%===============================================================
+\pagebreak
+\definition{Contrapositive}{Here is another way to think about showing $P \to Q$.
+You need to be sure that it never happens that $P$ is true but $Q$ is false.
+You can do this by showing that whenever $Q$ is false, $P$ is also false.
+In other words, show that $\lnot Q \to \lnot P$.
+This is called {\em proof by contrapositive}.
+It may be easier to find a direct proof that $\lnot Q \to \lnot P$ than it is to show $P \to Q$.
+}
+
+\exercise{Let $n$ be an integer.
+Consider $A: n^2$ is even and $B: n$ is even.
+State $\lnot B$ and $\lnot A$, then show that $\lnot B \to \lnot A$.
+State what you have shown in terms of $n^2$ and $n$.
+ }{0.7in}
+
+\exercise{Let $n$ be an integer.  Consider $P: n^2 + 8n + 9$ is even and $Q: n$ is odd.
+State $\lnot Q$ and $\lnot P$ and show $\lnot Q \to \lnot P$.}{0.7in}
+
+\exercise{Let $n$ be an integer.  Consider $S: n^2$ is a multiple of 3 and $T: n$ is a multiple of 3.
+State $\lnot T$ and $\lnot S$.  By the Division Algorithm, there are two ways that $\lnot T$ can happen.  Write down each one, and prove that in either case, they imply $\lnot S$.}{1.0in}
+
+\definition{Rational\label{rational}}{A real number is said to be {\em rational} if it can be written as $\frac{a}{b}$ where $a$ and $b$ are integers and $b \neq 0$; this is the quotient of two integers.}
+
+\definition{Irrational\label{irrational}}{A real number is said to be {\em irrational} if it cannot be written as the quotient of two integers.}
+
+\exercise{Let $r \neq 0$. Show that if $r$ is irrational, then $\frac{1}{r}$ is irrational.}{0.7in}
+
+\exercise{Suppose that $a$ is an irrational number.  Show that $5a$ is irrational.}{0.6in}
+
+\exercise{Suppose that $a$ is an irrational number.  Let $b$ be a rational number not equal to 0.  Show that $ba$ is irrational.}{0.0in}
+
+%===============================================================
+\pagebreak
+\note{{\bf Showing that a statement is false.} Sometimes we want to show that a statement $P$ is false.
+Here is a method to do that.
+Pretend for a minute that $P$ is true, and use rules of algebra, previously-proven results, theorems, etc.~to make a series of logical implications $P \to Q$, $Q \to R$, $R \to S$, $S \to T$ until you arrive at a statement $T$ that you know to be false.
+Then you have shown that $P \to T$.
+But since $T$ is false, then you can be certain that $P$ is false.
+It can be difficult to identify a specific statement that is false; work hard to accomplish this, because it can really help to clarify the proof.}
+
+\note{When proving that statement $P$ is false, we start by writing ``Pretend for a minute that $P$ is true.''
+We do not really believe that $P$ is true, but it helps to pretend that it's true as you make a chain of implications starting from $P$.
+}
+
+\prove{\label{bothevenandodd}
+Let $n$ be an integer.
+Consider the statement $P: n$ is both even and odd.
+Complete the following proof that $P$ is false.
+
+\noindent
+Pretend for a minute that $P$ is true.  Then $n = 2k$ and $n= 2j+1$ for ...
+
+\vspace{0.5in}
+
+\noindent
+But $k$ and $j$ are integers, and so $k-j$ is an integer, so $k-j = \frac{1}{2}$ is false.
+Thus, $P$ must be false.
+}{0in}
+
+\prove{Consider the statements $P:$ $n$ is a positive integer and $Q:$ $n^2$ is 6.
+Prove that $P \wedge Q$ is false by first pretending that it is true.
+One idea is that $n$ would have to be larger than 2 but smaller than 3.}{0.5in}
+
+\note{In the previous problem, we saw that $P \wedge Q$ is false, but we cannot say which of the two statements is false.
+If $n$ is an integer, then $Q: n^2 = 6$ is false.
+If $n^2 = 6$, then $n$ is not an integer, so $P$ is false.
+The next example shows a slightly different approach where you can make a solid conclusion.
+}
+
+\example{Let $n$ be an integer and suppose that $n$ is even.
+Prove that the statement $Q$: $n$ is odd is false.
+
+\noindent
+Pretend for a minute that $Q$ is true.  The argument in \ref{bothevenandodd} leads us to a false statement.
+Thus, $Q$ must be false.
+
+\noindent
+What is different here is that before we encounter the statement $Q$, we have supposed that $n$ is an integer and $n$ is even, both of which can be true.
+In that context, we can see that $Q$ is false.
+}{0in}
+
+\guidedproof{Let $R$ be the statement that $\sqrt{2}$ is rational.
+You will show that $R$ is false,  by making a series of deductions that lead to a conclusion that is known to be false.
+
+\noindent
+Pretend for a minute that $R$ is true, that is, that $\sqrt{2}$ is rational.
+
+\noindent
+Then there exist integers $p$ and $q$ for which $\sqrt{2} = \frac{p}{q}$, and we can arrange it so that $p$ and $q$ are not both even.  
+(If they were both even numbers, we would factor out 2 from each until they are not both even.)
+
+\noindent
+Using algebra, $2q^2 = p^2$.  Thus, $p^2$ is \blank{1.5in}.
+Thus, $p$ is \blank{1in} by result \blank{1in} and so can be written as $p = \blank{1in}$ for some \blank{1in}.
+
+\noindent
+Using algebra, $q^2 = $ \blank{2in}, and so $q^2$ is \blank{1in}.  Thus $q$ is \blank{1in}.
+
+\noindent
+But we know that this is false, because $\blank{3in}$.
+Thus, the statement $R$ is false.
+Note that because $\sqrt{2}$ is not rational, it must be irrational.
+}
+
+\prove{
+Suppose there are 20 kids playing musical chairs, with 19 chairs.
+When the music stops, at least one kid will not have a chair to sit on.
+Show that the statement $M:$ ``all kids have a chair to sit on by themselves'' is false.
+
+\noindent
+Pretend for a moment that $M$ is true.  Let $k$ denote the number of kids and let $c$ denote the number of chairs.  (What is the relationship between $k$ and $c$?)
+}{0.5in}
+
+\definition{Composite}{An integer $n > 1$ is {\em composite} if it can be written as $n=ab$ where $a$ and $b$ are integers with $1 < a,b < n$.}
+
+\definition{Prime}{An integer $n>1$ is {\em prime} if it is not composiite, that is, its only non-negative integer factors are 1 and itself.}
+
+\example{List the prime numbers less than 20.}{0.0in}
+
+\example{Write 24 as a product of prime factors.}{0.0in}
+
+\prove{Let $S$ be the statement that there are finitely many prime numbers.
+Show that $S$ is false by filling in the blanks.
+
+\noindent
+Pretend for a minute that $S$ is true, so there are only finitely many \blank{2in}.
+Let $k$ be how many prime numbers there are, and call the prime numbers $p_1, p_2, p_3, \ldots, p_k$.
+Consider the number $n = p_1 p_2 p_3 \cdots p_k + 1$.
+Then $n$ is larger than all prime numbers and so $n$ is not \blank{1in}, so it must be \blank{1.5in}.
+By considering factors of $n$, at least one factor must be a \blank{1in} number.
+But by the \blank{2in} part of the \blank{2in}, $n$ is not a multiple of $p_1$, $n$ is not a multiple of $p_2$, etc.
+Thus, $n$ is not a multiple of a prime number.
+We have arrived at the false statement that $n$ is composite and yet has no prime factors.
+Thus, statement $S$ must be false, and now we know that there are infinitely many prime numbers.
+}{0in}
+
+\definition{Process of elimination}{Consider logical statements $P, Q$, and $R$ and suppose we know that $P \vee Q \vee R$ is true.
+Suppose now that we show that $Q$ is false and $R$ is false.
+We can conclude that $P$ is true.
+Hopefully that is obviously true.
+If not, one can use truth tables to make it extra clear, which is one place where truth tables really help.}
+
+\prove{\label{nsquaredmultipleof5}
+Let $n$ be an integer.
+Suppose that $n^2$ is a multiple of 5.
+Use the Division Algorithm to produce statements $P,$  $Q,$ $R,$ $S,$ and $T$ of the form $n = 5k + r$ for different values of $r$, so that $P \vee Q \vee R \vee S \vee T$ is true.
+Then show that $Q$, $R$, $S$, and $T$ are false, and conclude that $P$ is true, so that $n$ is a multiple of 5.
+Do a really good job on these cases, because you'll use them a few more times in the next questions.
+}{1.8in}
+
+\example{List the first 11 perfect squares, $0, 1, 4, 9, \ldots$.}{0.0in}
+
+\prove{Use the cases from \ref{nsquaredmultipleof5} to argue that perfect squares of integers can only end in the decimal digits 0, 1, 4, 5, 6, 9, and never in 2, 3, 7, 8.}{1in}
+
+\prove{The result in \ref{nsquaredmultipleof5} can also be shown with a contrapositive proof.
+
+\noindent
+Let $n$ be an integer.  Consider $A$: $n^2$ is a multiple of 5 and $B$: $n$ is a multiple of 5.
+Clearly state $\lnot B$ and $\lnot A$.
+Rewrite $\lnot B$ in terms of the cases from \ref{nsquaredmultipleof5}, and then argue that each case iimplies $\lnot A$.  You may use the cases from \ref{nsquaredmultipleof5} without rewriting them.
+}{0.9in}
+
+\definition{Proof by contradiction}{One way to prove that a statement $P$ is true is to pretend for a minute that $\lnot P$ is true and argue to a false statement, conclude that $\lnot P$ is false, and thus establish that $P$ is true.
+It may be easiest to think of this as a proof by the process of elimination:  we know that $P \vee \lnot P$ is true, and we are eliminating $\lnot P$.
+}
+
+\note{When using proof by contradiction that $P$ is true, we will write ``Pretend for a minute that $\lnot P$ is true'' and find a chain of implications resulting in a statement that is false.
+Sometimes it is difficult to put your finger on what specific statement is false, but you realize that two or more statements are true, but cannot be true at the same time.
+That is the nature of a contradiction.
+If you can put your finger on a specific statement that is false, that is better.}
+
+\guidedproof{Let $L$ be the statement ``There is a largest integer.''
+Prove that $L$ is false.
+
+\noindent
+Pretend for a minute that $L$ is true.
+Write $n$ for the largest integer.
+Consider $n+1$.
+
+\vspace{0.5in}
+
+\noindent
+Thus, $L$ is false.
+}
+
+\prove{Show that $\sqrt{5}$ is irrational, following the proof that $\sqrt{2}$ is irrational.
+Start by pretending for a minute that $\sqrt{5}$ is rational and argue to a false statement or a contradiction.}{1.7in}
+
+\vfill          % pad the rest of the page with white space
