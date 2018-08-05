@@ -5,34 +5,38 @@
 \overview{Using the right words in the right situation shows that you understand the logical structure of what you are writing.
 It also makes it clear to the reader what you mean.}
 
-\definition{Let}{The word ``Let'' has two main uses in mathematics.
+\definition{Let}{The word ``Let'' has two main uses in mathematics, both of them in proofs.
 
 \balist{0.1in}
 \item The word ``Let'' is used to introduce a new variable or other object and give it a specific value.  This is often used in proofs where you need to show the existence of some object, but is also used in many other contexts.
 \begin{itemize}
-\item Let $n = \frac{1}{a} + 1$, rounded up to the nearest integer.
-\item Let $x = \frac{-b + \sqrt{b^2-4ac}}{2a}.$
 \item Let $f(x) = \sin(x) + \cos(x)$.
+\item Let $x = \frac{-b + \sqrt{b^2-4ac}}{2a}.$
+\item Let $n = \frac{1}{a} + 1$, rounded up to the next integer.
 \end{itemize}
-The word ``set'' can also be used here.
-\item The word ``Let'' can also be used to introduce a new variable with a generic value, which is used when writing a generic proof that is supposed to work for many values of the variable.
+The word ``set'' can also be used here in place of ``let.''
+\item The word ``Let'' can also be used to introduce a new variable having a particular property:
 \begin{itemize}
-\item Let $n \geq 1$.
-\item Let $x > 0$.
+\item Let $n$ be even.
+\item Let $a > 0$.
 \item Let $r \in \Q$.
 \item Let $0 < x < 1$.
 \end{itemize}
+These statements cause the variable to take on a specific value.
+We don't know the specific value, only that it has the property we make it have.
+This is very useful when writing a generic proof that is supposed to work for all values of the variable having the property.
 \elist
-A very important point is that whenever you use the word ``Let'', you change the value of the variable.  So for example, if you start a proof by saying ``Let $a > 0$, then $a$ becomes a specific real number, but it could be any real number greater than 0.  
-Based on this $a$, you may construct other variables like $n$ which depend on $a$.  For example, $n = 1/a$.
-Later in the same proof, if you say, ``Let $a > 1$, then this changes the value of $a$, and any variable that depends on $a$ will lose its connection.
+A very important point is that whenever you use the word ``Let'', you change the value of the variable.  So for example, if you start a proof by saying ``Let $a > 0$,'' then $a$ becomes a specific real number.  
+Based on this $a$, you may construct other variables like $b$ which depend on $a$.  For example, $b = 1/a$.
+Later in the same proof, if you say, ``Let $a > 1$,'' then this changes the value of $a$, and any variable that depends on $a$ will lose its connection.
+Instead, you may want to think of $a > 1$ as a case to consider and use the word ``suppose.''
 }
 
 \definition{Suppose}{The word ``Suppose'' has two main uses in mathematics.
 \balist{0.1in}
-\item The word ``Suppose'' can be used to introduce cases, for example, to restrict consideration of an already--introduced variable to a smaller range of variables.  Using ``suppose'' this way does not introduce a new variable.
+\item The word ``Suppose'' can be used to introduce cases in a proof, for example, to restrict consideration of an already--introduced variable to a smaller range of variables.  Using ``suppose'' this way does not introduce a new variable or change the value of the variable.
 \begin{itemize}
-\item Let $x \in \R$.  Case 1.  Suppose $x \geq 0$. ... Case 2. Suppose $x < 0$.
+\item Let $a > 0$.  Case 1.  Suppose $a \geq 1$. \ldots  Case 2. Suppose $0 < a < 1$. \ldots
 \item Let $x \in [3,7]$.  Case 1.  Suppose that $x < 4$.  ... Case 2.  Suppose that $x \geq 4$.
 \end{itemize}
 \item The word ``Suppose'' is also used to introduce a logical statement at the beginning of a theorem or proof.
@@ -40,7 +44,6 @@ Later in the same proof, if you say, ``Let $a > 1$, then this changes the value 
 \item Suppose that the function $f$ is continuous on the interval $[a,b]$.
 \item Suppose that $n$ is an odd integer.
 \end{itemize}
-These are the only ways that ``Suppose'' can be used to introduce a new variable.  Note that ``Let'' could also have been used.
 \elist
 }
 
@@ -50,15 +53,50 @@ You can say things like:
 \balist{0in}
 \item Assume that $\sqrt{2}$ is rational.
 \item Assume for the sake of contradiction that $\sqrt{2}$ is rational.
-\item Pretend for a minute that $\sqrt{2}$ is rational.  (Recommended in this class, but unconventional outside this class.
+\item Pretend for a minute that $\sqrt{2}$ is rational.  (Recommended in this class, but unconventional outside this class.)
 \elist}
 
-\remark{The word ``Any'' is ambiguous and I recommend that you avoid using it.  Sometimes it means ``for all'' and sometimes it means ``there exists''.
+\remark{The word ``Any'' is ambiguous and it is best to avoid using it.  Sometimes it means ``for all'' and sometimes it means ``there exists'' and sometimes you just can't tell.
 Consider this example:
 \balist{0.1in}
-\item Suppose that $n > a$ for any non-negative integer $n$.  This would be true {\bf for all} non-negative integers $n$ if $a = -5$.  But it would be true for {\bf some} non-negative integer $n$ if $a=10$.  The meaning is ambiguous.
+\item Let $a$ be a real number.  Suppose that $n > a$ for any non-negative integer $n$.  This would be true {\bf for all} non-negative integers $n$ if $a = -5$.  But it would be true for {\bf some} non-negative integer $n$ if $a=10$.  The meaning is ambiguous.
 \elist
 }
+
+\example{{\bf A badly told story.}  
+Amanda was a sophomore in college.
+One day after class, she went to study in the park.
+She walked past a family at a picnic table and headed toward a shady tree.
+Barney said, ``This next test is going to be really hard!''
+Amanda told Barney to relax.
+
+\vspace{0.1in}
+\noindent
+Who is Barney?  We haven't been introduced.  How does he know Amanda?  Were they walking together?  Were they meeting to study?
+
+\vspace{0.1in}
+\noindent
+Writing a proof is a bit like tellling a story.  It's important to introduce the variables you use.  Don't let a variable barge in without introduction like Barney did.  Make sure to relate a new variable to existing variables.}{0in}
+
+\example{Show that for all real numbers $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
+
+\vspace*{0.1in}
+\noindent
+Let $a > 0$.
+
+Case 1.  Suppose that $a \geq 1$.  \blank{1.5in}  Then $\frac{1}{n^2} = \frac{1}{4} < 1 \leq a$, and so $\frac{1}{n^2} < a$.
+
+Case 2.  Suppose that $a < 1$.  Let $n$ be the next integer larger than $\frac{1}{\sqrt{a}}$.  Then $n > \frac{1}{\sqrt{a}}$.
+Squaring both sides, $n^2 > \frac{1}{a}$.  Taking reciprocals, $\frac{1}{n^2} < a$, as desired.
+
+In each case, we have shown the existence of an integer $n$ with the desired property.
+Thus, for all $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
+
+\vspace{0.1in} 
+\noindent
+Note that in Case 1, the variable $n$ has not been introduced.  Fill in the blank to do that properly.
+}{0in}
+
 
 
 
