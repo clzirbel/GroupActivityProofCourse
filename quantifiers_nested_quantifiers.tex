@@ -1,0 +1,211 @@
+\yourname
+
+\activitytitle{Quantifiers and nested quantifiers}{}
+
+\overview{
+Many statements that we want to prove are supposed to be true {\bf for all} objects having a certain property.
+Other times, we want to show that {\bf there exists} an object having a property.
+`For all' and `there exists' are called quantifiers.
+Sometimes the two occur together, as in a statement that `for every object A, there is an object B having a certain relationship to A.'
+Then we say that the quantifiers are {\em nested}.
+In this activity you will work with quantifiers and nested quantifiers.
+}
+
+\definition{For all}{The phrase {\em for all} means that what follows is supposed to be true for all values of the indicated variable, and will probably require a generic proof to cover all possibilities.
+Alternative words are ``for every'' or ``for each.''
+Sometimes people write ``for any'' but please avoid that because it can be ambiguous.
+The notation $\forall$ is often used to represent ``for all''.
+The format is ``for all (introduce a variable and optionally put restrictions on the variable), we have (property satisfied by the variable).''
+In this course, use the words ``we have'' except when ``for all'' is followed by ``there exists.''
+}
+
+\definition{There exists}{The phrase {\em there exists} claims that an object with a certain property can be shown to exist.
+Often, you prove existence by constructing the object that is needed, but occasionally the proof works differently.
+The notation $\exists$ is often used to represent ``there exists.''
+The format is ``there exists (introduce a variable and  optionally put restrictions on the variable) such that (property satisfied by the variable).''
+In this course, write out the words ``such that.''}
+
+\exercise{Rewrite English sentences symbolically, and rewrite symbolic statements as English sentences.
+The first ones are done for you.
+Pay close attention to the format for writing the statements.
+\balist{0.3in}
+\item Every prime number is greater than 1.  Solution:  $\forall$ prime $n$, we have $n > 1$.
+\vspace*{-0.2in}
+
+\item There is a real number $x$ for which $x^2 = 2$. Solution:  $\exists$ $x \in \R$ such that $x^2 = 2$.
+The set $\R$ is called the {\em universe} for the variable $x$.
+\vspace*{-0.2in}
+
+\item $\forall$ $x \in A$, we have $x^2 = x$.
+
+\item The equation $x = \sin(x)$ has an integer-valued solution.
+
+\ealist
+}{0.1in}
+
+\exercise{
+Write the following statements symbolically:
+\balist{0.3in}
+\item For every $a$, there is a $b$ for which $b^2 = a$
+\item For every $b$, there is an $a$ for which $b^2 = a$
+\item For every $a$ and every $b$, we have $b^2 = a$
+\item There exists an $a$ and there exists a $b$ such that $b^2 = a$
+\elist
+}{0.0in}
+
+\pagebreak
+
+\exercise{For each of the statements in the previous problem, decide whether it is true or false if the universe for both $a$ and $b$ is the set of non--negative integers.
+If false, give specific numbers as counterexamples using ``Let \ldots''
+\balist{0.2in}
+\item
+\item
+\item
+\item
+\elist
+}{0.1in}
+
+\remark{Now you will write proofs that involve nested quantifiers.  
+For each, first write  the  statement with $\forall$ and $\exists$.
+Note the order in which the quantifiers occur, because that will have a big impact on the structure of the proof.
+To prove a ``for all'' statement, use ``Let \ldots'' to introduce a generic instance of the variable that satisfies whatever restriction is imposed.
+If your proof works for a generic value of the variable, then it will work for all variables satisfying the restriction.
+To prove a ``there exists'' statement, construct the required variable in terms of other variables, also using ``Let \ldots''
+}
+
+\prove{Show that for all odd integers $m$ and $n$, there exists an integer $p$ such that $m+n = 2p$.
+
+\noindent
+In symbols:  $\forall$ integers $m$ and $n$, \blank{2in}
+
+Start your proof by writing ``Let $m$ and $n$ be odd integers.''
+A few steps later, you will be able to construct the integer $p$.
+At the end, generalize by noting that you made no further assumptions about $m$ and $n$, so your result is true for all odd integers $m$ and $n$.}{1in}
+
+\prove{Show that for every rational number $r \neq 0$, there exists a rational number $s$ such that $rs = 1$.
+Remember to generalize at the end.
+Is there more than one possible value for $s$?
+
+\noindent
+In symbols:
+
+}{0.9in}
+
+\prove{Show that for every real number $y$ there is a value of $x$ for which $y = 2x-5$.
+
+\noindent
+In symbols:
+
+}{1.0in}
+
+\prove{(Calculus required.)  Show that for every continuous function $f:\R \to \R$, there exists a function $F$ with $F' = f$ and $F(0) = 0$.
+Is there more than one possible choice for $F$?
+
+\noindent
+In symbols:
+
+}{1.0in}
+
+\prove{(Linear algebra required.)  Suppose that the 3 by 3 matrix $A$ is invertible.
+(The matrix $A$ is given; you don't need to say ``Let $A$ be a matrix'' or construct $A$.)
+Show that for all 3-dimensional vectors $b$, the equation $Ax = b$ has a solution $x$, which is also a 3-dimensional vector.
+Is there more than one possible value for $x$?
+
+\noindent
+In symbols:
+}{1.0in}
+
+
+\exercise{~
+\balist{0.7in}
+\item Show that there exists an integer $n$ such that for all integers $p$ with $p \leq 0$, we have $2^n > p$.
+First define $n$, then show that it works for all $p$ by starting with ``Let $p \leq 0$ be an integer.''
+\item Show that for every integer $p > 0$, there is an integer $n$ with $2^n > p$.
+It's OK if $2^n$ is much larger than $p$; you don't need the smallest possible $n$, just one that works.
+\item Using the integer $n$ that you constructed in (a) or (b), show that for all $m > n$, we have $2^m > p$.
+\item Write three quantifiers to express what you have shown about $p$, $n$, and $m$ in (a), (b), and (c).
+\elist
+}{0.0in}
+
+\exercise{~
+\balist{0.7in}
+\item Suppose that $n^2 > \frac{1}{a}$.  Cite a property of inequalities to show that $n^2 + 10 > \frac{1}{a}$.
+\item Show that for every real number $a > 0$, there is an integer $n$ with $\frac{1}{n^2 + 10} < a$.
+\item Using the integer $n$ that you constructed in (b), show that for all $m > n$, we have $\frac{1}{m^2+10} < a$.
+\item Write three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
+\elist
+}{0.3in}
+
+\exercise{~
+\balist{0.5in}
+\item Let $a > 0$.  Solve the inequality $0 < \frac{1}{x^2 - 100} < a$ for $x$.
+\item Show that for every real number $a > 0$, there is an integer $n$ with $0 < \frac{1}{n^2 - 100} < a$.
+\item Using the integer $n$ that you constructed, show that for all $m > n$, we have $\frac{1}{m^2 - 100} < a$.
+\item Write three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
+\elist
+}{0.3in}
+
+\exercise{
+Show that there exists a number $a$ such that for all $x \in \R$, $5\sin(x) + 7\cos(3x) < a$.
+Note that in this problem, you first construct $a$ and then you show a ``for all'' statement.
+
+\noindent
+In symbols:
+
+}{1.0in}
+
+\exercise{
+Show that for the integers, there exists a number $a$ for which, for all integers $b$, $ab = b$.
+
+\noindent
+In symbols:
+}{0.1in}
+
+\remark{The negation of a logical statement $P$ is denoted by $\lnot P$.  It is true when $P$ is false and false when $P$ is true.  When the logical statement begins with a quantifier, we can think through the result of negation.  In what follows, $Q(x)$ is a logical statement whose truth value depends on the value of $x$.  For example, $Q(x)$ could be the statement ``$x^2 = x$.''
+\blist{0.1in}
+\item Consider $\lnot \forall$ $x \in A$, we have $Q(x)$.  This means that it is not true that all $x$ values ``work,'' so there must be an $x$ value that does not work, that is, $\exists$ $x\in A$ such that $\lnot Q(x)$.
+\item Consider $\lnot \exists$ $x \in A$ such that $Q(x)$.  Try as we might, we cannot find a value of $x$ that ``works,'' so it must be that all values of $x$ fail to work.  That is, $\forall$ $x\in A$, we have $\lnot Q(x)$.
+\elist 
+Note that in both cases, negating the quantifier can be done quite mechanically:  negation turns $\forall$ into $\exists$ and it turns $\exists$ into $\forall$.  Also note that in both cases we keep the restriction $x\in A$ and instead negate the property $Q(x)$ that $x$ is supposed to have.
+When negating nested quantifiers, after flipping the first quantifier, the negation applies to the next quantifier, which then flips, and so on.
+}
+
+\exercise{Negate the following statements.
+\balist{0.1in}
+\item $\exists$ integer $k$ such that $k^2 < k$
+
+\item $\exists$ $x \geq 0$ such that $\cos(x) > e^x$
+
+\item $\forall$ $y \in \R$, $\exists$ $x \in \R$ such that $x^2 = y$
+
+\item $\forall$ $a > 0$, $\exists$ integer $n$ such that $\forall$ $m > n$, $\sin(m) < a$
+
+\item $\forall$ $a > 0$, $\exists$ $d > 0$ such that $\forall$ $x \in (a-d,a+d)$, we have $|\cos(x) - \cos(a)| < a$
+
+\ealist
+}{0in}
+
+\exercise{Write the following statements symbolically.
+Introduce new notation as you need it.
+The first one is done for you.
+\balist{0.5in}
+\item Every state has a city named Springfield.  Use variables $s$ and $c$.
+
+\noindent
+Solution: $\forall$ state $s$, $\exists$ city $c$ in $s$ such that NameOf(c) = Springfield.\\
+\vspace*{-0.6in}
+
+\item Every bridge has a weight limit.  Use variables $b$ and $w$.
+
+\item There is an integer that is larger than every other integer.  Use variables $m$ and $n$.
+\item Every broken clock is right twice a day.  Use variables $c, t_1, t_2$.
+\item Every married couple can find a tax deduction.  Use variables $m$ and $d$.
+\item Between every two locations in the US, there is a shortest driving route.  Use variables $L_1, L_2, r,$ and $R$.\\
+Solution: $\forall$ locations $L_1$ and $L_2$ in the US, $\exists$ route $r$ such that $r$ starts at $L_1$ and ends at $L_2$ and $\forall$ route $R$ such that $R$ starts at $L_1$ and ends at $L_2$, length($r$) $\leq$ length($R$).\\
+Why is the second $\forall$ needed?
+\vspace*{-0.2in}
+\elist
+}{0.1in}
+
+
+\vfill          % pad the rest of the page with white space
