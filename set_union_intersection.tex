@@ -21,12 +21,12 @@ Let $C$ be the set of Computer Science majors and $M$ be the set of Mathematics 
 Then $C \cap M$ is the set of students double majoring in Computer Science and Mathematics (a powerful combination!) while $C \cup M$ is the set of students majoring in one, the other, or both majors.
 }{0in}
 
-\example{Find $[1,5] \cup (3,7)$.  Draw a diagram on a number line to illustrate.}{0.4in}
+\example{Find $[1,5] \cup (3,7)$.  Draw a diagram on a number line to illustrate.}{0.3in}
 
-\example{Find $[1,5] \cap (3,7)$.  Draw a diagram on a number line to illustrate.}{0.4in}
+\example{Find $[1,5] \cap (3,7)$.  Draw a diagram on a number line to illustrate.}{0.3in}
 
 \problem{Let $3\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 3j\}$.
-Let $5\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 5j\}$, and similarly with other sets like $7\Z$ and $11\Z$.
+Let $5\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 5j\}$, and similarly with other sets like $7\Z$ and $12\Z$.
 
 \balist{0.4in}
 \item Find $3\Z \cap 5\Z$ and write it in the most convenient form you can.
@@ -50,6 +50,9 @@ Since \blank{1in} was arbitrary, \blank{1in}.
 \item Show that $B \subseteq C$.  Use good form.
 \elist
 }{0in}
+
+%============================================================
+\pagebreak
 
 \remark{For sets $A, B,$ and $C$, to show that $A \cap B \subseteq C$, you need to start with ``Let $x \in A \cap B$.''  This tells you that $x \in A$ and $x \in B$.
 Using those two pieces of information, you need to show that $x \in C$.  You will usually need to use both pieces of information.}
@@ -83,7 +86,8 @@ Since \blank{1in} was arbitrary, \blank{3in}.
 
 }{-0.2in}
 
-\prove{Show that $2\Z \cap 7\Z \subseteq 14\Z$.  Use good form.  You do not need to prove any results about divisibility, simply use what you know is true.
+\prove{Show that $2\Z \cap 7\Z \subseteq 14\Z$.  Use good form.  
+You do not need to prove any results about multiples or divisibility, simply use what you know is true from the definition of these sets.
 
 \noindent
 Let \blank{1.5in}
@@ -100,6 +104,7 @@ This is not all that much to work with, since maybe only one of these is true, a
 No matter which one is true, you need to show that $x \in C$.
 You should do this by considering two cases.  Case 1, when $x \in A$.  Case 2, when $x \in B$.
 In both cases, show that $x \in C$ and then no matter which case applies, you get the result you need.
+In the end, you show that $A \subseteq C$ and $B \subseteq C$.
 }
 
 \guidedproof{Suppose that $A \subseteq C$ and $B \subseteq C$.
@@ -115,25 +120,29 @@ Case 1.  Suppose that $x \in A$.  Then $x \in C$ because \blank{1in}.
 Case 2.  Suppose that $x \in B$.  Then \blank{1in} because \blank{1in}.
 
 \noindent
-In both cases, \blank{0.7in}.  Thus, \blank{0.7in}.
+In both cases, \blank{0.7in}.
 Since \blank{1in} was arbitrary, we conclude that \blank{1in}
 }
 
 \prove{Show that $[1,5] \cup (3,7) \subseteq [1,7)$.  Use good form.  You will use transitivity for inequalities.}{1in}
 
+\vfill
+\pagebreak
+% ==========================================================
+
 \prove{Suppose that $B \subseteq A$.
 Show that $A \cup B \subseteq A$.
-Use good form.}{1in}
+Use good form.}{0.9in}
 
 \prove{Suppose that $A \cup B \subseteq A$.
 Show that $B \subseteq A$.
-Use good form.}{1in}
+Use good form.}{0.9in}
 
 \remark{To show that $A \subseteq B \cap C$, start with ``Let $x \in A$ and show that $x \in B$ and $x \in C$, so you can conclude that $x \in B \cap C$.
 Make sure to write that you have shown that $x \in B \cap C$ before you make a general conclusion.
 }
 
-\prove{Show that $14\Z \subseteq 2\Z \cap 7\Z$.  Use good form and make a general conclusion at the end.
+\prove{Show that $14\Z \subseteq 2\Z \cap 7\Z$.  Use transitivity and make a general conclusion at the end.
 
 \noindent
 Let \blank{1in}
@@ -149,13 +158,16 @@ Since \blank{0.5in} was arbitrary, \blank{3in}.
 
 \remark{To show that $A \subseteq B \cup C$, start with ``Let $x \in A$ and show that $x \in B$ or that $x \in C$.
 Often, some $x$ values are in $B$ and others are in $C$, and so you will want to introduce two cases that split the values of $x$ into two groups.  Unfortunately, the cases cannot be ``Case 1:  Suppose $x \in B$'' and ``Case 2:  Suppose $x \in C$'' because you do not yet know that those case cover all possibiliities.  Instead, you may need to use cases like ``Case 1: Suppose $x < 0$'' and ``Case 2:  Suppose $x \geq 0.$''
-The details will be different for each problem.}
+The details will be different for each problem.
+Each case must end with ``Thus $x \in B \cup C$.''}
 
 \prove{Show that $[1,7) \subseteq [1,5] \cup (3,7)$.  Use good form and make a general conclusion at the end.}{1in}
 
+% =======================================================
 \pagebreak
 
 \prove{Show that $(3,8) \cup [6,9] = (3,9]$.  There are two steps.
+Use inequalities and transitivity, not statements like $(3,8) \subseteq (3,9]$.
 \balist{2in}
 \item Step 1.  Show that $(3,8) \cup [6,9] \subseteq (3,9]$.
 \item Step 2.  Show that $(3,9] \subseteq (3,8) \cup [6,9]$.
@@ -167,21 +179,6 @@ The details will be different for each problem.}
 \item Step 1. 
 \item Step 2. 
 \elist}{-0.2in}
-
-\problem{Let $E = \{ m \in \Z : $ there exists $j \in \Z$ such that $m = 2j \}$.
-Let $O = \{ m \in \Z : $ there exists $k \in \Z$ such that $m = 2k + 1 \}$.
-Show that $E \cap O = \emptyset$ by letting $m \in E \cap O$ and showing that this leads to a contradiction.
-}{1in}
-
-\problem{Continuing the previous problem, show that $E \cup O = \Z$ by showing set inclusion both ways.
-}{1in}
-
-\problem{Using standard interval notation, show that $[2,6) \cap [3,8) = [3,6)$ by showing set inclusion both ways. As above, write compound inequalities, then individual inequalities, then compound inequalities again.  Use a number line to illustrate.}{2in}
-
-\problem{Show that $[2,6) \cup [3,8) = [2,8)$ by showing set inclusion both ways.}{0in}
-
-
-
 
 
 \vfill          % pad the rest of the page with white space
