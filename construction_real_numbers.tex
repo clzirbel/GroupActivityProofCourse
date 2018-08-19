@@ -8,12 +8,12 @@ To this point in your mathematical career, you have worked with real numbers and
 The mathematical answer is that we {\em construct} them from simpler numbers and show that they have the right properties.
  }
 
-\note{{\bf Natural numbers.}  At some point in your life you learned the counting numbers 1, 2, 3, \ldots.
+\note{{\bf Natural numbers.}  At some point in your life you learned the natural numbers 1, 2, 3, \ldots.
 Then you learned to add and multiply, and these operations have the familiar algebraic properties like commutativity, associativity, distributivity.
 Their biggest claim to fame:  No matter how high you count, there is always a next number.
 Note, however, that we are not {\em defining} the natural numbers.}
 
-\definition{Zero}{Subtraction problems like $9-5$ have answers that are whole numbers, but subtraction problems like $3-3$ and $12-12$ call for a new number.
+\definition{Zero}{Subtraction problems like $9-5$ have answers that are natural numbers, but subtraction problems like $3-3$ and $12-12$ call for a new number.
 You can define $0$ as $3-3$ or as $12-12$; there are many ways to write this new number.}
 
 \definition{Negative numbers}{Subtraction problems like $5-9$ and $8-12$ need another set of new numbers to be defined.
@@ -22,7 +22,7 @@ Anytime you want to work with $-4$, you can substitute in $5-9$ instead.
 Or $8-12$.}
 
 \exercise{With negative numbers, we say that $a-b = c-d$ if $a+d = c+b$.  Check that this is the case for $5-9$ and $8-12$.
-It's important that to check, and you only need to work with natural numbers.}{0in}
+It's important to check, and you only need to work with natural numbers.}{0in}
 
 \definition{Integers}{The natural numbers, zero, and the negative numbers make up the integers.
 Each integer can be written as $a-b$ where $a$ and $b$ are natural numbers.
@@ -30,7 +30,7 @@ The integers are closed under addition and multiplication, and these operations 
 
 \definition{Rational numbers}{\label{rationaldefinition}
 Division problems like $15 \div 5$ have answers that are integers, but problems like $5 \div 15$ need yet more new numbers to be defined.
-For some reason people decided to write the new numbers as $\frac{5}{15}$ but we could have chosen some other notation like $(5,15)$ or $5 \# 15$.
+For some reason people decided to write the new number as $\frac{5}{15}$ but we could have chosen some other notation like $(5,15)$ or $5 \# 15$.
 At any rate, these new ``rational'' numbers are made up of two integers, the second of which needs to be non-zero.
 The rules for rational numbers are worth noting in some detail:
 \balist{0.0in}
@@ -47,14 +47,14 @@ The set of all rational numbers is denoted by $\Q$.
 }
 
 \exercise{Use Definition \ref{rationaldefinition} for each part.
-\balist{0.1in}
+\balist{0.05in}
 \item Check that $\frac{1}{3} = \frac{5}{15}$ using the definition.
 \item Check that $\frac{1}{4} < \frac{2}{7}$ using the definition.
 \item Add $\frac{1}{3} + \frac{1}{4}$ using the definition.
 \item Show that $\frac{a}{b} + \frac{c}{d} = \frac{c}{d} + \frac{a}{b}$ using a rewrite proof.
 Proofs of other algebraic properties are similar.
 \elist
-}{0.1in}
+}{0.3in}
 
 \definition{Complex numbers}{Once the real numbers have been defined, we can define the complex numbers by letting $i = \sqrt{-1}$ and then thinking about numbers of the form $a + ib$ where $a$ and $b$ are real numbers.}
 
@@ -82,7 +82,7 @@ It's OK to use words like ``cube root of 5'' in your description, even though th
 
 \remark{\label{closedbelowremark}
 Note that ``closed below'' is unusual in that it has two ``for all'' quantifiers.
-To prove that a set $A$ is closed below, follow this format:  ``Let $q \in A$.  Let $p \in \Q$ such that $p < q$.  Show that $p \in A$.}
+To prove that a set $A$ is closed below, follow this format:  ``Let $q \in A$.  Let $p \in \Q$ such that $p < q$.  Show that $p \in A$.''}
 
 \exercise{Show that each of the following sets is closed below, following Remark \ref{closedbelowremark}.
 \balist{0.5in}
@@ -115,7 +115,8 @@ If the set is a Dedekind cut, show that.  If not, explain why not.
 
 \vspace*{0.5in}
 
-\item $C = \{ q \in \Q: q^3 < 5 \}$.  Let $m =$ \blank{1in}.  Let $n = $ \blank{1in}.  To show (ii), given $p \in A$, I suggest you consider two cases.  When $p < 1$, let $q = 1$.  When $p \geq 1,$ let $q = p + c$ where $c =\frac{5-p^3}{100}$ when $p \geq 1$.  Calculate $(p+c)^3$ and use the fac that $c < 1$, so $c^2 < c$ and $c^3 < c$.  Also keep in mind that $p < 2$.
+\item $C = \{ q \in \Q: q^3 < 5 \}$.  Let $m =$ \blank{1in}.  Let $n = $ \blank{1in}.  To show (ii), given $p \in C$, I suggest you consider two cases.  When $p < 1$, let $q = 1$, then $q^3 < 5$.  When $p \geq 1,$ let $q = p + c$ where $c =\frac{5-p^3}{100}$ when $p \geq 1$.  
+Calculate $(p+c)^3$ and use the fact that $c < 1$, so that $c^2 < c$ and $c^3 < c$.  Also keep in mind that $p < 2$.
 
 \vspace*{1in}
 
@@ -143,7 +144,7 @@ Finally, $p+q = \blank{3.5in} = c$, and so \blank{1in}.
 \item There exists an integer $m$ with $m \in C$.  \Hint Use $m_A \in A$ and $m_B \in B$ from \ref{Dedekind}(c).
 \vspace*{0.5in}
 
-\item There exists an integer $n$ with $n \notin C$.  \Hint Use $n_A \in A$ and $n_B \in B$.  Then $a < n_A$ for all $a \in A$ and $b < n_B$ for all $b \in B$.  Then $a + b < n_A + n_B$ for all $a \in A$ and all $b \in B$.
+\item There exists an integer $n$ with $n \notin C$.  \Hint Use $n_A \notin A$ and $n_B \notin B$.  Then $a < n_A$ for all $a \in A$ and $b < n_B$ for all $b \in B$.  Then $a + b < n_A + n_B$ for all $a \in A$ and all $b \in B$.
 Now ... why does that mean that $n_A + n_B$ is not in $C$?
 \elist
 
@@ -157,13 +158,13 @@ Now ... why does that mean that $n_A + n_B$ is not in $C$?
 
 \definition{Less than for real numbers}{If $A$ and $B$ are real numbers we say that $A$ is less than $B$ if $A \subset B$.  We write $A < B$.}
 
-\definition{The real number zero}{Let $\zero = \{ q \in \Q : q < 0\}$.}
+\definition{The real number zero}{Let $\zero = \{ q \in \Q : q < 0\}$.  Note that $0$ is in bold.}
 \definition{The real number one}{Let $\one = \{ q \in \Q : q < 1\}$.}
 
 \definition{Addition of real numbers}{Let $A$ and $B$ be real numbers.
 The sum of $A$ and $B$ is the real number $C = \{ z : $ there exist $a \in A$ and $b \in B$ such that $z = a + b \}$.
 This set is a Dedekind cut as explained in \ref{sumisDedekind}.
-We write $A \oplus B$ for the sum.
+We write $A \oplus B$ for the sum to make clear that it is a new type of addition.
 }
 
 \prove{Show that $\zero \oplus \one = \one$ by showing set inclusion both ways.
