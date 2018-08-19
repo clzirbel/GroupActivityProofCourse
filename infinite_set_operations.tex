@@ -5,25 +5,40 @@
 \overview{We are working with infinitely many sets of real numbers.  These exercises will give you practice with sets and teach you things about the real numbers as well.}
 
 \definition{Union}{Let $A_1, A_2, \ldots$ be sets.
-The {\em union} of $A_1, A_2, \ldots$, which is denoted $\bigcup_{n=1}^{\infty} A_n$, is all elements which are in $A_n$ for some $n = 1, 2, 3, \ldots.$}
+The {\em union} of $A_1, A_2, \ldots$ is a new set consisting of all elements that are in $A_n$ for some $n=1, 2, 3, \ldots$.
+The union can be written in open form as $A_1 \cup A_2 \cup \cdots$ or in closed form as $\bigcup_{n=1}^{\infty} A_n$.
+Note that there is no set $A_{\infty}$.
+}
 
 \definition{Intersection}{Let $A_1, A_2, \ldots$ be sets.
-The {\em intersection} of $A_1, A_2, \ldots$, which is denoted $\bigcap_{n=1}^{\infty} A_n$, is all elements which are in $A_n$ for all $n = 1, 2, 3, \ldots.$}
+The {\em intersection} of $A_1, A_2, \ldots$ is a new set consisting of all elements which are in $A_n$ for all $n = 1, 2, 3, \ldots.$
+The intersection can be written in open form as $A_1 \cap A_2 \cap \cdots$ or in  closed form as $\bigcap_{n=1}^{\infty} A_n$.
+ }
 
 \problem{Use quantifiers to express what it means that $x \in \bigcup_{n=1}^{\infty} A_n.$\\
-{\bf Solution:} $\exists n$ such that $x \in A_n$.
-In words, there is at least one $n$ for which $x$ is in $A_n$; that is what it takes to be in the union.}{0.0in}
+{\bf Solution:} $\exists$ $n \geq 1$ such that $x \in A_n$.
+In words, there is at least one $n$ for which $x$ is in $A_n$.
+It does not take much to be in the union.}{0.0in}
 
 \problem{Use quantifiers to express what it means that $x \in \bigcap_{n=1}^{\infty} A_n.$}{0.2in}
 
-\exercise{To show $A \subseteq \bigcap_{n=1}^{\infty} B_n:$  Let $x \in A$, and show that $x \in B_n$ for all $n = 1, 2, 3, \ldots$.
-What kind of proof do you need to write in order to show that $x \in B_n$ for all $n = 1, 2, 3, \ldots$?
-What is the first line of that part of the proof?}{0.1in}
+\remark{To show $A \subseteq \bigcap_{n=1}^{\infty} B_n,$ you need to show that for all $x \in A$, we have $x \in \bigcap_{n=1}^{\infty} B_n$.
+That is, for all $x \in A$ and all $n = 1, 2, 3, \ldots$, we have $x \in B_n$.
+To show this, you need a generic proof that works for all $x$ and all $n$, so start with ``Let $x \in A$ and let $n \geq 1$,'' and then show that $x \in B_n$.
+}
 
-\exercise{To show $A \subseteq \bigcup_{n=1}^{\infty} B_n:$  Let $x \in A$, and show that $x \in B_n$ for some $n = 1, 2, 3, \ldots$.
-In other words, show that $\exists n$ such that $x \in B_n$.
-What kind of proof do you need to write in order to show that $x \in B_n$ for some $n = 1, 2, 3, \ldots$?
-What is going to have to happen first in the proof?}{0.1in}
+\exercise{To show $A \subseteq \bigcup_{n=1}^{\infty} B_n,$ you need to show that $\forall$ $x \in A$, we have $x \in \bigcup_{n=1}^{\infty} B_n$.
+That is, $\forall$ $x \in A$, $\exists$ $n \geq 1$ such that $x \in B_n$.
+Think ahead to your proof.
+
+\noindent
+How will the variable $x$ be introduced?
+
+\vspace*{0.1in}
+\noindent
+How will the variable $n$ be introduced?
+
+}{0.0in}
 
 \remark{To show $\bigcap_{n=1}^{\infty} A_n \subseteq B:$  Let $x \in \bigcap_{n=1}^{\infty} A_n$.
 Then you know that $x \in A_n$ for all $n$, which is a lot of information about $x$.
@@ -31,10 +46,10 @@ Use this information to show that $x \in B$.
 Exactly how that will work depends on the problem.
 }
 
-\remark{To show $\bigcup_{n=1}^{\infty} A_n \subseteq B:$  Let $x \in \bigcap_{n=1}^{\infty} A_n$.
+\remark{To show $\bigcup_{n=1}^{\infty} A_n \subseteq B:$  Let $x \in \bigcup_{n=1}^{\infty} A_n$.
 Then you know that $x \in A_n$ for some $n$, but you don't know which $n$, so that is not very informative.
 There are infinitely many cases, one for each possible value of $n$.
-The best you can do is to start with, ``Suppose $x \in A_n$'' and work forward from there to show that $x \in B$.
+The best you can do is to start with, ``Let $n \geq 1$. Suppose $x \in A_n$.'' and work forward from there to show that $x \in B$.
 In the end, this is the same as showing that $A_n \subseteq B$ for all $n$.
 }
 
@@ -42,12 +57,15 @@ In the end, this is the same as showing that $A_n \subseteq B$ for all $n$.
 
 \problem{Let $\displaystyle A = \bigcup_{n=1}^{\infty} [n,n+1)$.  
 
-\balist{0.2in}
+\balist{0.0in}
 \item Write $A$ in open form, listing out the first five sets in the union:
 
 $A = \blank{0.75in} \cup \blank{0.75in} \cup \blank{0.75in} \cup  \blank{0.75in} \cup \blank{0.75in} \cup \cdots$
 
-\item Figure out what interval $A$ is equal to and call the new interval $B$.  $B$ = \blank{1in}.
+\item Let $B = [1,\infty)$.
+Explain intuitively why $A = B$.
+
+\vspace*{0.2in}
 
 \item Show that $A \subseteq B$.
 
@@ -55,7 +73,10 @@ $A = \blank{0.75in} \cup \blank{0.75in} \cup \blank{0.75in} \cup  \blank{0.75in}
 Let $x \in A$.
 Then $x \in [n,n+1)$ for \blank{1.5in}.
 
-\vspace{0.8in}
+\noindent
+Thus, $x$ satisfies the following inequalities: \blank{2in}
+
+\vspace{0.7in}
 \noindent
 Thus, $x \in B$.  Since $x \in A$ was arbitrary, $A \subseteq B$.
 
@@ -77,23 +98,24 @@ Thus, $x \in [n,n+1)$, and so $x \in A$.  Since $x \in B$ was arbitrary, $B \sub
 \balist{0.2in}
 \item Write $A$ in open form, listing out the first five sets in the union.
 
-\item Figure out what interval $A$ is equal to and call the new interval $B$.  $B =$ \blank{1.5in}.
+\item Figure out what single interval $A$ is equal to and call the new interval $B$.  $B =$ \blank{1.5in}.
+Explain why $A=B$.
 
 \item Show that $A \subseteq B$.  Use good form.
 
-\vspace*{0.2in}
+\vspace*{0.3in}
 
 \item Show that $B \subseteq A$.  Use good form.
 
 \elist
-}{0.8in}
+}{0.7in}
 
 \problem{Let $\displaystyle A = \bigcap_{n=1}^{\infty} (-n,n)$.  
 
 \balist{0.2in}
 \item Write $A$ in open form, listing out the first five sets in the intersection.
 
-\item Figure out what interval $A$ is equal to and call the interval $B$.  $B = $\blank{1in}.
+\item Figure out what single interval $A$ is equal to and call the interval $B$.  $B = $\blank{1in}.
 
 \item Show that $A \subseteq B$.
 
@@ -107,42 +129,13 @@ Let $x \in B$.  You need to show that $x \in (-n,n)$ for all $n$.  How do you do
 \elist
 }{0.5in}
 
-\problem{Let $\displaystyle A = \bigcup_{n=0}^{\infty} [n, n^2]$.
-
-\balist{0.2in}
-\item List out the first five sets in this union, as you did above.
-Draw them on a number line if it helps.
-
-\item Make a conjecture about how you can write $A$ in a simpler way and call the new set $B$.
-It should be the union of three simpler things.
-
-\item Show that $A \subseteq B$.
-Let $x \in A$.  Then $x \in [n,n^2]$ for some $n = 0, 1, 2, \ldots.$.
-You want to show that $x \in B$.
-You can do this with three cases, depending on whether $n=0$, $n=1$, or $n > 1$.
-Each case needs to end with $x \in B$.
-
-\vspace*{1in}
-
-\item Show that $B \subseteq A$.
-Let $x \in B$.
-There are three cases, and in each one, you will need to construct $n$ so that $x \in [n, n^2]$.
-Each case needs to end with $x \in A$.
-
-\elist
-}{1.5in}
-
-\problem{Let ${\displaystyle A = \bigcup_{r \in \Q}} (r-\frac{1}{10}, r+\frac{1}{10})$.
-Here, $\Q$ is the set of all rational numbers.
-Think of a simpler way to describe the set $A$, then prove your conjecture by showing set containment both ways.}{2in}
-
-
-\problem{Let $n$ be an integer greater than 0.  
+\problem{  ~
 
 \balist{0.0in}
-\item Show that $[5+\frac{1}{n},6] \subseteq (5,6]$
-
 \item Show that $(5,6] \subseteq [5,6]$.
+
+\item Let $n$ be an integer greater than or equal to 1.  Show that $[5+\frac{1}{n},6] \subseteq (5,6]$
+
 \elist
 }{0.0in}
 
@@ -160,17 +153,55 @@ Show that $x \leq 5$.
 List out the first five sets in this intersection, as you did above.  
 Draw a picture of them above a number line.  
 Make a conjecture about what interval $A$ is equal to, call the new set $B$, then prove that $A = B$ by showing containment both ways.
-}{0in}
-
-% -----------------
-\pagebreak
+}{1.7in}
 
 \problem{Let $a < b$.  Show that ${\displaystyle \bigcup_{n=1}^{\infty}} [a, b-\frac{1}{n}] = [a,b)$.  
 (If $b - \frac{1}{n} < a$, the interval is empty.)
 Draw pictures, then show set inclusion both ways.  
-}{2in}
+}{1.7in}
 
-\problem{Let $a < b$.  Show that ${\displaystyle \bigcap_{n=1}^{\infty}} (a-\frac{1}{n},b+\frac{1}{n}) = [a,b]$.  Draw pictures, then show set inclusion both ways.}{2in}
+\problem{Let $a < b$.  Show that ${\displaystyle \bigcap_{n=1}^{\infty}} (a-\frac{1}{n},b+\frac{1}{n}) = [a,b]$.  Draw pictures, then show set inclusion both ways.}{1.7in}
+
+\problem{Let ${\displaystyle A = \bigcup_{r \in \Q}} (r-\frac{1}{10}, r+\frac{1}{10})$.
+Here, $\Q$ is the set of all rational numbers.
+Think of a simpler way to describe the set $A$, then prove your conjecture by showing set containment both ways.}{0.6in}
+
+\pagebreak
+
+\problem{Let $\displaystyle A = \bigcup_{n=0}^{\infty} [n, n^2]$.
+
+\balist{0.2in}
+\item List out the first five sets in this union, as you did above.
+Draw them on a number line if it helps.
+
+\item Make a conjecture about how you can write $A$ as a union of three simpler sets, and call the new union $B$.
+
+\item Show that $A \subseteq B$.
+Let $x \in A$.  Then $x \in [n,n^2]$ for some $n = 0, 1, 2, \ldots.$.
+You want to show that $x \in B$.
+You can do this with three cases, depending on whether $n=0$, $n=1$, or $n > 1$.
+Each case needs to end with $x \in B$.
+
+\noindent
+Case 1.  $n=0$
+
+\vspace*{0.2in}
+\noindent
+Case 2. $n=1$
+
+\vspace*{0.2in}
+\noindent
+Case 3. 
+
+\vspace*{0.2in}
+
+\item Show that $B \subseteq A$.
+Let $x \in B$.
+There are three cases, and in each one, you will need to construct $n$ so that $x \in [n, n^2]$.
+Each case needs to end with $x \in A$.
+
+\elist
+}{1.5in}
 
 \problem{Let $\displaystyle A = \bigcup_{k \in \Z} (k, k+1)$.
 \blist{0.2in} 
@@ -183,17 +214,21 @@ Draw pictures, then show set inclusion both ways.
 \item Write out the first five of the $A_n$.
 \item Let $\displaystyle B = \bigcup_{n=2}^{\infty} A_n$.
 Describe the set $B$ in simpler terms, perhaps by writing out the smallest 10 elements of $B$, then describe $B$ in a sentence.
-\item What is $\N \backslash B$?  Remember that $\N = \{0, 1, 2, 3, \ldots\}$.
+\item Describe the integers larger than 1 that are not in $B$.
 \elist
 }{0in}
 
 \problem{
 Use quantifiers to write down what it means that $x \in \bigcup_{n=1}^{\infty} A_n$.
-Use quantifiers to express what it means that $x \notin \bigcup_{n=1}^{\infty} A_n$ by negative quantifiers and rewriting until the expression is as simple as possible.}{1in}
+
+\noindent
+Use quantifiers to express what it means that $x \notin \bigcup_{n=1}^{\infty} A_n$ by negating quantifiers and rewriting until the expression is as simple as possible.}{1in}
 
 \problem{
 Use quantifiers to write down what it means that $x \in \bigcap_{n=1}^{\infty} A_n$.
-Use quantifiers to express what it means that $x \notin \bigcap_{n=1}^{\infty} A_n$ by negative quantifiers and rewriting until the expression is as simple as possible.}{1in}
+
+\noindent
+Use quantifiers to express what it means that $x \notin \bigcap_{n=1}^{\infty} A_n$ by negating quantifiers and rewriting until the expression is as simple as possible.}{1in}
 
 \definition{Set complement}{If $A$ is a set, then $A^c$ is all elements under consideration that are not in $A$.  For example, if $A = [0,8)$, then $A^c = (-\infty,0) \cup [8,\infty)$.}
 
