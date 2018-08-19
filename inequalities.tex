@@ -41,6 +41,8 @@ It's true, and here is how you show it; fill in steps and write the justificatio
 \eeqnarray{-0.5in}
 This shows that $(-1) \cdot a$ is the additive inverse of $a$, because that number is unique.}{0in}
 
+\show{Let $a \in \R$.  The statement $-(-a) = a$ is just a statement about additive inverses.  Prove that it is true.}{0.4in}
+
 \show{You might think that it is obvious that $(-1)(-1) = 1$, where $(-1)$ is the additive inverse of 1, but this takes a few steps.
 Fill in steps and write justifications.
 \beqnarray{-0.1in}
@@ -57,13 +59,11 @@ Why does this show that $(-1)(-1)$ is the additive inverse of $-1$?}{0in}
 Let $a$ and $b$ be real numbers and think about the additive inverse of $a+b$.
 Write justifications to the right of each statement.
 \beqnarray{-0.1in}
--(a+b) &=& (-1)(a+b) \\
+-(a+b) &=& (-1)(a+b) \qqqq\qqqq\qqqq\qqqq ~\\
        &=& (-1)(a) + (-1)(b) \\
        &=& (-a) + (-b)
 \eeqnarray{-0.5in}
 }{0in}
-
-\show{Let $a \in \R$.  The statement $-(-a) = a$ is just a statement about additive inverses.  Prove that it is true.}{0.4in}
 
 \definition{Positive real numbers\label{positivereals}}{By construction, the real numbers have a subset $\Rp$, called the {\em positive real numbers,} for which:
 \balist{0.3in}
@@ -87,18 +87,24 @@ Show that $a\cdot a \in \Rp$, justifying each step, citing previous definitions 
 {\bf Hint:} Use a proof by cases, using the two remaining cases in \ref{positivereals}c.
 For future reference, this gives us a new way to show that a number is in $\Rp$.
 
-\balist{0.3in}
-\item Suppose that $a \in $ \blank{0.5in}.
-\item Suppose that $(-a) \in $ \blank{0.5in}.
-\elist
-}{0.4in}
+\vspace*{0.1in}
+\noindent
+Case 1.  Suppose that $a \in $ \blank{0.5in}.
+
+\vspace*{0.3in}
+\noindent
+Case 2.  Suppose that $(-a) \in $ \blank{0.5in}.
+}{0.0in}
+
+\pagebreak
 
 \show{Show that $1 \in \Rp$.  Justify each step.}{0.5in}
 
 \show{Show that $(-1) \notin \Rp$.
-{\bf Hint:} Pretend for a minute that $(-1) \in \Rp$ and use \ref{positivereals}a.}{0.5in}
+{\bf Hint:} Pretend for a minute that $(-1) \in \Rp$ and use \ref{positivereals}c.}{0.5in}
 
-\definition{Less than}{\label{lessthan}Let $a$ and $b$ be real numbers.  We write that $a < b$ if $b + (-a) \in \Rp$.}
+\definition{Less than}{\label{lessthan}Let $a$ and $b$ be real numbers.  
+If $b+(-a)  \in \Rp$, we write that $a < b$ and say that $a$ is {\em less than } $b$.}
 
 \note{All of the following problems rely on  Definition \ref{lessthan}, so you will use it over and over.
 Note that $>$ has not been defined yet, so be careful not to use it.}
