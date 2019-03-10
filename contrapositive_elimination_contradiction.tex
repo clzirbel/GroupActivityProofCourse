@@ -9,11 +9,12 @@ This activity introduces logical statements and four ways to prove implications:
 You may have seen this same material presented using truth tables, but this particular activity specifically avoids truth tables.
 }
 
-\definition{Logical statement}{A {\em logical statement} is a sentence that is either true or false.  
+\definition{Logical statement}{A {\em logical statement} is a sentence that is either true or false.
 Sometimes logical statements have an unknows such as $n$, but for each value of $n$, the statement is either true or false.
 We often label logical statements with capital letters.}
 
-\example{For each of the logical statements below, write its truth value T or F.
+\example{\label{logicalstatementexample}
+For each of the logical statements below, write its truth value T or F.
 If the sentence is not a logical statement, explain why not.
 
 \balist{0.0in}
@@ -24,7 +25,7 @@ If the sentence is not a logical statement, explain why not.
 \item $T$: $2^5-1$ is prime
 \item $U$: $\sqrt{2}$ is rational
 \elist
-}{0.0in}
+}{-0.2in}
 
 \example{For each of the logical statements below, give five values of the integer $n$ for which the statement is true, if possible, and five values of the integer $n$ for which the statement is false, if possible.
 
@@ -34,7 +35,7 @@ If the sentence is not a logical statement, explain why not.
 \item \parbox{1.5in}{$n^2$ is a prime number} \parbox{2in}{T: $n=$}  F:  $n=$
 \item \parbox{1.5in}{$n^2 + 3n + 1$ is odd}    \parbox{2in}{T: $n=$}  F:  $n=$
 \elist
-}{0.0in}
+}{-0.2in}
 
 \definition{Conjunction, logical and}{The {\em conjunction} of two logical statements $P$ and $Q$ is a new logical statement denoted $P \wedge Q$ which is true when both $P$ and $Q$ are true, and false otherwise.
 It is usually read as ``and''.
@@ -46,9 +47,7 @@ The symbol $\vee$ is only used between logical statements.
 Instead of writing ``Suppose $n=3 \vee 5$,'' you could write ``Suppose $n=3 \vee n=5$.''
 }
 
-%===============================================================
-\pagebreak
-\exercise{Give the truth value T or F of each of the new statements below, using the statements from the previous page.
+\exercise{Give the truth value T or F of each of the statements, using definitions in Example \ref{logicalstatementexample}.
 
 \balist{0.0in}
 \item $P \vee Q$
@@ -56,21 +55,21 @@ Instead of writing ``Suppose $n=3 \vee 5$,'' you could write ``Suppose $n=3 \vee
 \item $P \wedge Q \wedge T$
 \item $P \vee (Q \wedge U)$
 \elist
-}{0.0in}
+}{-0.2in}
 
 \definition{Negation}{The {\em negation} of a logical statement $P$ is a new statement denoted $\lnot P$ which is true when $P$ is false and false when $P$ is true.
 $\lnot P$ is read as ``not $P$''.}
 
-\exercise{Give the truth value T or F of each of the new statements below.
+\exercise{Give the truth value T or F of each of the statements, using definitions in Example \ref{logicalstatementexample}.
 
 \balist{0.0in}
 \item $\lnot Q$
 \item $P \wedge \lnot Q$
 \item $Q \vee \lnot S$
 \elist
-}{0.0in}
+}{-0.2in}
 
-\definition{Implication}{For logical statements $P$ and $Q$, we say that $P$ implies $Q$ and write $P \to Q$ if $P$ being true guarantees that $Q$ is true.  
+\definition{Implication}{For logical statements $P$ and $Q$, we say that $P$ implies $Q$ and write $P \to Q$ if $P$ being true guarantees that $Q$ is true.
 }
 
 \exercise{For each line below, identify the statement corresponding to $P$ and the statement corresponding to $Q$ in the implication $P \to Q$.
@@ -88,17 +87,15 @@ We have seen a number of direct proofs, including proofs by rewriting.}
 
 \prove{Let $n$ be an integer.  Consider $S: n$ is even and $T: n^2+6n+7$ is odd.
 Write a direct proof that $S \to T$.
-Start with ``Let $n$ ...''}{0.8in}
+Start with ``Let $n$ ...''}{1.2in}
 
 \example{\label{trydirectoddeven}
 Let $n$ be an integer.
 Consider $A: n^2$ is even and $B: n$ is even.
 Try to write a direct proof that $A \to B$.
 If you don't see a way to do it, you can stop trying.
-}{0.0in}
+}{0.8in}
 
-%===============================================================
-\pagebreak
 \definition{Contrapositive}{Here is another way to think about showing $P \to Q$.
 You need to be sure that it never happens that $P$ is true but $Q$ is false.
 You can do this by showing that whenever $Q$ is false, $P$ is also false.
@@ -107,6 +104,8 @@ This is called {\em proof by contrapositive}.
 It may be easier to find a direct proof that $\lnot Q \to \lnot P$ than it is to show $P \to Q$.
 }
 
+%===============================================================
+\pagebreak
 \exercise{Let $n$ be an integer.
 Consider $A: n^2$ is even and $B: n$ is even.
 State $\lnot B$ and $\lnot A$, then show that $\lnot B \to \lnot A$.
@@ -114,10 +113,14 @@ State what you have shown in terms of $n^2$ and $n$.
  }{0.7in}
 
 \exercise{Let $n$ be an integer.  Consider $P: n^2 + 8n + 9$ is even and $Q: n$ is odd.
-State $\lnot Q$ and $\lnot P$ and show $\lnot Q \to \lnot P$.}{0.7in}
+State $\lnot Q$ and $\lnot P$ and show $\lnot Q \to \lnot P$.}{0.9in}
 
 \exercise{Let $n$ be an integer.  Consider $S: n^2$ is a multiple of 3 and $T: n$ is a multiple of 3.
-State $\lnot T$ and $\lnot S$.  By the Division Algorithm, there are two ways that $\lnot T$ can happen.  Write down each one, and prove that in either case, they imply $\lnot S$.}{1.0in}
+State $\lnot T$ and $\lnot S$.  By the Division Algorithm, there are two ways that $\lnot T$ can happen.  Write down each one, and prove that in either case, they imply $\lnot S$.
+
+\vspace{1.0in}
+\noindent
+Thus, if $n^2$ is a multiple of 3, we know that $n$ is a multiple of 3.}{-0.2in}
 
 \definition{Rational\label{rational}}{A real number is said to be {\em rational} if it can be written as $\frac{a}{b}$ where $a$ and $b$ are integers and $b \neq 0$; this is the quotient of two integers.}
 
@@ -127,7 +130,9 @@ State $\lnot T$ and $\lnot S$.  By the Division Algorithm, there are two ways th
 
 \exercise{Suppose that $a$ is an irrational number.  Show that $5a$ is irrational.}{0.6in}
 
-\exercise{Suppose that $a$ is an irrational number.  Let $b$ be a rational number not equal to 0.  Show that $ba$ is irrational.}{0.0in}
+\exercise{Let $b$ be a rational number not equal to 0.  Suppose that $a$ is an irrational number.  Show that $ba$ is irrational.
+There are three logical statements here.  One is just context, one is $P$ and one is $Q$ in the implication $P \to Q$.
+Identify $P$ and $Q$, then show that $P \to Q$.}{0.0in}
 
 %===============================================================
 \pagebreak
@@ -158,8 +163,12 @@ Thus, $P$ must be false.
 }{0in}
 
 \prove{Consider the statements $P:$ $n$ is a positive integer and $Q:$ $n^2$ is 6.
-Prove that $P \wedge Q$ is false by first pretending that it is true.
-One idea is that $n$ would have to be larger than 2 but smaller than 3.}{0.5in}
+Prove that $P \wedge Q$ is false.
+One idea is that $n$ would have to be larger than 2 but smaller than 3.
+
+\noindent
+Pretend for a minute that $n$ is a positive integer and $n^2 = 6$.
+}{0.5in}
 
 \note{In the previous problem, we saw that $P \wedge Q$ is false, but we cannot say which of the two statements is false.
 If $n$ is an integer, then $Q: n^2 = 6$ is false.
@@ -186,15 +195,15 @@ You will show that $R$ is false,  by making a series of deductions that lead to 
 Pretend for a minute that $R$ is true, that is, that $\sqrt{2}$ is rational.
 
 \noindent
-Then there exist integers $p$ and $q$ for which $\sqrt{2} = \frac{p}{q}$, and we can arrange it so that $p$ and $q$ are not both even.  
+Then there exist integers $p$ and $q$ for which $\sqrt{2} = \frac{p}{q}$, and we can arrange it so that $p$ and $q$ are not both even.
 (If they were both even numbers, we would factor out 2 from each until they are not both even.)
 
 \noindent
 Using algebra, $2q^2 = p^2$.  Thus, $p^2$ is \blank{1.5in}.
-Thus, $p$ is \blank{1in} by result \blank{1in} and so can be written as $p = \blank{1in}$ for some \blank{1in}.
+Thus, $p$ is \blank{1in} by Exercise \blank{1in} earlier in this activity, and so can be written as $p = \blank{1in}$ for some \blank{1in}.
 
 \noindent
-Using algebra, $q^2 = $ \blank{2in}, and so $q^2$ is \blank{1in}.  Thus $q$ is \blank{1in}.
+Using algebra, $q^2 = \frac{1}{2} p^2 = $ \blank{2in}, and so $q^2$ is \blank{1in}.  Thus $q$ is \blank{1in}.
 
 \noindent
 But we know that this is false, because $\blank{3in}$.
@@ -213,7 +222,7 @@ Pretend for a moment that $M$ is true.  Let $k$ denote the number of kids and le
 
 \definition{Composite}{An integer $n > 1$ is {\em composite} if it can be written as $n=ab$ where $a$ and $b$ are integers with $1 < a,b < n$.}
 
-\definition{Prime}{An integer $n>1$ is {\em prime} if it is not composiite, that is, its only non-negative integer factors are 1 and itself.}
+\definition{Prime}{An integer $n>1$ is {\em prime} if it is not composite, that is, its only non-negative integer factors are 1 and itself.}
 
 \example{List the prime numbers less than 20.}{0.0in}
 
@@ -257,7 +266,7 @@ Do a really good job on these cases, because you'll use them a few more times in
 \noindent
 Let $n$ be an integer.  Consider $A$: $n^2$ is a multiple of 5 and $B$: $n$ is a multiple of 5.
 Clearly state $\lnot B$ and $\lnot A$.
-Rewrite $\lnot B$ in terms of the cases from \ref{nsquaredmultipleof5}, and then argue that each case iimplies $\lnot A$.  You may use the cases from \ref{nsquaredmultipleof5} without rewriting them.
+Rewrite $\lnot B$ in terms of the cases from \ref{nsquaredmultipleof5}, and then argue that each case implies $\lnot A$.  You may use the cases from \ref{nsquaredmultipleof5} without rewriting them.
 }{0.9in}
 
 \definition{Proof by contradiction}{One way to prove that a statement $P$ is true is to pretend for a minute that $\lnot P$ is true and argue to a false statement, conclude that $\lnot P$ is false, and thus establish that $P$ is true.
