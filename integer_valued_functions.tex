@@ -2,29 +2,31 @@
 
 \activitytitle{Integer-valued functions}{}
 
-\overview{This activity introduces some functions from the real numbers to the integers, and asks you to establish some of their properties.}
+\overview{It is often helpful to replace a real number with a nearby integer.
+There are standard functions from the real numbers to the integers to do this, and this activity helps you learn some of their properties and uses.}
 
 \exercise{Think of a function $f$ with the following properties:  
 First, $f : \R \to \Z$, meaning that the input to $f$ is a real number, and the output from $f$ will always be an integer.
 Second, $f$ takes on the following values:
 \[
   \begin{array}{cccccr}
-	f(0.5) & = & 1 &\qqqq f(-3.2) & = & -3 \\
-	f(0.9) & = & 1 &\qqqq  f(-10) & = & -10 \\
-	f(1) & = & 1 &\qqqq f(-9.5) & = & -9 \\
-	f(1.1) & = & 2 &\qqqq f(18.2) & = & 19 \\
+	f(0.5) & = & 0 &\qqqq f(-3.2) & = & -4 \\
+	f(0.9) & = & 0 &\qqqq  f(-10) & = & -10 \\
+	f(1) & = & 1 &\qqqq f(-9.5) & = & -10 \\
+	f(1.1) & = & 1 &\qqqq f(18.2) & = & 18 \\
   \end{array}
 \]
 
 \noindent
 Humans have an amazing ability to generalize from examples like this.
-Describe what $f$ does to a generic input number $x$.
+Describe what $f$ does to a generic input number $x$:
 
 \vspace*{0.2in}
 \noindent
 We will need the letter $f$ for other functions.
-Decide among yourselves on new notation for $f$.
-You can use special symbols, as with the notation $|x|$ or $n!$, or you can use multiple letters, as with $\sin(x)$ or $\ln(x)$.
+Common notation in mathematics for $f(x)$ is $\lfloor x \rfloor$.
+In programming languages, people write $\floor(x)$.
+In what way does the word floor describe what $f$ does?
 }{0.3in}
 
 \exercise{Think of a function $g$ with the following properties:  
@@ -32,74 +34,70 @@ First, $g : \R \to \Z$.
 Second, $g$ takes on the following values:
 \[
   \begin{array}{cccccr}
-	g(0.5) & = & 0 &\qqqq g(-3.2) & = & -4 \\
-	g(0.9) & = & 0 &\qqqq  g(-10) & = & -10 \\
-	g(1) & = & 1 &\qqqq g(-9.5) & = & -10 \\
-	g(1.1) & = & 1 &\qqqq g(18.2) & = & 18 \\
+	g(0.5) & = & 1 &\qqqq g(-3.2) & = & -3 \\
+	g(0.9) & = & 1 &\qqqq  g(-10) & = & -10 \\
+	g(1) & = & 1 &\qqqq g(-9.5) & = & -9 \\
+	g(1.1) & = & 2 &\qqqq g(18.2) & = & 19 \\
   \end{array}
 \]
 
 \noindent
-Describe what $g$ does to a generic input number $x$.
+Describe what $g$ does to a generic input number $x$:
 
 \vspace*{0.2in}
 \noindent
-Decide among yourselves on new notation for $g$.
-
-\vspace*{0.2in}
-\noindent
-Can you write $g$ in terms of $f$?  If so, how?  If not, why not?
+Common mathematical notation for $g(x)$ is $\lceil x \rceil$.
+In programming languages, people write $\ceil(x)$, where ceil is short for ceiling.
+In what way does the word ceiling describe what $g$ does?
 }{0.3in}
 
-\exercise{Think of a function $h$ with the following properties:  
-First, $h : \R \to \Z$.
-Second, $h$ takes on the following values:
-\[
-  \begin{array}{cccccr}
-	h(0.5) & = & 1 &\qqqq h(-3.2) & = & -3 \\
-	h(0.9) & = & 1 &\qqqq  h(-10) & = & -9 \\
-	h(1) & = & 2 &\qqqq h(-9.5) & = & -9 \\
-	h(1.1) & = & 2 &\qqqq h(18.2) & = & 19 \\
-  \end{array}
-\]
+\exercise{For what values of $x$ do we have ceil($x$) = floor($x$)+1?
 
-\noindent
-Describe what $h$ does to a generic input number $x$.
-
-\vspace*{0.2in}
-\noindent
-Can you write $h$ in terms of $f$ or $g$ or both?  If so, how?  If not, why not?
+\indent
+Are there any values of $x$ for which the equality does not hold?
 }{0.0in}
 
-%=================================================================
-\pagebreak
+\exercise{What exactly is it about the definition of $\floor(x)$ that makes $x - \floor(x) < 1$?
+}{0.5in}
 
-\exercise{Using the notation introduced on the previous page, several inequalities are listed below.
-They might be true for all $x$, or they might fail for some values of $x$.
-If an inequality is true for all $x$, say so.
-If it fails for some $x$ values, gives a specific example of $x$, called a {\em counterexample}, and calculate the quantities in the inequality to explain the counterexample.
+\exercise{The inequalities listed below might be true for all $x$, or they might fail for some values of $x$.
+If one sometimes fails, give a specific example of $x$ where it fails, called a {\em counterexample}, and calculate the quantities in the inequality to explain the counterexample.
+If an inequality appears to be true for all $x$, prove it this way:  ``Let $x$ be a real number.  Consider two cases.  Case 1: Suppose $x$ is an integer.  Case 2: Suppose $x$ is not an integer.''  Show that the inequality is correct in both cases.
 
-\balist{0.4in}
+\balist{0.6in}
 
-\item $x \leq f(x)$
+\item $x \leq \ceil(x)$
 
-\item $x < f(x)$
+\item $x < \ceil(x)$
 
-\item $f(x) - 1 < x \leq f(x)$
-
-\item $g(x) \leq x$
-
-\item $g(x) < x$
-
-\item $g(x) \leq x < g(x)+1$
-
-\item $0 \leq x - g(x) < 1$
-
-\item $x < h(x)$
+\item $0 \leq \ceil(x) - x < 1$ (check both inequalities)
 
 \ealist
+}{0.3in}
+
+\exercise{Let $b$ be a real number.  
+Let $n=\ceil(b)+1$.
+Show that $n > b$; cite a previous result or give a reason for each step.
+\begin{eqnarray*}
+    n &=& \ceil(b) + 1 \qq \mbox{given}\\
+       &>& \ceil(b) \qqqq \mbox{because \blank{1.5in}} \\
+       &\geq& b \qqqq\qq \mbox{because \blank{1.5in}}
+\end{eqnarray*}
 }{0.0in}
 
+\question{Let $x$ be a real number.  What is special about the integer $\floor(x+1)$?}{0.15in}
+
+\question{Solve the equality $\frac{1}{x} = 0.07$ for $x$.}{0.2in}
+
+\question{Let $x>0$.  Solve the inequality $\frac{1}{x} < 0.07$ for $x$.}{0.2in}
+
+\question{Find the smallest integer $n>0$ for which $\frac{1}{n} < 0.07$.}{0.2in}
+
+\question{Find the smallest integer $n>0$ for which $\frac{1}{n} < 0.004$.}{0.2in}
+
+\question{Find the smallest integer $n>0$ for which $\frac{1}{n} < 0.00009$.}{0.2in}
+
+\question{Let $\varepsilon > 0$.  Describe a procedure for finding the smallest integer $n>0$ for which $\frac{1}{n} < \varepsilon$.}{0in}
 
 
 

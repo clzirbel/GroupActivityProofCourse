@@ -2,7 +2,11 @@
 
 \activitytitle{The Division Algorithm}{Dividing integers with remainders will form the basis for several things we want to prove.}
 
-\overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  We will investigate a procedure for doing this, which is called division, even though there will be no fractions in this activity.  Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persion mathematician al-Khwarizmi, who worked on procedures for arithmetic.  The division algorithm itself dates to Euclid's {\em Elements} from around 300 BC.}
+\overview{We would like to distribute $n$ objects evenly among $k$ people and find out how many are left over.  
+We will investigate a procedure for doing this, which is called division, even though there will be no fractions in this activity and we will avoid using division symbols like / and $\div$.  
+The Division Algorithm dates to Euclid's {\em Elements} from around 300 BC.
+Procedures that are guaranteed to work are called {\em algorithms} after the 9th century Persian mathematician al-Khwarizmi, who worked on procedures for arithmetic.  
+}
 
 \example{\label{37among5} You are the dealer in a card game that has 37 cards.  (It's not a standard deck of cards.)  There are 5 people playing, and everyone needs to end up with the same number of cards.  Dealing one card to each player leaves 32 cards in your hands.  Write down the numbers 37, 32, and continue until you cannot deal out any more cards evenly:  
 
@@ -56,11 +60,11 @@ Using $q$ to denote the number of cards each person gets and $r$ to denote the n
 
 \question{What happens when $k=1$?  What is $r$?  What is $q$?}{0.4in}
 
-\question{What happens when $k=0$?  What inequality must $r$ satisfy?  Can you satisfy $n = qk + r$?  For what value(s) of $q$?   Describe in words, and take your time to get it right, because this explains why we don't divide by 0.}{1in}
+\question{What happens with the cards when $k=0$?  What inequalities must $r$ satisfy?  Can you satisfy $n = qk + r$?  For what value(s) of $q$?   Describe in words, and take your time to get it right, because this explains why we don't divide by 0.}{1in}
 
 \note{As above, suppose that $n$ and $k$ are integers that are greater than 0.
 Suppose you find integers $q$ and $r$ for which $n = qk + r$ and $0 \leq r < k$.
-Suppose your friend tries to do the same thing and finds integers $q_2$ and $r_2$ for which $n = q_2 k + r_2$ and $0 \leq r_2 < k$.
+Suppose your friend sets out to do the same thing and finds integers $q_2$ and $r_2$ for which $n = q_2 k + r_2$ and $0 \leq r_2 < k$.
 Must it be the case that $q = q_2$ and $r = r_2$?
 That is, are the values of $q$ and $r$ {\em unique}?
 If you think about dealing $n$ cards to $k$ people, it's pretty clear that you and your friend will get the same values of $q$ and $r$, but how can we see this without thinking about card dealing?
@@ -69,7 +73,7 @@ It will take a few steps.
 
 \show{\label{remainderinequality} Suppose that $r$ and $r_2$ are integers for which $0 \leq r < k$ and $0 \leq r_2 < k$.
 Show that $-k < r-r_2 < k$.
-Starting and ending expressions are shown; your goal is to provide crystal clear intermediate steps with no extra steps.
+Starting and ending expressions are shown below; your goal is to provide crystal clear intermediate steps with no extra steps.
 Note:  You can add inequalities that run the same direction; for example, if $a < b$ and $c \leq d$, then $a+c < b+d$.
 
 \vspace*{0.1in}
@@ -83,8 +87,8 @@ Thus $-k < r-r_2 < k$.
 
 \show{\label{DivisionAlgorithmUniqueness}Suppose that $n$ and $k$ are integers with $k > 0$, that $q$, $r$, $q_2$, and $r_2$ are integers such that $n = qk + r$ and $n = q_2 k + r_2$, and that $0 \leq r < k$ and $0 \leq r_2 < k$.
 Use \ref{remainderinequality} to show that $q = q_2$ and $r = r_2$.
-Starting and ending points are suggested.
-This is not simply a rewrite proof; it requires a spark of genius to complete it, so work on scratch paper, write down everything you know including \ref{remainderinequality},work together, and be patient.
+Starting and ending points are suggested below .
+This is not simply a rewrite proof; it requires a spark of genius to complete it, so work on scratch paper, write down everything you know including \ref{remainderinequality}, work together, and be patient.
 Write a final argument here.
 
 \vspace*{0.1in}
@@ -109,14 +113,14 @@ Check that your group agrees.
 }
 
 \example{Rewrite Theorem \ref{divisionalgorithm} for the case where $k=2$.
-Be specific about the possible values of $r$.
+Use equalities to tell the possible values of $r$.
 
 \vspace{0.1in}
 \noindent
 Let $n$ be an integer greater than 0.  Then,
 \blist{0in}
-\item {\bf Existence:} 
-\item {\bf Uniqueness:}  
+\item {\bf Existence:} There exist integers $q$ and $r$ \ldots
+\item {\bf Uniqueness:}  The numbers $q$ and $r$ are \ldots
 \elist
 }{0.0in}
 
@@ -126,7 +130,7 @@ Use the existence part of the Division Algorithm with $k=2$ to show that $n$ mus
 
 \prove{Let $n$ be an integer greater than 0.
 Use the uniqueness part of the Division Algorithm with $k=2$ to conclude that if $n$ is even, then it cannot be odd.  Also, if $n$ is odd, it cannot be even.  Thus, each integer is even or odd, never both.
-}{0.1in}
+}{0.0in}
 
 % ===================================================================
 \note{Now we will divide negative numbers by positive numbers, with remainder.}
@@ -150,58 +154,58 @@ In what ways is it the same as division of a positive number with remainder?
 
 \prove{Let $n$ be an integer less than 0.
 Let $k$ be an integer greater than 0.
-Add $k$ to $n$ repeatedly until you reach a number from 0 to $k-1$.
+Add $k$ to $n$ repeatedly until you reach a non-negative number, then stop.
 
 \vspace{0.1in}
 \noindent
-How can you be sure that you will ever get all the way to non-negative numbers?
+How can you be sure that you will ever get all the way to a non-negative number?
 
 \vspace{0.4in}
 \noindent
-How can you be sure that you won't jump over the numbers $0, 1, \ldots, k-1$ and keep adding $k$ forever?
+How can you be sure that the first non-negative number you reach will be 0, 1, \ldots, $k-1$ and not a larger number like $k$ or $k+1$?
 
 \vspace{0.5in}
 \noindent
-Use these facts to argue that you can write $n = qk + r$ for some integer $q$ and a small value of $r$.
+What inequalities do you know for $r$?
+}{0.0in}
 
-\vspace{0.5in}
-\noindent
-What inequalities do you know for $q$ and $r$?
-}{0.2in}
+\example{Suppose $n$ = 0.  Show that you can write $n=kq+r$ for integers $q$ and $r$ where $0 \leq r < k$.}{0.2in}
 
-\prove{Let $n$ be an integer less than 0 and let $k$ be an integer greater than 0.
+\prove{Let $n$ be an integer less than or equal to 0 and let $k$ be an integer greater than 0.
+In \ref{DivisionAlgorithmUniqueness}, we did not assume $n \geq 0$.
 Scrutinize your proof of \ref{DivisionAlgorithmUniqueness}.
-We did not assume $n \geq 0$.
-Will your proof work for $n < 0$?  Explain.
+Will your proof work for $n \leq 0$?  Explain.
 }{0.3in}
 
 \theorem{
-Rewrite Theorem \ref{divisionalgorithm} to reflect what you know now about both positive and negative values of $n$.
+Completely rewrite Theorem \ref{divisionalgorithm} to cover positive, negative, and zero values of $n$.
 Be specific about the assumptions on $n$ and $k$.
 }
-% Note to instructor:  existence for the case n = 0 has not been covered.  Good quiz question, maybe.  Or good if a student notices it.
 
 \pagebreak
 
 
 % =====================================================================
 \show{Let $n$ be an integer and suppose that $n = 3m + 1$ for some integer $m$.
-Identify $k$, $q$, and $r$.
-Use the Division Algorithm to argue that $n$ cannot be written as $n = 3k$ where $k$ is an integer.
-Thus, $n$ is not a multiple of 3.
-Take your time and work together to write a really clear argument.
+Clearly $r=1$, but should we think of $k$ in the Division Algorithm as being 3 or as being $m$?
+$k$ = \blank{1in}
 
-\vspace{0.9in}
+\noindent
+Use the Division Algorithm to argue that $n$ cannot be written as $n = 3j$ where $j$ is an integer.
+Do not re-prove this part of the Division Algorithm, just cite it carefully to make your point.
+Thus, if $n=3m+1$, then $n$ is not a multiple of 3.
+
+\vspace{0.8in}
 \noindent
 Which part(s) of the Division Algorithm did you use, existence, uniqueness, or both? \blank{1.5in}
 }{0.0in}
 
 \show{Let $n$ be an integer and suppose that $n^2$ is a multiple of 3.
 For example, $n^2$ could be 36.
-List two more possible values of $n^2$:
+List two more values of $n^2$ that are multiples of 3:
 
 \noindent
-We would like to conclude that $n$ is a multiple of 3.
+When $n^2$ is a multiple of 3, we would like to conclude that $n$ is a multiple of 3.
 It's hard to do this directly, but it can be done indirectly.
 Use the Division Algorithm to write $n= 3q + r$.
 Start with ``There exist integers ....'' and be specific about the possible values of $r$.
@@ -209,7 +213,7 @@ Start with ``There exist integers ....'' and be specific about the possible valu
 \vspace{0.4in}
 \noindent
 Your previous step gives three cases to consider.
-For each case, write the expression for $n$, then use algebra to compute $n^2$.
+For each case, write the expression for $n$, then use algebra to compute $n^2$ and rewrite it as a multiple of 3 plus a remainder of 0, 1, or 2.
 
 \vspace{0.1in}
 \noindent
@@ -232,15 +236,15 @@ This is harder than you might think to explain clearly; work hard on it.
 
 \show{Suppose $n$ is an integer.
 Can $n^2$ be of the form $3m + 2$ where $m$ is an integer?
-Examine the cases in the previous question carefully.}{0.8in}
+Use the cases you found in the previous question.}{0.8in}
 
 \example{In the triple of consecutive integers 5, 6, 7, exactly one number is a multiple of 3.
 Circle it.
 Same thing for 13, 14, 15.
 Circle the multiple of 3.
 Write down 5 more triples of consecutive integers.
-Do you always get a multiple of 3?
-Can you get more than one multiple of 3?}{0in}
+Do you always get a multiple of 3? \blank{1in}
+Can you get more than one multiple of 3? \blank{1in}}{0in}
 
 \pagebreak
 
@@ -254,12 +258,14 @@ Use three cases, $n = 3k$, $n = 3k + 1$, and $n = 3k + 2$, and follow the guide 
 {\bf Case 1:}  $n = 3k$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
 Exactly one of these is a multiple of three (circle it).
 Use the Division Algorithm to argue that the other two are not multiples of 3.
+Work hard, be clear.
 
 \vspace*{0.4in}
 \noindent
 {\bf Case 2:}  $n = 3k+1$.  Then $n+1 = $ \blank{1.5in} and $n+2 = $ \blank{1.5in}.\\
 Exactly one of these is a multiple of three (circle it).
 Use the Division Algorithm to argue that the other two are not multiples of 3.
+Work hard, be clear.
 
 \vspace*{0.4in}
 \noindent
@@ -267,7 +273,7 @@ Use the Division Algorithm to argue that the other two are not multiples of 3.
 }{0.2in}
 
 \example{Think about pairs of consutive even numbers, like 8 and 10, or 14 and 16.
-One number is a multiple of 4 (circle it), the other is not.  Check five more pairs.}{0in}
+One number is a multiple of 4 (circle it), the other is not.  Check five more pairs in the same way.}{0in}
 
 \show{
 Let $n$ be even and consider the numbers $n$ and $n+2$.

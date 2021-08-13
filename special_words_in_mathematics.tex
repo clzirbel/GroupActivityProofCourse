@@ -28,8 +28,8 @@ This is very useful when writing a generic proof that is supposed to work for al
 \elist
 A very important point is that whenever you use the word ``Let'', you change the value of the variable.  So for example, if you start a proof by saying ``Let $a > 0$,'' then $a$ becomes a specific real number.  
 Based on this $a$, you may construct other variables like $b$ which depend on $a$.  For example, $b = 1/a$.
-Later in the same proof, if you say, ``Let $a > 1$,'' then this changes the value of $a$, and any variable that depends on $a$ will lose its connection.
-Instead, you may want to think of $a > 1$ as a case to consider and use the word ``suppose.''
+Later in the same proof, if you say, ``Let $a \geq 1$,'' then this changes the value of $a$, and any variable that depends on $a$ will lose its connection.
+Instead, you may want to think of $a \geq 1$ as a case to consider and use the word ``suppose.''
 }
 
 \definition{Suppose}{The word ``Suppose'' has two main uses in mathematics.
@@ -56,10 +56,13 @@ You can say things like:
 \item Pretend for a minute that $\sqrt{2}$ is rational.  (Recommended in this class, but unconventional outside this class.)
 \elist}
 
-\remark{The word ``Any'' is ambiguous and it is best to avoid using it.  Sometimes it means ``for all'' and sometimes it means ``there exists'' and sometimes you just can't tell.
-Consider this example:
+\remark{The word ``any'' is ambiguous and it is best to avoid using it.  Sometimes it means ``for all'' and sometimes it means ``there exists'' or ``for some'' and sometimes you just can't tell.
+Consider these examples:
 \balist{0.1in}
-\item Let $a$ be a real number.  Suppose that $n > a$ for any non-negative integer $n$.  This would be true {\bf for all} non-negative integers $n$ if $a = -5$.  But it would be true for {\bf some} non-negative integer $n$ if $a=10$.  The meaning is ambiguous.
+\item Let $f(x) = \sin(4x)$ for any real number $x$.  ``any'' means: \blank{1in}
+\item Is it true that $\sin(x) = x$ for any value of $x$?  ``any'' means:  \blank{1in}
+\item Is it true that $\sin^2(x) + \cos^2(x) = 1$ for any $x$?  ``any'' means:  \blank{1in}
+\item Let $a$ be a real number.  Suppose that $n > a$ for any non-negative integer $n$.  This would be true for all / for some (circle one choice) non-negative integers $n$ if $a = -5$.  But it would be true for {\bf some} non-negative integer $n$ if $a=10$.  The meaning is ambiguous.
 \elist
 }
 
@@ -72,29 +75,43 @@ Amanda told Barney to relax.
 
 \vspace{0.1in}
 \noindent
-Who is Barney?  We haven't been introduced.  How does he know Amanda?  Were they walking together?  Were they meeting to study?
+Who is Barney?!?  We haven't been introduced.  Does he know Amanda?  Were they walking together?  Were they meeting to study?
 
 \vspace{0.1in}
 \noindent
-Writing a proof is a bit like tellling a story.  It's important to introduce the variables you use.  Don't let a variable barge in without introduction like Barney did.  Make sure to relate a new variable to existing variables.}{0in}
+Writing a proof is a bit like tellling a story.  It's important to introduce the variables you use.  Don't let a variable barge in without introduction like Barney did.  Make sure to relate a new variable to existing variables the first time it enters the story.}{0in}
 
-\example{Show that for all real numbers $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
+\exercise{Rewrite the story about Amanda and Barney.}{1in}
+
+\example{{\bf Another story.}
+Rex, Bill, and Ted went for a walk.
+Bill said, ``Rex, I see a cat over there.  Please chase it away.''
+Rex barked at the cat, the cat ran away, Bill squeaked in delight, and Ted whinnied in amusement.
+
+\vspace{0.1in}
+\noindent
+In this story, names were introduced, but the names did not suggest that Rex, Bill, and Ted are animals, and we the reader is left to try to figure out what types of animals.
+What is Rex? \blank{1in}  Bill? \blank{1in}  Ted? \blank{1in}
+When you introduce variables, tell what type of thing each variable represents, whether an integer, rational number, real number, vector, function, set, matrix, etc.
+}{0in}
+
+\exercise{Rewrite the story about Rex, Bill, and Ted.}{1in}
+
+\example{Fill in the blanks in this proof with the appropriate words and/or definitions.
+
+Show that for all real numbers $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
 
 \vspace*{0.1in}
 \noindent
 Let $a > 0$.
 
-Case 1.  Suppose that $a \geq 1$.  \blank{1.5in}  Then $\frac{1}{n^2} = \frac{1}{4} < 1 \leq a$, and so $\frac{1}{n^2} < a$.
+Case 1.  \blank{1in} that $a \geq 1$.  \blank{1.5in}  Then $\frac{1}{n^2} = \frac{1}{4} < 1 \leq a$, and so $\frac{1}{n^2} < a$.
 
-Case 2.  Suppose that $a < 1$.  Let $n$ be the next integer larger than $\frac{1}{\sqrt{a}}$.  Then $n > \frac{1}{\sqrt{a}}$.
+Case 2.  \blank{1in} that $a < 1$.  Let $n$ be the next integer larger than $\frac{1}{\sqrt{a}}$.  Then $n > \frac{1}{\sqrt{a}}$.
 Squaring both sides, $n^2 > \frac{1}{a}$.  Taking reciprocals, $\frac{1}{n^2} < a$, as desired.
 
 In each case, we have shown the existence of an integer $n$ with the desired property.
-Thus, for all $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
-
-\vspace{0.1in} 
-\noindent
-Note that in Case 1, the variable $n$ has not been introduced.  Fill in the blank to do that properly.
+Thus, \blank{1in} $a > 0$, there is an integer $n$ with $\frac{1}{n^2} < a$.
 }{0in}
 
 

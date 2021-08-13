@@ -15,23 +15,32 @@ It's OK that we don't have a list of the students, we can still talk about the s
 }{0.0in}
 
 \example{
-Consider all the days last spring when it was somewhat gloomy. Here, the objects are days that are somewhat gloomy. Since `somewhat gloomy' is not defined precisely, this collection is not a set.
+Consider all the days last spring when it was somewhat gloomy. Here, the objects are days that were somewhat gloomy. 
+Since `somewhat gloomy' does not have a precise meaning, this collection is not a set.
 }{0in}
 
-\exercise{Which of the following are sets?  Consider whether the set is well defined and explain your thinking.
-Mark sets with a check mark, non-sets with an X.
+\exercise{Which of the following are sets?  
+Consider whether the set is well defined and explain your thinking in each case.
 If the set is small enough, list out its elements.
 
 \balist{0.2in}
 \item Your Facebook friends right now
-\item Your high school friends on graduation day
-\item All the stars in the Milky Way galaxy
-\item All the small stars in the Milky Way galaxy
+\item Your high school friends on high school graduation day
+\item All the stars in the Milky Way galaxy right now
+\item All the small stars in the Milky Way galaxy right now
+
+\noindent
+Remember to explain your thinking.
+
 \item The ten most important characters in the Harry Potter books
 \item The days in a year with exactly 20mm of rainfall
-\item The days in 2016 in Bowling Green, Ohio with less than 20mm of rainfall
+\item The days in 2020 in Bowling Green, Ohio with less than 20mm of rainfall
 \item English letters that are vowels
 \item Planets in our solar system
+
+\noindent
+Remember to explain your thinking and list the elements of small sets.
+
 \item Construct your own example or non-example of a set and explain why it is or is not a set.
 \elist
 }{0.1in}
@@ -40,12 +49,12 @@ If the set is small enough, list out its elements.
 If $A$ is a set and an object $x$ is an element of $A$, we write $x \in A$. 
 The symbol $\in$ looks a bit like a letter E and stands for ``is an element of.''
 Thus $x \in A$ should be read as ``$x$ is an element of $A$.''
-If $x$ is not an element of $A$, we write $x \notin A$. 
+If $x$ is not an element of $A$, we write $x \notin A$ and say that $x$ is not an element of $A$.
 Sets are usually denoted by capital letters and their elements by lower case letters.
 }
 
 \definition{Tabular form}{
-We represent a set in \textbf{tabular form} by listing out its elements, separated by commas and enclosed in braces \{ \}.
+We represent a set in \textbf{tabular form} by listing out its elements, separated by commas and enclosed in curly braces \{ \}.
 The order in which we list the elements does not matter, only which objects are elements of the set.
 If the set has too many elements to list, establish a pattern and use $\ldots$.
 }
@@ -83,17 +92,18 @@ Sometimes people use a vertical line $|$ instead of a colon.
 \item Express the set $A=\{x : x$ is a ``home row'' character on a keyboard$\}$ in tabular form.
 \item Express the set $B =\{A, L, G, E, B, R\}$ in set-builder form.
 \item Express the set $P = \{2, 3, 5, 7, 11, \ldots, 97\}$ in set-builder form. 
-\item Express the set $T = \{ x : x$ is a power of 2 $\}$ in tabular form.
+\item Express the set $T = \{ x : x$ is a power of 2$\}$ in tabular form.
 \item Suppose that $R = \{ x | x$ is a zero of $f(x) = 5x^3 - 2x^2 + 7x - 1 \}$.
 Suppose that $u \in R$.
 Write the equation that we know that $u$ satisfies.
 \item Suppose that $M = \{ m : m $ is a multiple of 7 $\}$.
 Let $k \in M$.
-Without using the word ``multiple,'' what do we know about $k$?
+Without using the words ``multiple'' or ``divides'' or ``divisible,'' what do we know about $k$?
 \elist
-}{0.1in}
+}{0.0in}
 
 % ======================================================================
+\pagebreak
 
 \definition{Empty set}{
 A set which contains no elements is called the \textbf{null set} or \textbf{empty set}.
@@ -113,14 +123,15 @@ The set of mountains on earth with height over 29,000 feet is a singleton set, s
 }{0in}
 
 \exercise{
-For the following questions, identify the sets in the context of the definitions above.
+For the following questions, identify the set and describe it using the definitions above.  That's two things to do.
 
 \balist{0.2in}
 \item The set of all mountains in the state of Ohio above 2000 feet in height.  This might require an internet search.
 
-\item If Jill has classes on Mondays, Wednesdays and Fridays and has work on Wednesdays and Saturdays, describe the set of days on which Jill has both work and classes?
+\item If Jill has classes on Mondays, Wednesdays and Fridays and has work on Wednesdays and Saturdays.
+Consider the set of days on which Jill has both work and classes.
 
-\item Suppose we draw two lines in the plane and consider the intersection of the two lines, that is, the set of all points that are on both lines.
+\item Suppose we draw two straight lines in the plane and consider the intersection of the two lines, that is, the set of all points that are on both lines.
 Can this set be empty?  If so, draw a picture.
 Can this set be a singleton?  If so, draw a picture.
 Can this set be anything else?  If so, draw a picture and describe it.
@@ -130,7 +141,8 @@ Can this set be anything else?  If so, draw a picture and describe it.
 % ======================================================================
 
 \definition{Subset of a set}{
-If every element in a set $A$ is also a member of a set $B,$ then $A$ is called a \textbf{subset} of $B$ and we write $A \subseteq B$.
+Let $A$ and $B$ be sets.
+If every element of $A$ is also an element of $B,$ then $A$ is said to be a \textbf{subset} of $B$ and we write $A \subseteq B$.
 }
 
 \remark{
@@ -156,7 +168,7 @@ We write $\varnothing \subseteq A$.
 This happens when there is an element of $A$ that is not an element of $B$.}
 
 \example{
-If $A$ = \{ green, yellow, red, black, dog, cat, mouse\} and $B$ = \{dog, cat\} then  $B \subseteq A$.
+If $A$ = \{green, yellow, red, black, dog, cat, mouse\} and $B$ = \{dog, cat\} then  $B \subseteq A$.
 However, $A \not\subseteq B$ because, for example, mouse $\in A$ but mouse $\notin B$.
 }{0in}
 
@@ -165,11 +177,11 @@ However, $A \not\subseteq B$ because, for example, mouse $\in A$ but mouse $\not
 \item If $A$ is the set of all cars manufactured by a Japanese car company and $B$ is the set of all Toyota sedans, then what is the relationship between $A$ and $B$?
 
 \item Let $M$ be the set of people you have communicated with on social media in the last week, and let $C$ be the set of people you are taking a class with now.
-Is $M \subseteq C$?  If not, name one person in $M$ but not in $C$.
+Is $M \subseteq C$?  If not, give the first name of one person in $M$ but not in $C$.
 Is $C \subseteq M$?  If not, name one person in $C$ but not in $M$.
 \vspace*{0.2in}
 
-\item Let $V$ be the set of people who voted in the last US presidential election, and let $C$ be the set of US citizens.
+\item Let $V$ be the set of people who voted in the last US presidential election, and let $C$ be the set of US citizens at the time.
 Is $V \subseteq C$?
 Under what condition would we have $V \not\subseteq C$?
 
@@ -177,8 +189,8 @@ Under what condition would we have $V \not\subseteq C$?
 }{0.3in}
 
 \definition{Proper subset}{
-If every element in a set A is also a member of a set B, and yet $B$ contains at least one element that is not in $A$, then A is called a \textbf{proper subset} of B and we write $A \subset B$.  Sometimes people write $A \subsetneq B$.
-Generally speaking, when you want to show that $A \subset B$, you need to check that $A \subseteq B$ and that $A$ and $B$ are not equal.
+If every element in a set $A$ is also a member of a set $B,$ and yet $B$ contains at least one element that is not in $A$, then $A$ is called a \textbf{proper subset} of B and we write $A \subset B$.  Sometimes people write $A \subsetneq B$.
+When you want to show that $A \subset B$, you need to check that $A \subseteq B$ and that $A$ and $B$ are not equal.
 }
 
 \remark{
@@ -191,31 +203,37 @@ That means that $B$ has an element that $A$ does not have.
 
 \exercise{
 If A = \{ green, yellow, red, black, dog, cat, mouse\} and B = \{dog, cat\} then  $B \subset A$.
-Put your finger on why this is true.
+Put your finger on the two reasons why this is true.
+Be specific.
 }{0.1in}
 
 \exercise{
-If $A$ is a set, explain why $A \subset A$ is not true.  We could write $A \not\subset A$.
+If $A$ is a set, explain why $A \subset A$ is not true, by talking about elements of $A$.  
+We could write $A \not\subset A$.
 }{0.1in}
 
 \exercise{
-\balist{0.4in}
-\item Suppose that $L$ is the set of US citizens who voted legally in the last presidential election and $C$ is the set of US citizens at that time.
-Explain why $L \subseteq C$ is true.
-Explain why $L \subset C$ is true.
+\balist{0.2in}
+\item Suppose that $L$ is the set of US citizens who voted legally in the last presidential election and $C$ is the set of US citizens at that time.\\
+\noindent
+Explain in the context of voting why $L \subseteq C$ is true.\\
+
+\noindent
+Explain in the context of voting why $L \subset C$ is true.
 
 \item Consider a class at the University.
-Let $R$ be the set of students who are registered for the class and let $F$ be the set of people who take the final exam.
+Let $R$ be the set of students who are registered for the class at the time of the final exam, and let $F$ be the set of people who take the final exam.
 
 \noindent
 What needs to happen at the final exam to make $R = F$?
 Talk about students, not sets.
+\vspace*{0.2in}
 
 \noindent
-What needs to happen to make $F \subset R$?
+What two things need to happen to make $F \subset R$?
 
 \noindent
-What needs to happen to make $R \subset F$?
+What two things need to happen to make $R \subset F$?
 
 \noindent
 Which of the three possibilities do you think is most likely to happen?   
@@ -223,5 +241,5 @@ Which of the three possibilities do you think is most likely to happen?
 \noindent
 Least likely?  Why?
 \elist
-}{0.2in}
+}{0.0in}
 

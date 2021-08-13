@@ -6,7 +6,7 @@
 Many statements that we want to prove are supposed to be true {\bf for all} objects having a certain property.
 Other times, we want to show that {\bf there exists} an object having a property.
 `For all' and `there exists' are called quantifiers.
-Sometimes the two occur together, as in a statement that `for every object A, there is an object B having a certain relationship to A.'
+Sometimes the two occur together, as in a statement that `for every object A, there exists an object B having a certain relationship to A.'
 Then we say that the quantifiers are {\em nested}.
 In this activity you will work with quantifiers and nested quantifiers.
 }
@@ -33,12 +33,13 @@ Pay close attention to the format for writing the statements.
 \vspace*{-0.2in}
 
 \item There is a real number $x$ for which $x^2 = 2$. Solution:  $\exists$ $x \in \R$ such that $x^2 = 2$.
-The set $\R$ is called the {\em universe} for the variable $x$.
+Note: The set $\R$ is called the {\em universe} for the variable $x$.
 \vspace*{-0.2in}
 
-\item $\forall$ $x \in A$, we have $x^2 = x$.
+\item $\forall$ $x \in A$, we have $x^2 = x$.  Rewrite in English:
 
 \item The equation $x = \sin(x)$ has an integer-valued solution.
+Rewrite symbolically:
 
 \ealist
 }{0.1in}
@@ -66,30 +67,50 @@ If false, give specific numbers as counterexamples using ``Let \ldots''
 }{0.1in}
 
 \remark{Now you will write proofs that involve nested quantifiers.  
-For each, first write  the  statement with $\forall$ and $\exists$.
+For each, first write the statement using symbols $\forall$ and $\exists$.
 Note the order in which the quantifiers occur, because that will have a big impact on the structure of the proof.
 To prove a ``for all'' statement, use ``Let \ldots'' to introduce a generic instance of the variable that satisfies whatever restriction is imposed.
 If your proof works for a generic value of the variable, then it will work for all variables satisfying the restriction.
-To prove a ``there exists'' statement, construct the required variable in terms of other variables, also using ``Let \ldots''
+To prove a ``there exists'' statement, construct the required variable in terms of other variables, also using ``Let \ldots'' to start the construction.
+It can help you organize your work if you indent under each ``Let'' statement.
 }
 
 \prove{Show that for all odd integers $m$ and $n$, there exists an integer $p$ such that $m+n = 2p$.
 
 \noindent
-In symbols:  $\forall$ integers $m$ and $n$, \blank{2in}
+In symbols:  $\forall$ \blank{1in} integers $m$ and $n$, \blank{2in}
 
-Start your proof by writing ``Let $m$ and $n$ be odd integers.''
-A few steps later, you will be able to construct the integer $p$.
-At the end, generalize by noting that you made no further assumptions about $m$ and $n$, so your result is true for all odd integers $m$ and $n$.}{1in}
+\noindent
+Let $m$ and $n$ be odd integers.  ($m$ and $n$ satisfy the condition but are otherwise arbitrary)\\
+\hspace*{0.3in} By the definition of odd, \blank{4in}\\
+\hspace*{0.3in} Thus, $m+n=$\blank{4in}\\
+\hspace*{0.3in} Let $p = $\blank{1in} (this constructs $p$)\\
+\hspace*{0.6in} Then $p$ is an \blank{1.2in} and $m+n=2p$ as desired.\\
+Because $m$ and $n$ were arbitrary odd numbers, we have shown that for all odd $m$ and $n$, there exists ...
+}{0in}
 
 \prove{Show that for every rational number $r \neq 0$, there exists a rational number $s$ such that $rs = 1$.
-Remember to generalize at the end.
-Is there more than one possible value for $s$?
+Follow the model.
 
 \noindent
 In symbols:
 
-}{0.9in}
+\noindent
+Let $r$ be a rational number with $r \neq 0$.
+
+By the definition of rational numbers, \blank{4in}
+
+\vspace{0.1in}
+
+Let $s = $ \blank{1in}.
+
+\vspace{0.1in}
+
+\hspace*{0.3in} Then $s$ is rational and $rs=\blank{1in}=1$.
+
+\noindent
+Because ...
+}{0.0in}
 
 \prove{Show that for every real number $y$ there is a value of $x$ for which $y = 2x-5$.
 
@@ -118,30 +139,40 @@ In symbols:
 
 \exercise{~
 \balist{0.7in}
+\item Show that for every integer $p > 0$, there is an integer $n$ with $2^n > p$.
+You don't need the smallest possible $n$, just one that works.
 \item Show that there exists an integer $n$ such that for all integers $p$ with $p \leq 0$, we have $2^n > p$.
 First define $n$, then show that it works for all $p$ by starting with ``Let $p \leq 0$ be an integer.''
-\item Show that for every integer $p > 0$, there is an integer $n$ with $2^n > p$.
-It's OK if $2^n$ is much larger than $p$; you don't need the smallest possible $n$, just one that works.
-\item Using the integer $n$ that you constructed in (a) or (b), show that for all $m > n$, we have $2^m > p$.
-\item Write three quantifiers to express what you have shown about $p$, $n$, and $m$ in (a), (b), and (c).
+\item Suppose that $2^n > p$.  Show that for all $m > n$, we have $2^m > p$.
+\item Fill in the blanks to document what you have shown about $p$, $n$, and $m$ in (a), (b), and (c).\\
+\hspace*{0.3in} $\forall p \blank{0.6in}, \exists n \blank{0.6in}$ such that $\forall m \blank{0.6in},$ we have \blank{1in}
 \elist
 }{0.0in}
 
 \exercise{~
 \balist{0.7in}
 \item Suppose that $n^2 > \frac{1}{a}$.  Cite a property of inequalities to show that $n^2 + 10 > \frac{1}{a}$.
-\item Show that for every real number $a > 0$, there is an integer $n$ with $\frac{1}{n^2 + 10} < a$.
-\item Using the integer $n$ that you constructed in (b), show that for all $m > n$, we have $\frac{1}{m^2+10} < a$.
-\item Write three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
+\item Show that for every real number $a > 0$, there exists an integer $n$ with $\frac{1}{n^2 + 10} < a$.
+
+\noindent 
+Let $a > 0$.  
+Let $n = ceil(\frac{1}{\sqrt{a}}).$  
+Then $n \geq \frac{1}{\sqrt{a}}$, (now you continue)
+
+\item Suppose that $\frac{1}{n^2+10} < a$.
+Show that for all $m > n$, we have $\frac{1}{m^2+10} < a$.
+\item As in the previous question, use three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
 \elist
+As a consequence, you have shown that $\lim_{n\to\infty} \frac{1}{n^2 + 10} = 0.$
 }{0.3in}
 
 \exercise{~
 \balist{0.5in}
-\item Let $a > 0$.  Solve the inequality $0 < \frac{1}{x^2 - 100} < a$ for $x$.
+\item Let $a > 0$.  Solve the inequality $0 < \frac{1}{x^2 - 100} < a$ for a value of $x$ where $x > 10$.
 \item Show that for every real number $a > 0$, there is an integer $n$ with $0 < \frac{1}{n^2 - 100} < a$.
-\item Using the integer $n$ that you constructed, show that for all $m > n$, we have $\frac{1}{m^2 - 100} < a$.
-\item Write three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
+\item Suppose that $\frac{1}{n^2 - 100} < a$.
+Show that for all $m > n$, we have $\frac{1}{m^2 - 100} < a$.
+\item Use three quantifiers to express what you have shown about $a$, $n$, and $m$ in (b) and (c).
 \elist
 }{0.3in}
 
@@ -155,7 +186,7 @@ In symbols:
 }{1.0in}
 
 \exercise{
-Show that for the integers, there exists a number $a$ for which, for all integers $b$, $ab = b$.
+Show that there exists an integer $a$ for which, for all integers $b$, $ab = b$.
 
 \noindent
 In symbols:
@@ -170,7 +201,7 @@ Note that in both cases, negating the quantifier can be done quite mechanically:
 When negating nested quantifiers, after flipping the first quantifier, the negation applies to the next quantifier, which then flips, and so on.
 }
 
-\exercise{Negate the following statements.
+\exercise{Negate the following statements, getting rid of every ``not'' (except for part (c) where you will need ``not equal'').
 \balist{0.1in}
 \item $\exists$ integer $k$ such that $k^2 < k$
 

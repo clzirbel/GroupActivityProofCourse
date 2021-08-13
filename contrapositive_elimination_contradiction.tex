@@ -87,7 +87,7 @@ We have seen a number of direct proofs, including proofs by rewriting.}
 
 \prove{Let $n$ be an integer.  Consider $S: n$ is even and $T: n^2+6n+7$ is odd.
 Write a direct proof that $S \to T$.
-Start with ``Let $n$ ...''}{1.2in}
+Start with ``Let $n$ be an integer.  Suppose that $n$ is even.''}{1.2in}
 
 \example{\label{trydirectoddeven}
 Let $n$ be an integer.
@@ -107,18 +107,33 @@ It may be easier to find a direct proof that $\lnot Q \to \lnot P$ than it is to
 %===============================================================
 \pagebreak
 \exercise{Let $n$ be an integer.
-Consider $A: n^2$ is even and $B: n$ is even.
-State $\lnot B$ and $\lnot A$, then show that $\lnot B \to \lnot A$.
-State what you have shown in terms of $n^2$ and $n$.
- }{0.7in}
+Consider $A: n^2$ is even and $B: n$ is even.\\
+State $\lnot B$:\\
+State $\lnot A$:\\
+Show that $\lnot B \to \lnot A$, starting with: ``Let $n$ be an integer.  Suppose that $n$ is odd.''
+\vspace*{0.5in}
 
-\exercise{Let $n$ be an integer.  Consider $P: n^2 + 8n + 9$ is even and $Q: n$ is odd.
-State $\lnot Q$ and $\lnot P$ and show $\lnot Q \to \lnot P$.}{0.9in}
+\noindent
+State what you have shown: if $n^2$ is even then \blank{2in} 
+ }{-0.2in}
 
-\exercise{Let $n$ be an integer.  Consider $S: n^2$ is a multiple of 3 and $T: n$ is a multiple of 3.
-State $\lnot T$ and $\lnot S$.  By the Division Algorithm, there are two ways that $\lnot T$ can happen.  Write down each one, and prove that in either case, they imply $\lnot S$.
+\exercise{Let $n$ be an integer.  Consider $P: n^2 + 8n + 9$ is even and $Q: n$ is odd.\\
+State $\lnot Q$:\\
+State $\lnot P$:\\
+Show $\lnot Q \to \lnot P$:
+\vspace*{0.5in}
 
-\vspace{1.0in}
+\noindent
+State $P \to Q$:}{-0.2in}
+
+\exercise{Let $n$ be an integer.  Consider $S: n^2$ is a multiple of 3 and $T: n$ is a multiple of 3.\\
+State $\lnot T$:\\
+State $\lnot S$:\\
+By the Division Algorithm, there are two ways that $\lnot T$ can happen.  
+Call these Case 1 and Case 2.
+Prove that in either case, they imply $\lnot S$.
+
+\vspace{0.8in}
 \noindent
 Thus, if $n^2$ is a multiple of 3, we know that $n$ is a multiple of 3.}{-0.2in}
 
@@ -126,13 +141,14 @@ Thus, if $n^2$ is a multiple of 3, we know that $n$ is a multiple of 3.}{-0.2in}
 
 \definition{Irrational\label{irrational}}{A real number is said to be {\em irrational} if it cannot be written as the quotient of two integers.}
 
-\exercise{Let $r \neq 0$. Show that if $r$ is irrational, then $\frac{1}{r}$ is irrational.}{0.7in}
+\exercise{Let $r \neq 0$. Show that if $r$ is irrational, then $\frac{1}{r}$ is irrational.  Write a proof by contrapositive.}{0.6in}
 
 \exercise{Suppose that $a$ is an irrational number.  Show that $5a$ is irrational.}{0.6in}
 
 \exercise{Let $b$ be a rational number not equal to 0.  Suppose that $a$ is an irrational number.  Show that $ba$ is irrational.
-There are three logical statements here.  One is just context, one is $P$ and one is $Q$ in the implication $P \to Q$.
-Identify $P$ and $Q$, then show that $P \to Q$.}{0.0in}
+There are three logical statements here.  
+The one about $b$ is just context, one is $P$ and one is $Q$ in the implication $P \to Q$.
+Identify $P$ and $Q$, then show that $P \to Q$.}{0.1in}
 
 %===============================================================
 \pagebreak
@@ -155,20 +171,26 @@ Complete the following proof that $P$ is false.
 \noindent
 Pretend for a minute that $P$ is true.  Then $n = 2k$ and $n= 2j+1$ for ...
 
-\vspace{0.5in}
+\vspace{0.6in}
 
 \noindent
 But $k$ and $j$ are integers, and so $k-j$ is an integer, so $k-j = \frac{1}{2}$ is false.
 Thus, $P$ must be false.
-}{0in}
+}{-0.2in}
 
 \prove{Consider the statements $P:$ $n$ is a positive integer and $Q:$ $n^2$ is 6.
 Prove that $P \wedge Q$ is false.
-One idea is that $n$ would have to be larger than 2 but smaller than 3.
+Your calculator will tell you that $\sqrt{6}=2.4494...$, but make an argument that does not rely on numerical approximations of square roots.
 
 \noindent
 Pretend for a minute that $n$ is a positive integer and $n^2 = 6$.
-}{0.5in}
+Then $2^2 < n^2 < 3^2$.
+
+\vspace*{0.6in}
+
+\noindent
+Thus $2<n<3$.  But this is false because \ldots
+}{-0.2in}
 
 \note{In the previous problem, we saw that $P \wedge Q$ is false, but we cannot say which of the two statements is false.
 If $n$ is an integer, then $Q: n^2 = 6$ is false.
@@ -195,8 +217,8 @@ You will show that $R$ is false,  by making a series of deductions that lead to 
 Pretend for a minute that $R$ is true, that is, that $\sqrt{2}$ is rational.
 
 \noindent
-Then there exist integers $p$ and $q$ for which $\sqrt{2} = \frac{p}{q}$, and we can arrange it so that $p$ and $q$ are not both even.
-(If they were both even numbers, we would factor out 2 from each until they are not both even.)
+Then there exist integers $p$ and $q$ for which $\sqrt{2} = \frac{p}{q}$, and we can arrange it so that $p$ and $q$ have no common factors.
+(If they had common factors, we would cancel common factors until they had no common factors.)
 
 \noindent
 Using algebra, $2q^2 = p^2$.  Thus, $p^2$ is \blank{1.5in}.
@@ -224,9 +246,9 @@ Pretend for a moment that $M$ is true.  Let $k$ denote the number of kids and le
 
 \definition{Prime}{An integer $n>1$ is {\em prime} if it is not composite, that is, its only non-negative integer factors are 1 and itself.}
 
-\example{List the prime numbers less than 20.}{0.0in}
+\exercise{List the prime numbers less than 20.}{0.0in}
 
-\example{Write 24 as a product of prime factors.}{0.0in}
+\exercise{Write 24 as a product of prime factors.}{0.0in}
 
 \prove{Let $S$ be the statement that there are finitely many prime numbers.
 Show that $S$ is false by filling in the blanks.
@@ -241,10 +263,10 @@ But by the \blank{2in} part of the \blank{2in}, $n$ is not a multiple of $p_1$, 
 Thus, $n$ is not a multiple of a prime number.
 We have arrived at the false statement that $n$ is composite and yet has no prime factors.
 Thus, statement $S$ must be false, and now we know that there are infinitely many prime numbers.
-}{0in}
+}{-0.2in}
 
 \definition{Process of elimination}{Consider logical statements $P, Q$, and $R$ and suppose we know that $P \vee Q \vee R$ is true.
-Suppose now that we show that $Q$ is false and $R$ is false.
+Suppose we show that $Q$ is false and $R$ is false.
 We can conclude that $P$ is true.
 Hopefully that is obviously true.
 If not, one can use truth tables to make it extra clear, which is one place where truth tables really help.}
@@ -254,12 +276,18 @@ Let $n$ be an integer.
 Suppose that $n^2$ is a multiple of 5.
 Use the Division Algorithm to produce statements $P,$  $Q,$ $R,$ $S,$ and $T$ of the form $n = 5k + r$ for different values of $r$, so that $P \vee Q \vee R \vee S \vee T$ is true.
 Then show that $Q$, $R$, $S$, and $T$ are false, and conclude that $P$ is true, so that $n$ is a multiple of 5.
-Do a really good job on these cases, because you'll use them a few more times in the next questions.
-}{1.8in}
+Do a really good job on these cases, because you'll use them a few more times in the next questions.\\
+By the Division Algorithm, we can write $n$ as \blank{2.5in}\\
+Let $P: n=5k$, let $Q: n=5k+1$, ...\\
+Assume $Q$ is true, then $n^2 = $ ...\\
+}{0in}
+
+% ===============================================
+\pagebreak
 
 \example{List the first 11 perfect squares, $0, 1, 4, 9, \ldots$.}{0.0in}
 
-\prove{Use the cases from \ref{nsquaredmultipleof5} to argue that perfect squares of integers can only end in the decimal digits 0, 1, 4, 5, 6, 9, and never in 2, 3, 7, 8.}{1in}
+\prove{Use the cases from \ref{nsquaredmultipleof5} to argue that perfect squares of integers can only end in the decimal digits 0, 1, 4, 5, 6, 9, and never in 2, 3, 7, 8.  If that doesn't make sense, let $n$ be an integer and write $n=10q+r$ and check $n^2$ in 10 cases.}{1.0in}
 
 \prove{The result in \ref{nsquaredmultipleof5} can also be shown with a contrapositive proof.
 
@@ -269,7 +297,7 @@ Clearly state $\lnot B$ and $\lnot A$.
 Rewrite $\lnot B$ in terms of the cases from \ref{nsquaredmultipleof5}, and then argue that each case implies $\lnot A$.  You may use the cases from \ref{nsquaredmultipleof5} without rewriting them.
 }{0.9in}
 
-\definition{Proof by contradiction}{One way to prove that a statement $P$ is true is to pretend for a minute that $\lnot P$ is true and argue to a false statement, conclude that $\lnot P$ is false, and thus establish that $P$ is true.
+\definition{Proof by contradiction}{Another way to prove that a statement $P$ is true is to pretend for a minute that $\lnot P$ is true and argue to a false statement, conclude that $\lnot P$ is false, and thus establish that $P$ is true.
 It may be easiest to think of this as a proof by the process of elimination:  we know that $P \vee \lnot P$ is true, and we are eliminating $\lnot P$.
 }
 
@@ -293,6 +321,6 @@ Thus, $L$ is false.
 }
 
 \prove{Show that $\sqrt{5}$ is irrational, following the proof that $\sqrt{2}$ is irrational.
-Start by pretending for a minute that $\sqrt{5}$ is rational and argue to a false statement or a contradiction.}{1.7in}
+Start by pretending for a minute that $\sqrt{5}$ is rational and argue to a false statement or a contradiction.}{0in}
 
 \vfill          % pad the rest of the page with white space

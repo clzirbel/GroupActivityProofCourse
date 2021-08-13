@@ -26,7 +26,7 @@ If one of the following set inclusions is true, list five elements that account 
 
 \exercise{Let $C$ denote the set of composite numbers and let $E$ denote the set of even numbers.
 Determine which of the following set inclusions is true.
-If not true, list five elements which serve as counterexamples.
+If not true, list up to five elements which serve as counterexamples.
 \balist{0.0in}
 \item $C \subseteq E$
 \item $E \subseteq C$
@@ -43,12 +43,10 @@ Let $A  = \{x \in \R : x$ solves $x^2=a$ where $a$ is an integer and $a \geq 0\}
 List out at least 5 elements of $A$: \blank{1.5in}
 
 \noindent
-Show that $A \not\subseteq \Q$.
-Make your logic crystal clear.
+Show that $A \not\subseteq \Q$ by giving one concrete example and telling how it relates to $A$ and to $\Q$.
 }{0.5in}
 
-\problem{Continuing the previous problem, show that $\Q \not\subseteq A$.
-Make your logic crystal clear.
+\problem{Continuing the previous problem, show that $\Q \not\subseteq A$ by giving one concrete example and telling how it relates to $A$ and $\Q$.
 }{0.5in}
 
 \guidedproof{\label{guidedsubsetproof}
@@ -58,6 +56,7 @@ Let $x \in A$.
 Use this fact and the definitions of $A$ and $B$ to show that $x \in B$.
 Since you made no further assumptions about $x$, this shows that every element of $A$ is also an element of $B$.
 Note:  Your proof must start with ``Let $x \in A$.'' and must get to ``Thus $x\in B$.'' before generalizing.
+Note:  Often $B$ will have a specific membership requirement, and you need to show that $x$ exactly meets the requirement.
 }
 
 \guidedproof{\label{guidedpropersubsetproof}
@@ -70,13 +69,13 @@ Let $\Z$ denote the integers and $\Q$ denote the rational numbers.
 Recall that $\Q = \{ x : x = \frac{p}{q}$ for some integers $p$ and $q$ with $q \ne 0 \}$.
 Show that $\Z \subset \Q$ following the model.
 \balist{0.1in}
-\item Let $m \in \Z$.  $m$ meets the definition to be in $\Q$ because we can write it as \blank{2in}.
+\item Let $m \in \Z$.  $m$ meets the definition to be in $\Q$ because we can write it as \blank{1in} where $p = \blank{0.5in}$ and $q = \blank{0.5in}$.
 Thus $m \in \Q$.
 We made no further assumption about $m \in \Z$.
 Thus for all $m \in Z$, we know that $m \in \Q$.
 Thus $\Z \subseteq \Q$.
-\item To see that $\Z \subset \Q$, note that \blank{1in} is in $\Q$ but is not in $\Z$.
-\elist
+\item To see that $\Z \subset \Q$, note that \blank{1in} is in $\Q$ but is not in $\Z$.  (One concrete example.)
+\ealist
 }
 
 \prove{Let $\R$ denote the real numbers and $\C$ denote the complex numbers.
@@ -85,7 +84,7 @@ Show that $\R \subset \C$ following the model in the previous problem.
 \balist{0.3in}
 \item
 \item
-\elist
+\ealist
 }{0.3in}
 
 \prove{Let $2\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 2j \}$ and $6\Z = \{ m \in \Z :$ there exists $j \in \Z$ such that $m = 6j \}$.
@@ -98,7 +97,7 @@ We define the following four types of intervals:
 \item $[a,b) = \{ x \in \R : a \leq x < b\}$.  The compound inequality $a \leq x \leq b$ means $a \leq x$ and $x \leq b$.
 \item $(a,b] = \{ x \in \R : a < x \leq b\}$
 \item $[a,b] = \{ x \in \R : a \leq x \leq b\}$.  We say that both endpoints are closed.
-\elist
+\ealist
 }
 
 \exercise{Sketch the following intervals on separate number lines.
@@ -117,6 +116,7 @@ To indicate closed endpoints, draw a closed circle like $\bullet$.
 \exercise{Using standard interval notation, show that $(4,9] \subset [2,9]$.
 Begin with ``Let $x \in (4,9].''$ then rewrite this as a compound inequality, then rewrite as two separate inequalities.  
 Note when you use transitivity. 
+Make sure to write that $2 \leq x \leq 9$.
 Make sure to show that $(4,9]$ is a proper subset of $[2,9]$.}{1.5in}
 
 \definition{Set equality}{For sets $A$ and $B$, we say that $A$ equals $B$ when the elements of $A$ are exactly the same as the elements of $B$.

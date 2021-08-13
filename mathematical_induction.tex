@@ -18,12 +18,17 @@ From the above two steps, we can conclude that $P(n)$ is true for all $n = 1, 2,
 Often, some quantity in the statement $P(n+1)$ can be written in terms of a similar quantity in the statement $P(n)$ plus a new part.
 You will always use the fact that $P(n)$ is true.}
 
+\question{With induction proofs, $P(n)$ is always a true/false logical statement.
+A student working on an induction problem wrote $P(n+1) = P(n) + \frac{1}{n^2}$.
+How can you tell that this must be wrong?}
+{0.2in}
+
 \guidedproof{\label{inductionguidedproof}
 Use mathematical induction to show that $3^n$ is odd for all $n = 1, 2, 3, \ldots$.
 \balist{0.0in}
-\item State $P(n)$:  $P(n)$ is that \blank{2in}
-\item Basis step:  $P(1)$ is that \blank{1.5in}.  This is true because \blank{1.5in}.
-\item State $P(n+1)$:  $P(n+1)$ is that \blank{2in}
+\item State $P(n)$:  $P(n)$ is that ``\blank{2in}''
+\item Basis step:  $P(1)$ is that ``\blank{1.5in}.''  This is true because \blank{1.5in}.
+\item State $P(n+1)$:  $P(n+1)$ is that ``\blank{2in}''
 \item Inductive step:  Let $n \geq 1$.  suppose that $P(n)$ is true.  Show that $P(n+1)$ is true.
 You may use facts you have already proven about odd numbers.
 
@@ -35,22 +40,17 @@ Since $n \geq 1$ was arbitrary, by mathematical induction, $P(n)$ is true for al
 \elist
 }
 
-\question{With induction proofs, $P(n)$ is always a true/false logical statement.
-A student working on an induction problem wrote $P(n+1) = P(n) + \frac{1}{n^2}$.
-How can you tell that this must be wrong?}
-{0.2in}
-
 \exercise{Fill in the table using your powers of pattern recognition.
 
 \vspace*{0.1in}
 \label{examplesum}
 \centerline{
 \begin{tabular}[c]{c|c|c|c|c|c|c|c|c|c|c}
-  $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & $\cdots$ & $n$ & $n+1$ \\
+  $k$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & $\cdots$ & $n$ & $n+1$ \\
   \hline
-  $n$th odd integer & 1 & 3 & 5 & 7 & & & & $\cdots$ & & \\
+  $k$th odd integer & 1 & 3 & 5 & 7 & & & & $\cdots$ & & \\
   \hline
-  sum of first $n$ odd integers & ~1~ & ~4~ & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & $\cdots$ & \hspace{0.5in} & \hspace{0.5in} \\
+  sum of first $k$ odd integers & ~1~ & ~4~ & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & \hspace{0.2in} & $\cdots$ & \hspace{0.5in} & \hspace{0.5in} \\
 \end{tabular}}
 
 \vspace*{0.1in}
@@ -80,7 +80,7 @@ Since \blank{1in} was arbitrary, by \blank{2in} we conclude that the sum of the 
 }
 
 \notation{Summation notation for $a_1+a_2+a_3+\cdots+a_n$ is $\displaystyle \sum_{k=1}^{n}a_k$.
-For example, $\sum_{k=1}^{n} k = 1 + 2 + \cdots + n$.}
+For example, $\displaystyle \sum_{k=1}^{n} k = 1 + 2 + \cdots + n$.}
 
 \example{Use summation notation and the formula for the $n$th odd integer in \ref{examplesum} to rewrite $P(n)$ in \ref{oddsum}:
 $P(n)$ is that \blank{1.5in} = \blank{0.5in}}{0in}
